@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+
+    <!-- - - - - - - - - - - - - - - - -->
+    <!--                               -->
+    <!--          SimpleType           -->
+    <!--                               -->
+    <!-- - - - - - - - - - - - - - - - --> 
+
+
+
+    
+    <!-- - - - - - - - - - - - - - - - -->
+    <!--                               -->
+    <!--         ComplexType           -->
+    <!--                               -->
+    <!-- - - - - - - - - - - - - - - - -->
+
+    <xsd:simpleType name="TMLRString">
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xsd:complexType>
+
+    <!--
+        Type: Vocabulaire
+        Une liste de string
+    --> 
+    <xsd:complexType name="TVocabulaire">
+        <xsd:element name="xsd:string" type="TMLRString">
+    </xsd:complexType>
+
+    <!--
+        Identifiant: ISO-IEC22602:RC0007
+        Nom: Institution
+        Définition: un élément de cette classe est  une entité composée d'êtres humains, organisée dans la durée,en vue d'une finalité et dotée d'une personalité juridique
+        Sous classe de: RC0700
+        Note: Exemple : Le lycée Flaubert de Rouen
+    -->
+    <xsd:complexType name="TInstitution">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0000
+        Nom: Entité du monde de la formation
+        Définition: classe abstraite qui regroupe les propriétés communes à toutes les situations ou à l'ensemble de situations visant un ou plusieurs objectifs de développement personnel ou professionnel
+        Sous classe de: 
+        Note: Super classe de toutes les classes. Elle regroupe toutes les propriétés des classes présentes dans ce modèle
+
+    -->
+    <xsd:complexType name="TEntitéDuMondeDeLaFormation">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0015
+        Nom: Certificat, badge, diplome
+        Définition: un élément de cette classe est la reconnaissance des compétences, des connaissances, des savoir-faire d'une personne
+        Sous classe de: RC0000
+        Note: Exemple : reconnaissance des compétences, des connaissances, des savoir-faire d'une personne
+    -->
+    <xsd:complexType name="TCertificatBadgeDiplome">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0016
+        Nom: Certification
+        Définition: un élément de cette classe est la reconnaissance de la qualité de l'offre d'un organisme donné selon un référentiel spécifié
+        Sous classe de: RC0000
+        Note: Exemple : Certification ISO 9001, QUALIOPI
+    -->
+    <xsd:complexType name="TCertification">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0017
+        Nom: Niveau de certification
+        Définition: un élément de cette classe représente un niveau de certification dans un système de codification
+        Sous classe de: RC0000
+        Note: Exemple : Niveau 5 du CEC
+    -->
+    <xsd:complexType name="TNiveauDeCertification">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0020
+        Nom: Offre de formation
+        Définition: un élément de cette classe est une formation décrite au niveau national, cette formation pouvant donner lieu à une attestation ou à préparer à un diplôme, une qualification, un certificat
+        Sous classe de: RC0050, RC0030
+        Note: Exemple : description d'un BTS services informatiques aux organisations (BTS SIO) au niveau national
+    -->
+    <xsd:complexType name="TOffreDeFormation">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0030
+        Nom: Condition d'accès
+        Définition: un élément de cette classe indique les conditions d'admission pour pouvoir postuler à une offre de formation
+        Sous classe de: RC0000
+        Note: Ces conditions peuvent être exprimées de façon formelle ou informelle. Il peut y avoir plusieurs instances des modalités de sélection
+    -->
+    <xsd:complexType name="TConditionDAccès">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0031
+        Nom: Prérequis
+        Définition: un élément de cette classe indique un ou plusieurs prérequis pour pouvoir postuler à une offre de formation
+        Sous classe de: RC0000
+        Note: Ces prérequis sont exprimés de manière informelle
+    -->
+    <xsd:complexType name="TPrérequis">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0032
+        Nom: Modalité de sélection
+        Définition: un élément de cette classe indique une ou plusieurs modalités de sélection pour pouvoir être admis à une offre de formation
+        Sous classe de: RC0000
+        Note: Ces modalités de sélection sont décrites de manière informelle
+    -->
+    <xsd:complexType name="TModalitéDeSélection">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0040
+        Nom: Frais de formation
+        Définition: un élément de cette classe est une dépense pour l'apprenant liée à la participation à la formation
+        Sous classe de: 
+        Note: Exemple : Les frais d'inscription au BTS SIO ou les frais pédagogiques du même BTS en formation continue
+    -->
+    <xsd:complexType name="TFraisDeFormation">
+
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0050
+        Nom: Caractéristiques de la formation
+        Définition: classe abstraite qui regroupe les propriété communes aux offres de formation et aux cas décrivant l'organisation pédagoqique d'une formation
+        Sous classe de: RC0000
+        Note: Super classe des classes offre de formation et formation
+    -->
+    <xsd:complexType name="TCaractéristiquesDeLaFormation">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0060
+        Nom: Composition
+        Définition: classe abstraite qui définit la composition d'une action de formation, d'un parcours ou d'un module en termes d'élément de formation
+        Sous classe de: 
+        Note: Super classe des classes ""composition"" obligatoire, optionnelle et à choix
+    -->
+    <xsd:complexType name="TComposition">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0061
+        Nom: Compositon obligatoire
+        Définition: classe qui définit le caractère obligatoire de la composition d'une action de formation, d'un parcours ou d'un module en termes d'éléments de formation
+        Sous classe de: RC0060
+        Note: Exemple : dans le BTS SIO pour le module ""bloc 2"" du parcours ""SLAM"", l'élément de formation ""Conception et développement d'applications est obligatoire
+    -->
+    <xsd:complexType name="TCompositionObligatoire">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0062
+        Nom: Composition optionnelle
+        Définition: classe qui définit le caractère optionnel de la composition d'une action de formation, d'un parcours ou d'un module en termes d'éléments de formation
+        Sous classe de: RC0060
+        Note: Exemple : dans le BTS SIO pour le parcours ""SLAM"", l'élément de formation ""Mathématiques approfondies"" est optionnel
+    -->
+    <xsd:complexType name="TCompositionOptionnelle">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0063
+        Nom: Composition à choix
+        Définition: classe qui définit le caractère ""à choix"" de la composition d'une action de formation, d'un parcours ou d'un module en termes d'éléments de formation
+        Sous classe de: RC0060
+        Note: Exemple : dans le module M d'un parcours P, un étudiant peut choisir entre 2 et 3 éléments de formation parmi 5
+    -->
+    <xsd:complexType name="TCompositionAChoix">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0070
+        Nom: Crédits ECTS
+        Définition: classe qui définit le nombre de crédits ECTS qui peuvent être contextuels à une offre de formation
+        Sous classe de: RC0000
+        Note: 
+    -->
+    <xsd:complexType name="TCréditsECTS">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0080
+        Nom: Session d'information
+        Définition: classe qui présente une réalisation lors d'une session d'information
+        Sous classe de: RC0000
+        Note: Exemple : le BTS SIO option SLAM pour l'année 2020-2021 sera présenté aux étudiants le 4 avril 2020 à 14h
+    -->
+    <xsd:complexType name="TCréditsECTS">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0090
+        Nom: Période d'interruption
+        Définition: classe qui définit toute période d'interruption (vacances, fermeture administrative, etc.) pour une réalisation
+        Sous classe de: RC0000
+        Note: Exemple :  pour l'année 2020-2021 les étudiants BTS SIO n'ont pas cours du 19 décembre 2020 au 3 janvier 2021
+    -->
+    <xsd:complexType name="TCréditsECTS">
+        
+    </xsd:complexType>
+
+    <!--
+        Identifiant: RC0100
+        Nom: Formation
+        Définition: classe abstraite qui regroupe les propriétés communes decrivant l'organisation pédagogique de la formation dans une institution
+        Sous classe de: RC0050, RC0030
+        Note: Super classe des classes action de formation, parcours, module, élément de formation et activité pédagogique
+    -->
+    <xsd:complexType name="TFormation">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0101
+        Nom: Action de formation
+        Définition: un élément de cette classe est la réalisation concrète de la formation (sens catalogue). Il décrit un itinéraire composé de situations de formation permettant d'atteindre un objectif de développement personnel ou professionnel spécifié
+        Sous classe de: RC0100, RC0030
+        Note: Cette classe se concrétise dans un catalogue. Elle se décline en un ou plusieurs parcours. Exemple : description générale du BTS services informatiques aux organisations (BTS SIO) dans le lycée Flaubert de Rouen
+    -->
+    <xsd:complexType name="TActionDeFormation">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0102
+        Nom: Parcours
+        Définition: un élément de cette classe est un itinéraire pédagogique comportant un ou plusieurs éléments de formation spécifiés et ordonnés, organisé selon une ou plusieurs modalités spécifiées, en vue d'atteindre un objectif de développement personnel ou professionnel
+        Sous classe de: RC0100
+        Note: Cette classe se compose d'un ou plusieurs modules. Exemple : Itinéraire pédagogique en deux ans, en formation initiale, permettant d'acquérir un BTS services informatiques aux organisations (BTS SIO), option 1 SLAM solutions logicielles et applications métier proposé par le lycée Flaubert de Rouen
+    -->
+    <xsd:complexType name="TParcours">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0103
+        Nom: Module
+        Définition: un élément de cette classe est un regroupement temporel, thématique ou pédagogique d'éléments de formation. 
+        Sous classe de: RC0100
+        Note: Un module est l'organisation temporelle, thématique ou pédagogique d'une partie de la formation. Exemple : AU lycée Flaubert de Rouen, l'option 1 SLAM solutions logicielles et applications métier du BTS SIO est composée de 2 modules 1ère année et 2ème année, ce deuxième succédant au premier. Chaque année étant composée de 2 modules 1er semestre et 2eme semestre, le 2ème succédant au 1er
+    -->
+    <xsd:complexType name="TModule">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0104
+        Nom: Élément de formation
+        Définition: un élément de cette classe permet de décomposer les modules en unités pédagogiques
+        Sous classe de: RC0100
+        Note: Un élément de formation peut être composé d'activités pédagogiques. Il peut correspondre à un ""cours"" ou un ensemble de cours pédagogiquement cohérents. Pour l'enseignement supérieur le traité de Bologne appelle cette notion unité d'enseignement. Exemple : Au sein du BTS services informatiques aux organisations (BTS SIO), option 1 SLAM solutions logicielles et applications métier proposé par le lycée Flaubert de Rouen, il y a un élément de formation ""Mathématiques pour l'informatique"" composé des éléments de formations  ""mathématiques"" et ""algorithmique avancée""
+    -->
+    <xsd:complexType name="TÉlémentDeFormation">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0105
+        Nom: Activité pédagogique
+        Définition: un élément de cette classe est une forme spécifique d'une situation conçue pour apprendre
+        Sous classe de: RC0100
+        Note: Une activité pédagogique peut être décrite en spécifiant son type, sa modalité de mise en oeuvre et le matériel nécessaire à sa réalisation. Exemple : travaux pratiques en  réseau informatique nécessitant un routeur internet.
+    -->
+    <xsd:complexType name="TActivitéPédagogique">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0200
+        Nom: Réalisation
+        Définition: classe abstraite  qui regroupe les propriétés communes décrivant les réalisations programmées d'une offre de formation
+        Sous classe de: RC0000
+        Note: Superclasse des classes Réalisation de parcours, Réalisation de module, Réalisation de la session de formation et Réalisation de l'activité pédagogique
+    -->
+    <xsd:complexType name="TRéalisation">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0201
+        Nom: Réalisation de parcours
+        Définition: un élément de cette classe est la réalisation d'un parcours de formation programmé
+        Sous classe de: RC0200
+        Note: Une réalisation de parcours est la programmation pendant une période donnée, à un endroit donné. Exemple : Programmation de l'option 1 SLAM solutions logicielles et applications métier du BTS SIO sur la période 2020-2022 au lycée Flaubert de Rouen
+    -->
+    <xsd:complexType name="TRéalisationDeParcours">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0202
+        Nom: Réalisation de module
+        Définition: un élément de cette classe est la réalisation d'un module programmé
+        Sous classe de: RC0200
+        Note: Une réalisation de module est la programmation pendant une période donnée à un endroit donné d'un module de formation. Exemple : Le module du 1er semestre de la 1ère année du BTS SIO option 1 SLAM solutions logicielles et applications métier commence en septembre 2020 et finit en janvier 2021 au Lycée Flaubert de Rouen
+    -->
+    <xsd:complexType name="TRéalisationDeModule">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0203
+        Nom: Session de formation
+        Définition: un élément de cette classe est la réalisation d'une session de formation programmée
+        Sous classe de: RC0200
+        Note: Une session de formation est la programmation pendant une période donnée à un endroit donné d'un élément de formation. Exemple : Programmation de l'élément de formation ""Algorithmique appliquée"" de l'option 1 SLAM solutions logicielles et applications métier du BTS SIO de septembre 2020 à janvier 2021 au lycée Flaubert de Rouen.
+    -->
+    <xsd:complexType name="TSessionDeFormation">
+        
+    </xsd:complexType>
+    <!--
+        Identifiant: RC0204
+        Nom: Réalisation d'activité pédagogique
+        Définition: un élément de cette classe est la réalisation d'une activité pédagogique programmée
+        Sous classe de: RC0200
+        Note: Une réalisation d'une activité pédagogique est la programmation pendant une période donnée à un endroit donné d'une activité de pédagogique. Exemple : Programmation du premier cours magistral de l'activité pédagogique ""Algotihmique appliquée"" de l'option 1 SLAM solutions logicielles et applications métier du BTS SIO le mardi 8 septembre 2020 de 8h à 9h30 en salle 505 du lycée Flaubert de Rouen
+    -->
+    <xsd:complexType name="TRéalisationDActivitéPédagogique">
+        
+    </xsd:complexType>
+
+</xsd:schema>

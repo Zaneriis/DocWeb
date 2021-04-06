@@ -1,0 +1,210 @@
+@startuml
+
+class Institution {
+    ???
+}
+
+abstract class EntitéDuMondeDeLaFormation{
+    MLRString Libellé
+    MLR_Date DateMaj
+    MLRString Code
+    Object Contributeur
+}
+
+class CertificatBadgeDiplome{
+    MLRString Description
+    NiveauDeCertification APourNiveau
+    Certification EstAutoriseADelivrerPar
+}
+
+class Certification{
+    MLR_Date DateHabilitation
+    MLRDuration DuréeHabilitation
+}
+
+class NiveauDeCertification {
+    Nombre_Naturel Valeur
+    IRI SystemeDeCodification
+}
+
+class OffreDeFormation{
+    Vocabulaire Type
+    MLRString Stage
+    Vocabulaire MétierVisé
+    MLRString Acronyme
+    IRI Ressource
+    NiveauDeCertification NiveauDeSortie
+    OffreDeFormation SeDéclineEn
+    OffreDeFormation AÉvoluéEn
+    ConditionDAccès ConditionDAccès
+    ActionDeFormation EstMatérialisée
+}
+
+class ConditionDAccès {
+    Object Prérequis
+    Object ModalitéDeSélection
+}
+
+class Prérequis {
+    MLRString Description
+}
+
+class ModalitéDeSélection {
+    MLRString Description
+}
+
+class FraisDeFormation {
+    Reel_positif Montant
+    ISO_4217 Devise
+    Reel_positif TauxTVA
+    Vocabulaire Type
+    MLRString Description
+}
+
+abstract class CaractéristiqueDelaFormation {
+    MLRString Description
+    Vocabulaire Domaine
+    MLRDuration DuréeHorsEntrprise
+    MLRDuration DuréeEnEntrprise
+    Période DuréeEnEntrprise
+    CreditsECTS CréditsECTS
+    ISO_IEC_19788_1_2011__RC0002 ressource
+    ISO_IEC_22602_RC0003 APourObjectif
+    ISO_IEC_22602_RC0003 APourPrérequis
+}
+
+abstract class Composition {
+    ElementDeFormation 
+}
+class CompositionObligatoire {
+}
+class CompositionOpérationnelle {
+}
+class CompositionAChoix {
+    Float NombreMinimal
+    Float NombreMaximal
+}
+class CréditsECTS {
+    PositiveFloat NombreDeCrédits
+    Formation RelatifA
+}
+
+class SessionDInformation {
+    MLR_Date Date
+    MLRString Lieu
+    Nombre_Naturel NombreMaximal
+}
+
+class PeriodeDInterruption {
+    MLR_Date Début
+    MLR_Date Fin
+    MLRString Commentaire
+}
+
+abstract class Formation {
+    ISO_639 LangueDEnseignement
+    MLRDuration ChargeDeTravail
+    ISO_IEC_19788_1_2010_RC0003 Responsable
+    MLRString ConditionDeValidation
+    MLRString Programme
+    IRI ProgrammeRef
+    Vocabulaire MaterielPedagogique
+    Vocabulaire Financeur
+    CertificatBadgeDiplome PermetDObtenir
+    FraisDeFormation Tarif
+}
+
+class ActionDeFormation {
+    Vocabulaire PublicCible
+    Vocabulaire Modalité
+    Certification EstCertifiéPar
+    OffreDeFormation Matérialise 
+    ConditionDAccès ConditoinsDAccès
+    Parcours SeDéclineEn
+    Module SeComposeDe
+    Composition Utilise
+}
+
+class Parcours {
+    ConditionDAccès ConditoinsDAccès
+    Module SeComposeDe
+    Composition Utilise
+}
+class Module {
+    Module Suivant
+    Module SeComposeDe
+    Composition Utilise
+}
+class ElementDeFormation {
+    MLRString ModalitéDÉvalution
+    ElementDeFormation SeComposeDe
+    ActivitePedagogique SeComposeDe
+}
+class ActivitePedagogique {
+    Vocabulaire TypeDActivité
+    Vocabulaire ModalitéPédagogique
+}
+
+abstract class Réalisation {
+    MLR_Date Début
+    MLR_Date Fin
+    MLRString Lieu 
+    ISO_IEC_19788_1_2010_RC0003 Responsable
+    ISO_IEC_19788_1_2010_RC0003 Intervenant
+    Booléen EntreeSortiePermanente
+    ISO_IEC_22602_RC0001 EstMiseEnOeuvreDans
+    SessionDInformation SessionDinformation
+    PeriodeDInterruption PeriodeDInterruption
+}
+
+class RéalisationDeParcours {
+    ActionDeFormation Réalise
+}
+
+class RéalisationDeModule {
+    Module Réalise
+}
+
+class SessionDeFormation {
+    ElementDeFormation Réalise
+}
+
+class RéalisationDActivitéPédagogique {
+    RéalisationDActivitéPédagogique Réalise
+}
+
+EntitéDuMondeDeLaFormation <|-- CertificatBadgeDiplome
+EntitéDuMondeDeLaFormation <|-- Certification
+EntitéDuMondeDeLaFormation <|-- NiveauDeCertification
+EntitéDuMondeDeLaFormation <|-- ConditionDAccès
+EntitéDuMondeDeLaFormation <|-- Prérequis
+EntitéDuMondeDeLaFormation <|-- ModalitéDeSélection
+EntitéDuMondeDeLaFormation <|-- CaractéristiqueDelaFormation
+EntitéDuMondeDeLaFormation <|-- CreditsECTS
+EntitéDuMondeDeLaFormation <|-- SessionDInformation
+EntitéDuMondeDeLaFormation <|-- PeriodeDInterruption
+EntitéDuMondeDeLaFormation <|-- Réalisation
+
+CaractéristiqueDelaFormation <|-- OffreDeFormation
+ConditionDAccès <|-- OffreDeFormation
+CaractéristiqueDelaFormation <|-- Formation
+ConditionDAccès <|-- Formation
+
+Composition <|-- CompositionObligatoire
+Composition <|-- CompositionOpérationnelle
+Composition <|-- CompositionAChoix
+
+Formation <|-- Parcours
+Formation <|-- Module
+Formation <|-- ElementDeFormation
+Formation <|-- ActivitePedagogique
+Formation <|-- ActionDeFormation
+ConditionDAccès <|-- ActionDeFormation
+
+Réalisation <|-- RéalisationDeParcours
+Réalisation <|-- RéalisationDeModule
+Réalisation <|-- SessionDeFormation
+Réalisation <|-- RéalisationDActivitéPédagogique
+
+
+@enduml
