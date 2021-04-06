@@ -8,6 +8,52 @@
     <!-- - - - - - - - - - - - - - - - --> 
 
 
+    <xsd:simpleType name="TMLRString">
+        <xsd:restriction base="xsd:string">
+        </xsd:restriction>
+    </xsd:complexType>
+
+    <xsd:simpleType name="TMLRDuration">
+        <xsd:restriction base="xsd:duration">
+        </xsd:restriction>
+    </xsd:complexType>
+
+
+    <xsd:simpleType name="TMLRDate">
+        <xsd:restriction base="xsd:date">
+        </xsd:restriction>
+    </xsd:complexType>
+
+    <!--
+        Type: Vocabulaire
+        Une liste de string
+    --> 
+    <xsd:simpleType name="TVocabulaire">
+        <xsd:restriction base="xsd:TMLRString">
+        </xsd:restriction>
+    </xsd:complexType>
+
+    <!--
+        Type: TPositiveDouble
+        Un double positif
+    -->
+    <xsd:simpleType name="TPositiveDouble">
+        <xsd:restriction base="xsd:double">
+            <xsd:minExclusive value="0"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    
+    <!-- Inconnue -->
+
+    <xsd:simpleType name="TIsoRc0002">
+        <xsd:restriction base="xsd:TMLRString">
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="TIsoRc0003">
+        <xsd:restriction base="xsd:TMLRString">
+        </xsd:restriction>
+    </xsd:simpleType>
 
     
     <!-- - - - - - - - - - - - - - - - -->
@@ -15,19 +61,19 @@
     <!--         ComplexType           -->
     <!--                               -->
     <!-- - - - - - - - - - - - - - - - -->
+    
 
-    <xsd:simpleType name="TMLRString">
-        <xs:restriction base="xs:string">
-        </xs:restriction>
+    <!-- Utilie -->
+
+    <xsd:complexType name="TCurrency">
+        <xsd:simpleContent>
+            <xsd:extension base="Scheme">
+                <xsd:attribute default="http://www.fpml.org/ext/iso4217-2001-08-15" name="currencyScheme" type="xsd:anyURI"/>
+            </xsd:extension>
+        </xsd:simpleContent>
     </xsd:complexType>
 
-    <!--
-        Type: Vocabulaire
-        Une liste de string
-    --> 
-    <xsd:complexType name="TVocabulaire">
-        <xsd:element name="xsd:string" type="TMLRString">
-    </xsd:complexType>
+    <!-- CLASS NODEFE -->
 
     <!--
         Identifiant: ISO-IEC22602:RC0007
@@ -37,7 +83,6 @@
         Note: Exemple : Le lycée Flaubert de Rouen
     -->
     <xsd:complexType name="TInstitution">
-        
     </xsd:complexType>
     <!--
         Identifiant: RC0000
@@ -48,7 +93,12 @@
 
     -->
     <xsd:complexType name="TEntitéDuMondeDeLaFormation">
-        
+        <xsd:all>
+            <xsd:element name="libellé" type="TMLRString">
+            <xsd:element name="dateMAJ" type="TMLRDate">
+            <xsd:element name="code" type="TMLRString">
+            <xsd:element name="contributeur" type="TIsoRc0003">
+        </xsd:all>
     </xsd:complexType>
     <!--
         Identifiant: RC0015
@@ -58,7 +108,15 @@
         Note: Exemple : reconnaissance des compétences, des connaissances, des savoir-faire d'une personne
     -->
     <xsd:complexType name="TCertificatBadgeDiplome">
-        
+		<xsd:complexContent>
+            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+                <xsd:all>
+                    <xsd:element name="description" type="TMLRString">
+                    <xsd:element name="niveau" type="%RC0017%">
+                    <xsd:element name="delivre" type="%RC0016%">
+                </xsd:all>
+            </xsd:extension>
+		</xsd:complexContent>
     </xsd:complexType>
     <!--
         Identifiant: RC0016
@@ -68,7 +126,14 @@
         Note: Exemple : Certification ISO 9001, QUALIOPI
     -->
     <xsd:complexType name="TCertification">
-        
+		<xsd:complexContent>
+            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+                <xsd:all>
+                    <xsd:element name="date" type="TMLRDate">
+                    <xsd:element name="duree" type="TMLRDuration">
+                </xsd:all>
+            </xsd:extension>
+		</xsd:complexContent>
     </xsd:complexType>
     <!--
         Identifiant: RC0017
@@ -78,7 +143,14 @@
         Note: Exemple : Niveau 5 du CEC
     -->
     <xsd:complexType name="TNiveauDeCertification">
-        
+		<xsd:complexContent>
+            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+                <xsd:all>
+                    <xsd:element name="valeur" type="xs:int">
+                    <xsd:element name="codification" type="TMLRDuration">
+                </xsd:all>
+            </xsd:extension>
+		</xsd:complexContent>
     </xsd:complexType>
     <!--
         Identifiant: RC0020
@@ -98,7 +170,14 @@
         Note: Ces conditions peuvent être exprimées de façon formelle ou informelle. Il peut y avoir plusieurs instances des modalités de sélection
     -->
     <xsd:complexType name="TConditionDAccès">
-        
+		<xsd:complexContent>
+            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+                <xsd:all>
+                    <xsd:element name="prerequis" type="%RC0031%">
+                    <xsd:element name="modalite" type="%RC0032%">
+                </xsd:all>
+            </xsd:extension>
+		</xsd:complexContent>
     </xsd:complexType>
     <!--
         Identifiant: RC0031
@@ -108,7 +187,13 @@
         Note: Ces prérequis sont exprimés de manière informelle
     -->
     <xsd:complexType name="TPrérequis">
-        
+		<xsd:complexContent>
+            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+                <xsd:all>
+                    <xsd:element name="description" type="TMLRString">
+                </xsd:all>
+            </xsd:extension>
+		</xsd:complexContent>
     </xsd:complexType>
     <!--
         Identifiant: RC0032
@@ -118,7 +203,13 @@
         Note: Ces modalités de sélection sont décrites de manière informelle
     -->
     <xsd:complexType name="TModalitéDeSélection">
-        
+		<xsd:complexContent>
+            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+                <xsd:all>
+                    <xsd:element name="description" type="TMLRString">
+                </xsd:all>
+            </xsd:extension>
+		</xsd:complexContent>
     </xsd:complexType>
     <!--
         Identifiant: RC0040
@@ -128,7 +219,13 @@
         Note: Exemple : Les frais d'inscription au BTS SIO ou les frais pédagogiques du même BTS en formation continue
     -->
     <xsd:complexType name="TFraisDeFormation">
-
+        <xsd:all>
+            <xsd:element name="montant" type="TPositiveDouble">
+            <xsd:element name="devise" type="TCurrency">
+            <xsd:element name="tauxTVA" type="TPositiveDouble">
+            <xsd:element name="type" type="TVocabulaire">
+            <xsd:element name="description" type="TMLRString">
+        </xsd:all>
     </xsd:complexType>
     <!--
         Identifiant: RC0050
@@ -138,7 +235,21 @@
         Note: Super classe des classes offre de formation et formation
     -->
     <xsd:complexType name="TCaractéristiquesDeLaFormation">
-        
+		<xsd:complexContent>
+            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+                <xsd:all>
+                    <xsd:element name="description" type="TMLRString">
+                    <xsd:element name="domaine" type="TVocabulaire">
+                    <xsd:element name="dureeHorsEntreprise" type="TMLRDuration">
+                    <xsd:element name="dureeEnEntreprise" type="TMLRDuration">
+                    <xsd:element name="periode" type="TMLRDuration">
+                    <xsd:element name="creditECTS" type="TCréditsECTS">
+                    <xsd:element name="ressource" type="TIsoRc0002">
+                    <xsd:element name="objectf" type="TIsoRc0003">
+                    <xsd:element name="prerequis" type="TIsoRc0003">
+                </xsd:all>
+            </xsd:extension>
+		</xsd:complexContent>
     </xsd:complexType>
     <!--
         Identifiant: RC0060
