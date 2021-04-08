@@ -75,7 +75,7 @@ def main():
     tree = creationRacine(path, res, sheetNames)
 
     #Creation du fichier xml
-    tree.write("filename.xml")
+    tree.write("filename.xml",  xml_declaration=True, encoding='utf-16', standalone="no")
 
 
 
