@@ -3,17 +3,19 @@ from pandas_ods_reader import read_ods
 from lxml import etree
 import unidecode
 import struct
+import pandas as pd
+from pyexcel import get_book
 
 
-def creationRacine(path):
-    sheet_name = "Classes"
+def creationRacine(path, nbSheet, sheetNames):
+    singleSheetName = "Classes"
    
     root = etree.Element("root")
     racine = etree.SubElement(root, "EntiteDuMondeDeLaFormation")
 
-    obtenirValeurCellule(path, sheet_name, racine, 1)
+    obtenirValeurCellule(path, singleSheetName, racine, 1)
     creationFils(path, racine)
-    contenuSheetSecondaire(path, root)
+    contenuSheetSecondaire(path, root, nbSheet, sheetNames)
 
 
     tree = etree.ElementTree(root)
@@ -30,18 +32,23 @@ def creationFils(path, branche):
         obtenirValeurCellule(path, "Classes", fils, j+2)
 
 
-def contenuSheetSecondaire(path, branche):
+def contenuSheetSecondaire(path, branche, nbSheet, sheetNames):
     detailfils = etree.SubElement(branche, "DetailsDesIdentifiants")
-    sheet_name = "RC0015"
-    descriptifParId= etree.SubElement(detailfils, "Feuille")
 
-    df = read_ods(path, sheet_name)
+    for k in range(nbSheet-1):
+        
+        individualSheetName = sheetNames[k+1]
+        descriptifParId= etree.SubElement(detailfils, "Identifiant", name=individualSheetName)
 
-    for j in range(len(df)):
-        obtenirValeurCellule(path, sheet_name, descriptifParId, j)
+        df = read_ods(path, individualSheetName)
+
+        for j in range(len(df)): #Nombre de lignes de la feuille de calcul
+            separationInterieurDesId= etree.SubElement(descriptifParId, "Lignes")
+            obtenirValeurCellule(path, individualSheetName, separationInterieurDesId, j)
 
 
 
+#Obtention de la valeur par rapport à une ligne du tableur
 def obtenirValeurCellule(path, sheet_name, branche, nb):
     df = read_ods(path, sheet_name)
     
@@ -54,9 +61,20 @@ def obtenirValeurCellule(path, sheet_name, branche, nb):
 
 
 def main():
-    path = "NoDEfr-2.ods"
-    tree = creationRacine(path)
+    path = "NoDEfr-2.ods" #Chemin du fichier à exporter
 
+    #Connaître le nb de sheet du fichier
+    xl = pd.ExcelFile(path)
+    res = len(xl.sheet_names) 
+
+    #Connaître le nom des sheets
+    at = get_book(file_name=path)
+    sheetNames= at.sheet_names()
+
+    #Création de l'arbre
+    tree = creationRacine(path, res, sheetNames)
+
+    #Creation du fichier xml
     tree.write("filename.xml")
 
 
