@@ -5,17 +5,21 @@ import unidecode
 import struct
 import pandas as pd
 from pyexcel import get_book
+import string
 
 
 def creationRacine(path, nbSheet, sheetNames):
     singleSheetName = "Classes"
    
     root = etree.Element("root")
-    racine = etree.SubElement(root, "EntiteDuMondeDeLaFormation")
 
-    obtenirValeurCellule(path, singleSheetName, racine, 1)
+    df = read_ods(path, singleSheetName)
+    nomIdentifiant=df.iloc[1,0]
+    racine = etree.SubElement(root, "EntiteDuMondeDeLaFormation", IDREF=nomIdentifiant)
+
+    obtenirValeurCellule(path, singleSheetName, racine, 1, 1, 1)
     creationFils(path, racine)
-    contenuSheetSecondaire(path, root, nbSheet, sheetNames)
+    #contenuSheetSecondaire(path, root, nbSheet, sheetNames)
 
 
     tree = etree.ElementTree(root)
@@ -23,41 +27,38 @@ def creationRacine(path, nbSheet, sheetNames):
 
 
 def creationFils(path, branche):
-    nomFils=['CertificatBadgeDiplome', 'Certification', 'NiveauDeCertification', 'ConditionDAcces']
     sheet_name = "Classes"
     df = read_ods(path, sheet_name)
 
-    for j in range(len(nomFils)):
-        fils = etree.SubElement(branche, nomFils[j])
-        obtenirValeurCellule(path, "Classes", fils, j+2)
+    for j in range(5):
+        nom=string.capwords(df.iloc[2+j,1]).replace(",","").replace(" ", "").replace("'", "") #Permet de récupérer le nom des balises sans accents, ni espace, ni apostrophes
+        nomIdentifiant=df.iloc[2+j,0]
+        fils = etree.SubElement(branche, unidecode.unidecode(nom), IDREF=nomIdentifiant)
+        obtenirValeurCellule(path, "Classes", fils, j+2, 1, 1)
+        contenuSheetSecondaire(path,fils, nomIdentifiant)
 
 
-def contenuSheetSecondaire(path, branche, nbSheet, sheetNames):
-    detailfils = etree.SubElement(branche, "DetailsDesIdentifiants")
+def contenuSheetSecondaire(path, branche, nomSheet):
+    detailBranche = etree.SubElement(branche, "Details")
 
-    for k in range(nbSheet-1):
-        
-        individualSheetName = sheetNames[k+1]
-        descriptifParId= etree.SubElement(detailfils, "Identifiant", name=individualSheetName)
+    df = read_ods(path, nomSheet)
 
-        df = read_ods(path, individualSheetName)
-
-        for j in range(len(df)): #Nombre de lignes de la feuille de calcul
-            separationInterieurDesId= etree.SubElement(descriptifParId, "Lignes")
-            obtenirValeurCellule(path, individualSheetName, separationInterieurDesId, j)
+    for j in range(len(df)): #Nombre de lignes de la feuille de calcul
+        separationInterieurDesId= etree.SubElement(detailBranche, "Lignes")
+        obtenirValeurCellule(path, nomSheet, separationInterieurDesId, j,0, 2)
 
 
 
 #Obtention de la valeur par rapport à une ligne du tableur
-def obtenirValeurCellule(path, sheet_name, branche, nb):
+def obtenirValeurCellule(path, sheet_name, branche, commencementNumeroLigne, commencementNumeroColonne,arret):
     df = read_ods(path, sheet_name)
     
-    for i in range(len(df.columns)): 
-        nom=df.columns[i].replace(" ", "") #Permet d'enlever les espaces dans le nom des colonnes
-        if isinstance(df.iloc[nb,i], float):
-            etree.SubElement(branche, unidecode.unidecode(nom)).text = str(df.iloc[nb,i]).encode('utf-8','ignore')
+    for i in range(len(df.columns)-arret): 
+        nom=df.columns[i+commencementNumeroColonne].replace(" ", "") #Permet d'enlever les espaces dans le nom des colonnes
+        if isinstance(df.iloc[commencementNumeroLigne,i+commencementNumeroColonne], float):
+            etree.SubElement(branche, unidecode.unidecode(nom)).text = str(df.iloc[commencementNumeroLigne,i+commencementNumeroColonne]).encode('utf-8','ignore')
         else :
-            etree.SubElement(branche, unidecode.unidecode(nom)).text = df.iloc[nb,i]
+            etree.SubElement(branche, unidecode.unidecode(nom)).text = df.iloc[commencementNumeroLigne,i+commencementNumeroColonne]
 
 
 def main():
