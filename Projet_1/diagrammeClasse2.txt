@@ -4,8 +4,8 @@ class Institution {
     ???
 }
 
-abstract class EntitéDuMondeDeLaFormation{
-    MLRString Libellé
+abstract class EntiteDuMondeDeLaFormation{
+    MLRString Libelle
     MLR_Date DateMaj
     MLRString Code
     Object Contributeur
@@ -19,7 +19,7 @@ class CertificatBadgeDiplome{
 
 class Certification{
     MLR_Date DateHabilitation
-    MLRDuration DuréeHabilitation
+    MLRDuration DureeHabilitation
 }
 
 class NiveauDeCertification {
@@ -30,26 +30,26 @@ class NiveauDeCertification {
 class OffreDeFormation{
     Vocabulaire Type
     MLRString Stage
-    Vocabulaire MétierVisé
+    Vocabulaire MetierVise
     MLRString Acronyme
     IRI Ressource
     NiveauDeCertification NiveauDeSortie
-    OffreDeFormation SeDéclineEn
-    OffreDeFormation AÉvoluéEn
-    ConditionDAccès ConditionDAccès
-    ActionDeFormation EstMatérialisée
+    OffreDeFormation SeDeclineEn
+    OffreDeFormation AevolueEn
+    ConditionDAcces ConditionDAcces
+    ActionDeFormation EstMaterialisee
 }
 
-class ConditionDAccès {
-    Object Prérequis
-    Object ModalitéDeSélection
+class ConditionDAcces {
+    Object Prerequis
+    Object ModaliteDeSelection
 }
 
-class Prérequis {
+class Prerequis {
     MLRString Description
 }
 
-class ModalitéDeSélection {
+class ModaliteDeSelection {
     MLRString Description
 }
 
@@ -61,31 +61,31 @@ class FraisDeFormation {
     MLRString Description
 }
 
-abstract class CaractéristiqueDelaFormation {
+abstract class CaracteristiqueDelaFormation {
     MLRString Description
     Vocabulaire Domaine
-    MLRDuration DuréeHorsEntrprise
-    MLRDuration DuréeEnEntrprise
-    Période DuréeEnEntrprise
-    CreditsECTS CréditsECTS
+    MLRDuration DureeHorsEntrprise
+    MLRDuration DureeEnEntrprise
+    Periode DureeEnEntrprise
+    CreditsECTS CreditsECTS
     ISO_IEC_19788_1_2011__RC0002 ressource
     ISO_IEC_22602_RC0003 APourObjectif
-    ISO_IEC_22602_RC0003 APourPrérequis
+    ISO_IEC_22602_RC0003 APourPrerequis
 }
 
 abstract class Composition {
-    ElementDeFormation 
+    ElementDeFormation
 }
 class CompositionObligatoire {
 }
-class CompositionOpérationnelle {
+class CompositionOperationnelle {
 }
 class CompositionAChoix {
     Float NombreMinimal
     Float NombreMaximal
 }
-class CréditsECTS {
-    PositiveFloat NombreDeCrédits
+class CreditsECTS {
+    PositiveFloat NombreDeCredits
     Formation RelatifA
 }
 
@@ -96,7 +96,7 @@ class SessionDInformation {
 }
 
 class PeriodeDInterruption {
-    MLR_Date Début
+    MLR_Date Debut
     MLR_Date Fin
     MLRString Commentaire
 }
@@ -116,17 +116,17 @@ abstract class Formation {
 
 class ActionDeFormation {
     Vocabulaire PublicCible
-    Vocabulaire Modalité
-    Certification EstCertifiéPar
-    OffreDeFormation Matérialise 
-    ConditionDAccès ConditoinsDAccès
-    Parcours SeDéclineEn
+    Vocabulaire Modalite
+    Certification EstCertifiePar
+    OffreDeFormation Materialise
+    ConditionDAcces ConditoinsDAcces
+    Parcours SeDeclineEn
     Module SeComposeDe
     Composition Utilise
 }
 
 class Parcours {
-    ConditionDAccès ConditoinsDAccès
+    ConditionDAcces ConditoinsDAcces
     Module SeComposeDe
     Composition Utilise
 }
@@ -136,62 +136,62 @@ class Module {
     Composition Utilise
 }
 class ElementDeFormation {
-    MLRString ModalitéDÉvalution
+    MLRString ModaliteDevalution
     ElementDeFormation SeComposeDe
     ActivitePedagogique SeComposeDe
 }
 class ActivitePedagogique {
-    Vocabulaire TypeDActivité
-    Vocabulaire ModalitéPédagogique
+    Vocabulaire TypeDActivite
+    Vocabulaire ModalitePedagogique
 }
 
-abstract class Réalisation {
-    MLR_Date Début
+abstract class Realisation {
+    MLR_Date Debut
     MLR_Date Fin
-    MLRString Lieu 
+    MLRString Lieu
     ISO_IEC_19788_1_2010_RC0003 Responsable
     ISO_IEC_19788_1_2010_RC0003 Intervenant
-    Booléen EntreeSortiePermanente
+    Booleen EntreeSortiePermanente
     ISO_IEC_22602_RC0001 EstMiseEnOeuvreDans
     SessionDInformation SessionDinformation
     PeriodeDInterruption PeriodeDInterruption
 }
 
-class RéalisationDeParcours {
-    ActionDeFormation Réalise
+class RealisationDeParcours {
+    ActionDeFormation Realise
 }
 
-class RéalisationDeModule {
-    Module Réalise
+class RealisationDeModule {
+    Module Realise
 }
 
 class SessionDeFormation {
-    ElementDeFormation Réalise
+    ElementDeFormation Realise
 }
 
-class RéalisationDActivitéPédagogique {
-    RéalisationDActivitéPédagogique Réalise
+class RealisationDActivitePedagogique {
+    RealisationDActivitePedagogique Realise
 }
 
-EntitéDuMondeDeLaFormation <|-- CertificatBadgeDiplome
-EntitéDuMondeDeLaFormation <|-- Certification
-EntitéDuMondeDeLaFormation <|-- NiveauDeCertification
-EntitéDuMondeDeLaFormation <|-- ConditionDAccès
-EntitéDuMondeDeLaFormation <|-- Prérequis
-EntitéDuMondeDeLaFormation <|-- ModalitéDeSélection
-EntitéDuMondeDeLaFormation <|-- CaractéristiqueDelaFormation
-EntitéDuMondeDeLaFormation <|-- CreditsECTS
-EntitéDuMondeDeLaFormation <|-- SessionDInformation
-EntitéDuMondeDeLaFormation <|-- PeriodeDInterruption
-EntitéDuMondeDeLaFormation <|-- Réalisation
+EntiteDuMondeDeLaFormation <|-- CertificatBadgeDiplome
+EntiteDuMondeDeLaFormation <|-- Certification
+EntiteDuMondeDeLaFormation <|-- NiveauDeCertification
+EntiteDuMondeDeLaFormation <|-- ConditionDAcces
+EntiteDuMondeDeLaFormation <|-- Prerequis
+EntiteDuMondeDeLaFormation <|-- ModaliteDeSelection
+EntiteDuMondeDeLaFormation <|-- CaracteristiqueDelaFormation
+EntiteDuMondeDeLaFormation <|-- CreditsECTS
+EntiteDuMondeDeLaFormation <|-- SessionDInformation
+EntiteDuMondeDeLaFormation <|-- PeriodeDInterruption
+EntiteDuMondeDeLaFormation <|-- Realisation
 
-CaractéristiqueDelaFormation <|-- OffreDeFormation
-ConditionDAccès <|-- OffreDeFormation
-CaractéristiqueDelaFormation <|-- Formation
-ConditionDAccès <|-- Formation
+CaracteristiqueDelaFormation <|-- OffreDeFormation
+ConditionDAcces <|-- OffreDeFormation
+CaracteristiqueDelaFormation <|-- Formation
+ConditionDAcces <|-- Formation
 
 Composition <|-- CompositionObligatoire
-Composition <|-- CompositionOpérationnelle
+Composition <|-- CompositionOperationnelle
 Composition <|-- CompositionAChoix
 
 Formation <|-- Parcours
@@ -199,12 +199,12 @@ Formation <|-- Module
 Formation <|-- ElementDeFormation
 Formation <|-- ActivitePedagogique
 Formation <|-- ActionDeFormation
-ConditionDAccès <|-- ActionDeFormation
+ConditionDAcces <|-- ActionDeFormation
 
-Réalisation <|-- RéalisationDeParcours
-Réalisation <|-- RéalisationDeModule
-Réalisation <|-- SessionDeFormation
-Réalisation <|-- RéalisationDActivitéPédagogique
+Realisation <|-- RealisationDeParcours
+Realisation <|-- RealisationDeModule
+Realisation <|-- SessionDeFormation
+Realisation <|-- RealisationDActivitePedagogique
 
 
 @enduml

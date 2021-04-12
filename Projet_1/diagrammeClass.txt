@@ -5,7 +5,7 @@ class ISO_IEC22602_RC0007 {
 }
 
 abstract class RC0000{
-    MLRString Libellé
+    MLRString Libelle
     MLRDate DateMaj
     MLRString Code
     Object Contributeur
@@ -19,7 +19,7 @@ class RC0015{
 
 class RC0016{
     MLRDate DateHabilitation
-    MLRDuration DuréeHabilitation
+    MLRDuration DureeHabilitation
 }
 
 class RC0017 {
@@ -30,19 +30,19 @@ class RC0017 {
 class RC0020{
     Vocabulaire Type
     MLRString Stage
-    Vocabulaire MétierVisé
+    Vocabulaire MetierVise
     MLRString Acronyme
     IRI Ressource
     RC0017 NiveauDeSortie
-    RC0020 SeDéclineEn
-    RC0020 AÉvoluéEn
-    RC0030 ConditionDAccès
-    RC0101 EstMatérialisée
+    RC0020 SeDeclineEn
+    RC0020 AevolueEn
+    RC0030 ConditionDAcces
+    RC0101 EstMaterialisee
 }
 
 class RC0030 {
-    Object Prérequis
-    Object ModalitéDeSélection
+    Object Prerequis
+    Object ModaliteDeSelection
 }
 
 class RC0031 {
@@ -64,17 +64,17 @@ class RC0040 {
 abstract class RC0050 {
     MLRString Description
     Vocabulaire Domaine
-    MLRDuration DuréeHorsEntrprise
-    MLRDuration DuréeEnEntrprise
-    Période DuréeEnEntrprise
-    RC0070 CréditsECTS
+    MLRDuration DureeHorsEntrprise
+    MLRDuration DureeEnEntrprise
+    Periode DureeEnEntrprise
+    RC0070 CreditsECTS
     ISO_IEC_19788_1_2011__RC0002 ressource
     ISO_IEC_22602_RC0003 APourObjectif
-    ISO_IEC_22602_RC0003 APourPrérequis
+    ISO_IEC_22602_RC0003 APourPrerequis
 }
 
 abstract class RC0060 {
-    RC0104 
+    RC0104
 }
 class RC0061 {
 }
@@ -85,7 +85,7 @@ class RC0063 {
     Float NombreMaximal
 }
 class RC0070 {
-    PositiveFloat NombreDeCrédits
+    PositiveFloat NombreDeCredits
     RC0100 RelatifA
 }
 
@@ -96,7 +96,7 @@ class RC0080 {
 }
 
 class RC0090 {
-    MLRDate Début
+    MLRDate Debut
     MLRDate Fin
     MLRString Commentaire
 }
@@ -116,17 +116,17 @@ abstract class RC0100 {
 
 class RC0101 {
     Vocabulaire PublicCible
-    Vocabulaire Modalité
-    RC0016 EstCertifiéPar
-    RC0020 Matérialise 
-    RC0030 ConditoinsDAccès
-    RC0102 SeDéclineEn
+    Vocabulaire Modalite
+    RC0016 EstCertifiePar
+    RC0020 Materialise
+    RC0030 ConditoinsDAcces
+    RC0102 SeDeclineEn
     RC0103 SeComposeDe
     RC0060 Utilise
 }
 
 class RC0102 {
-    RC0030 ConditoinsDAccès
+    RC0030 ConditoinsDAcces
     RC0103 SeComposeDe
     RC0060 Utilise
 }
@@ -136,41 +136,41 @@ class RC0103 {
     RC0060 Utilise
 }
 class RC0104 {
-    MLRString ModalitéDÉvalution
+    MLRString ModaliteDevalution
     RC0104 SeComposeDe
     RC0105 SeComposeDe
 }
 class RC0105 {
-    Vocabulaire TypeDActivité
-    Vocabulaire ModalitéPédagogique
+    Vocabulaire TypeDActivite
+    Vocabulaire ModalitePedagogique
 }
 
 abstract class RC0200 {
-    MLRDate Début
+    MLRDate Debut
     MLRDate Fin
-    MLRString Lieu 
+    MLRString Lieu
     ISO_IEC_19788_1_2010_RC0003 Responsable
     ISO_IEC_19788_1_2010_RC0003 Intervenant
-    Booléen EntreeSortiePermanente
+    Booleen EntreeSortiePermanente
     ISO_IEC_22602_RC0001 EstMiseEnOeuvreDans
     RC0080 SessionDinformation
     RC0090 PeriodeDInterruption
 }
 
 class RC0201 {
-    RC0101 Réalise
+    RC0101 Realise
 }
 
 class RC0202 {
-    RC0103 Réalise
+    RC0103 Realise
 }
 
 class RC0203 {
-    RC0104 Réalise
+    RC0104 Realise
 }
 
 class RC0204 {
-    RC0204 Réalise
+    RC0204 Realise
 }
 
 RC0000 <|-- RC0015

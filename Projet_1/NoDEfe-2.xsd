@@ -5,7 +5,7 @@
     <!--                               -->
     <!--          SimpleType           -->
     <!--                               -->
-    <!-- - - - - - - - - - - - - - - - --> 
+    <!-- - - - - - - - - - - - - - - - -->
 
 
     <xsd:simpleType name="TMLRString">
@@ -27,7 +27,7 @@
     <!--
         Type: Vocabulaire
         Une liste de string
-    --> 
+    -->
     <xsd:simpleType name="TVocabulaire">
         <xsd:restriction base="xsd:TMLRString">
         </xsd:restriction>
@@ -48,7 +48,7 @@
             <xsd:minExclusive value="0"/>
         </xsd:restriction>
     </xsd:simpleType>
-    
+
     <!-- Inconnue -->
 
     <xsd:simpleType name="TIsoRc0002">
@@ -66,13 +66,13 @@
         </xsd:restriction>
     </xsd:simpleType>
 
-    
+
     <!-- - - - - - - - - - - - - - - - -->
     <!--                               -->
     <!--         ComplexType           -->
     <!--                               -->
     <!-- - - - - - - - - - - - - - - - -->
-    
+
 
     <!-- Utilie -->
 
@@ -100,13 +100,13 @@
         Identifiant: RC0000
         Nom: Entité du monde de la formation
         Définition: classe abstraite qui regroupe les propriétés communes à toutes les situations ou à l'ensemble de situations visant un ou plusieurs objectifs de développement personnel ou professionnel
-        Sous classe de: 
+        Sous classe de:
         Note: Super classe de toutes les classes. Elle regroupe toutes les propriétés des classes présentes dans ce modèle
 
     -->
-    <xsd:complexType name="TEntitéDuMondeDeLaFormation">
+    <xsd:complexType name="TEntiteDuMondeDeLaFormation">
         <xsd:all>
-            <xsd:element name="libellé" type="TMLRString">
+            <xsd:element name="libelle" type="TMLRString">
             <xsd:element name="dateMAJ" type="TMLRDate">
             <xsd:element name="code" type="TMLRString">
             <xsd:element name="contributeur" type="TIsoRc0003">
@@ -121,7 +121,7 @@
     -->
     <xsd:complexType name="TCertificatBadgeDiplome">
 		<xsd:complexContent>
-            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+            <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
                     <xsd:element name="description" type="TMLRString">
                     <xsd:element name="niveau" type="%RC0017%">
@@ -139,7 +139,7 @@
     -->
     <xsd:complexType name="TCertification">
 		<xsd:complexContent>
-            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+            <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
                     <xsd:element name="date" type="TMLRDate">
                     <xsd:element name="duree" type="TMLRDuration">
@@ -156,7 +156,7 @@
     -->
     <xsd:complexType name="TNiveauDeCertification">
 		<xsd:complexContent>
-            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+            <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
                     <xsd:element name="valeur" type="TNaturel">
                     <xsd:element name="codification" type="TMLRDuration">
@@ -173,7 +173,7 @@
     -->
     <!-- TODO -->
     <!-- <xsd:complexType name="TOffreDeFormation">
-        
+
     </xsd:complexType> -->
     <!--
         Identifiant: RC0030
@@ -184,7 +184,7 @@
     -->
     <xsd:complexType name="TConditionDAccès">
 		<xsd:complexContent>
-            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+            <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
                     <xsd:element name="prerequis" type="%RC0031%">
                     <xsd:element name="modalite" type="%RC0032%">
@@ -199,9 +199,9 @@
         Sous classe de: RC0000
         Note: Ces prérequis sont exprimés de manière informelle
     -->
-    <xsd:complexType name="TPrérequis">
+    <xsd:complexType name="TPrerequis">
 		<xsd:complexContent>
-            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+            <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
                     <xsd:element name="description" type="TMLRString">
                 </xsd:all>
@@ -215,9 +215,9 @@
         Sous classe de: RC0000
         Note: Ces modalités de sélection sont décrites de manière informelle
     -->
-    <xsd:complexType name="TModalitéDeSélection">
+    <xsd:complexType name="TModaliteDeSelection">
 		<xsd:complexContent>
-            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+            <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
                     <xsd:element name="description" type="TMLRString">
                 </xsd:all>
@@ -228,7 +228,7 @@
         Identifiant: RC0040
         Nom: Frais de formation
         Définition: un élément de cette classe est une dépense pour l'apprenant liée à la participation à la formation
-        Sous classe de: 
+        Sous classe de:
         Note: Exemple : Les frais d'inscription au BTS SIO ou les frais pédagogiques du même BTS en formation continue
     -->
     <xsd:complexType name="TFraisDeFormation">
@@ -247,16 +247,16 @@
         Sous classe de: RC0000
         Note: Super classe des classes offre de formation et formation
     -->
-    <xsd:complexType name="TCaractéristiquesDeLaFormation">
+    <xsd:complexType name="TCaracteristiquesDeLaFormation">
 		<xsd:complexContent>
-            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+            <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
                     <xsd:element name="description" type="TMLRString">
                     <xsd:element name="domaine" type="TVocabulaire">
                     <xsd:element name="dureeHorsEntreprise" type="TMLRDuration">
                     <xsd:element name="dureeEnEntreprise" type="TMLRDuration">
                     <xsd:element name="periode" type="TMLRDuration">
-                    <xsd:element name="creditECTS" type="TCréditsECTS">
+                    <xsd:element name="creditECTS" type="TCreditsECTS">
                     <xsd:element name="ressource" type="TIsoRc0002">
                     <xsd:element name="objectf" type="TIsoRc0003">
                     <xsd:element name="prerequis" type="TIsoRc0003">
@@ -268,7 +268,7 @@
         Identifiant: RC0060
         Nom: Composition
         Définition: classe abstraite qui définit la composition d'une action de formation, d'un parcours ou d'un module en termes d'élément de formation
-        Sous classe de: 
+        Sous classe de:
         Note: Super classe des classes ""composition"" obligatoire, optionnelle et à choix
     -->
     <xsd:complexType name="TComposition">
@@ -321,11 +321,11 @@
         Nom: Crédits ECTS
         Définition: classe qui définit le nombre de crédits ECTS qui peuvent être contextuels à une offre de formation
         Sous classe de: RC0000
-        Note: 
+        Note:
     -->
-    <xsd:complexType name="TCréditsECTS">
+    <xsd:complexType name="TCreditsECTS">
 		<xsd:complexContent>
-            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+            <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
                     <xsd:element name="nombre" type="TPositiveDouble">
                     <xsd:element name="relatif" type="%RC0100%">
@@ -342,7 +342,7 @@
     -->
     <xsd:complexType name="TSessionInformation">
 		<xsd:complexContent>
-            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+            <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
                     <xsd:element name="date" type="TMLRDate">
                     <xsd:element name="lieu" type="TMLRString">
@@ -360,7 +360,7 @@
     -->
     <xsd:complexType name="TPeriodeInterruption">
 		<xsd:complexContent>
-            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+            <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
                     <xsd:element name="debut" type="TMLRDate">
                     <xsd:element name="fin" type="TMLRDate">
@@ -379,7 +379,7 @@
     -->
     <!-- TODO -->
     <!-- <xsd:complexType name="TFormation">
-    
+
     </xsd:complexType> -->
     <!--
         Identifiant: RC0101
@@ -390,7 +390,7 @@
     -->
     <!-- TODO -->
     <!-- <xsd:complexType name="TActionDeFormation">
-        
+
     </xsd:complexType> -->
     <!--
         Identifiant: RC0102
@@ -401,7 +401,7 @@
     -->
     <xsd:complexType name="TParcours">
 		<xsd:complexContent>
-            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+            <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
                     <xsd:element name="condition" type="TMLRDate">
                     <xsd:element name="compose" type="TMLRDate">
@@ -413,7 +413,7 @@
     <!--
         Identifiant: RC0103
         Nom: Module
-        Définition: un élément de cette classe est un regroupement temporel, thématique ou pédagogique d'éléments de formation. 
+        Définition: un élément de cette classe est un regroupement temporel, thématique ou pédagogique d'éléments de formation.
         Sous classe de: RC0100
         Note: Un module est l'organisation temporelle, thématique ou pédagogique d'une partie de la formation. Exemple : AU lycée Flaubert de Rouen, l'option 1 SLAM solutions logicielles et applications métier du BTS SIO est composée de 2 modules 1ère année et 2ème année, ce deuxième succédant au premier. Chaque année étant composée de 2 modules 1er semestre et 2eme semestre, le 2ème succédant au 1er
     -->
@@ -435,7 +435,7 @@
         Sous classe de: RC0100
         Note: Un élément de formation peut être composé d'activités pédagogiques. Il peut correspondre à un ""cours"" ou un ensemble de cours pédagogiquement cohérents. Pour l'enseignement supérieur le traité de Bologne appelle cette notion unité d'enseignement. Exemple : Au sein du BTS services informatiques aux organisations (BTS SIO), option 1 SLAM solutions logicielles et applications métier proposé par le lycée Flaubert de Rouen, il y a un élément de formation ""Mathématiques pour l'informatique"" composé des éléments de formations  ""mathématiques"" et ""algorithmique avancée""
     -->
-    <xsd:complexType name="TÉlémentDeFormation">
+    <xsd:complexType name="TElementDeFormation">
 		<xsd:complexContent>
             <xsd:extension base="%RC0100%">
                 <xsd:sequence maxOccurs="unbounded">
@@ -453,7 +453,7 @@
         Sous classe de: RC0100
         Note: Une activité pédagogique peut être décrite en spécifiant son type, sa modalité de mise en oeuvre et le matériel nécessaire à sa réalisation. Exemple : travaux pratiques en  réseau informatique nécessitant un routeur internet.
     -->
-    <xsd:complexType name="TActivitéPédagogique">
+    <xsd:complexType name="TActivitePedagogique">
 		<xsd:complexContent>
             <xsd:extension base="%RC0100%">
                 <xsd:all>
@@ -470,9 +470,9 @@
         Sous classe de: RC0000
         Note: Superclasse des classes Réalisation de parcours, Réalisation de module, Réalisation de la session de formation et Réalisation de l'activité pédagogique
     -->
-    <xsd:complexType name="TRéalisation">
+    <xsd:complexType name="TRealisation">
 		<xsd:complexContent>
-            <xsd:extension base="TEntitéDuMondeDeLaFormation">
+            <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
                     <xsd:element name="debut" type="TMLRDate">
                     <xsd:element name="fin" type="TMLRDate">
@@ -493,7 +493,7 @@
         Sous classe de: RC0200
         Note: Une réalisation de parcours est la programmation pendant une période donnée, à un endroit donné. Exemple : Programmation de l'option 1 SLAM solutions logicielles et applications métier du BTS SIO sur la période 2020-2022 au lycée Flaubert de Rouen
     -->
-    <xsd:complexType name="TRéalisationDeParcours">
+    <xsd:complexType name="TRealisationDeParcours">
 		<xsd:complexContent>
             <xsd:extension base="%RC0200%">
                 <xsd:all>
@@ -509,7 +509,7 @@
         Sous classe de: RC0200
         Note: Une réalisation de module est la programmation pendant une période donnée à un endroit donné d'un module de formation. Exemple : Le module du 1er semestre de la 1ère année du BTS SIO option 1 SLAM solutions logicielles et applications métier commence en septembre 2020 et finit en janvier 2021 au Lycée Flaubert de Rouen
     -->
-    <xsd:complexType name="TRéalisationDeModule">
+    <xsd:complexType name="TRealisationDeModule">
 		<xsd:complexContent>
             <xsd:extension base="%RC0200%">
                 <xsd:all>
@@ -541,7 +541,7 @@
         Sous classe de: RC0200
         Note: Une réalisation d'une activité pédagogique est la programmation pendant une période donnée à un endroit donné d'une activité de pédagogique. Exemple : Programmation du premier cours magistral de l'activité pédagogique ""Algotihmique appliquée"" de l'option 1 SLAM solutions logicielles et applications métier du BTS SIO le mardi 8 septembre 2020 de 8h à 9h30 en salle 505 du lycée Flaubert de Rouen
     -->
-    <xsd:complexType name="TRéalisationDActivitéPédagogique">
+    <xsd:complexType name="TRealisationDActivitePedagogique">
             <xsd:extension base="%RC0200%">
                 <xsd:all>
                     <xsd:element name="realise" type="%RC104%">
