@@ -107,9 +107,9 @@
     <xsd:complexType name="TEntiteDuMondeDeLaFormation" id="RC0000">
         <xsd:all>
             <xsd:element name="libelle" type="TMLRString">
-            <xsd:element name="dateMAJ" type="TMLRDate">
-            <xsd:element name="code" type="TMLRString">
-            <xsd:element name="contributeur" type="TIsoRc0003">
+            <xsd:element name="dateDeMiseAJour" minOccurs="0" type="TMLRDate">
+            <xsd:element name="code" minOccurs="0" type="TMLRString">
+            <xsd:element name="contributeur" minOccurs="0" type="TIsoRc0003">
         </xsd:all>
     </xsd:complexType>
     <!--
@@ -123,9 +123,9 @@
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
-                    <xsd:element name="description" type="TMLRString">
-                    <xsd:element name="niveau" type="%RC0017%">
-                    <xsd:element name="delivre" type="%RC0016%">
+                    <xsd:element name="description" minOccurs="0" type="TMLRString">
+                    <xsd:element name="aPourNiveau" minOccurs="0" maxOccurs="unbounded" type="%RC0017%">
+                    <xsd:element name="estAutoriseADelivrerPar" minOccurs="0" maxOccurs="unbounded" type="%RC0016%">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -141,8 +141,8 @@
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
-                    <xsd:element name="date" type="TMLRDate">
-                    <xsd:element name="duree" type="TMLRDuration">
+                    <xsd:element name="dateDHabilitation" type="TMLRDate">
+                    <xsd:element name="dureeDHabilitation" type="TMLRDuration">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -159,7 +159,7 @@
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
                     <xsd:element name="valeur" type="TNaturel">
-                    <xsd:element name="codification" type="TMLRDuration">
+                    <xsd:element name="systemeDeCodification" type="TMLRDuration">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -186,8 +186,8 @@
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
-                    <xsd:element name="prerequis" type="%RC0031%">
-                    <xsd:element name="modalite" type="%RC0032%">
+                    <xsd:element name="prerequis" minOccurs="0" maxOccurs="unbounded" type="%RC0031%">
+                    <xsd:element name="modaliteDeSelection" minOccurs="0" maxOccurs="unbounded" type="%RC0032%">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -237,7 +237,7 @@
             <xsd:element name="devise" type="TCurrency">
             <xsd:element name="tauxTVA" type="TPositiveDouble">
             <xsd:element name="type" type="TVocabulaire">
-            <xsd:element name="description" type="TMLRString">
+            <xsd:element name="description" minOccurs="0" type="TMLRString">
         </xsd:all>
     </xsd:complexType>
     <!--
@@ -251,15 +251,15 @@
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
-                    <xsd:element name="description" type="TMLRString">
-                    <xsd:element name="domaine" type="TVocabulaire">
+                    <xsd:element name="description" minOccurs="0" type="TMLRString">
+                    <xsd:element name="domaine" minOccurs="0" maxOccurs="unbounded" type="TVocabulaire">
                     <xsd:element name="dureeHorsEntreprise" type="TMLRDuration">
-                    <xsd:element name="dureeEnEntreprise" type="TMLRDuration">
-                    <xsd:element name="periode" type="TMLRDuration">
-                    <xsd:element name="creditECTS" type="TCreditsECTS">
-                    <xsd:element name="ressource" type="TIsoRc0002">
-                    <xsd:element name="objectf" type="TIsoRc0003">
-                    <xsd:element name="prerequis" type="TIsoRc0003">
+                    <xsd:element name="dureeEnEntreprise" minOccurs="0" type="TMLRDuration">
+                    <xsd:element name="periode" minOccurs="0" type="TMLRDuration">
+                    <xsd:element name="creditsECTS" minOccurs="0" maxOccurs="unbounded" type="TCreditsECTS">
+                    <xsd:element name="ressource" minOccurs="0" maxOccurs="unbounded" type="TIsoRc0002">
+                    <xsd:element name="aPourObjectif" minOccurs="0" maxOccurs="unbounded" type="TIsoRc0003">
+                    <xsd:element name="aPourPrerequis" minOccurs="0" maxOccurs="unbounded" type="TIsoRc0003">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -273,7 +273,7 @@
     -->
     <xsd:complexType name="TComposition" id="RC0060">
         <xs:sequence>
-            <xsd:element name="element" type="%RC0104%" minOccurs="1" maxOccurs="unbounded">
+            <xsd:element name="elementConstituant" type="%RC0104%" maxOccurs="unbounded">
         </xs:sequence>
     </xsd:complexType>
     <!--
@@ -312,7 +312,10 @@
     <xsd:complexType name="TCompositionAChoix" id="RC0063">
 		<xsd:complexContent>
             <xsd:extension base="%RC0060%">
-                <xsd:extension name="minimum" type="TNaturel">
+              <xsd:all>
+                <xsd:element name="nombreMinimal" type="TNaturel">
+                <xsd:element name="nombreMaximal" type="TNaturel">
+              </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
     </xsd:complexType>
@@ -328,7 +331,7 @@
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
                     <xsd:element name="nombre" type="TPositiveDouble">
-                    <xsd:element name="relatif" type="%RC0100%">
+                    <xsd:element name="relatif" minOccurs="0" type="%RC0100%">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -346,7 +349,7 @@
                 <xsd:all>
                     <xsd:element name="date" type="TMLRDate">
                     <xsd:element name="lieu" type="TMLRString">
-                    <xsd:element name="max" type="TNaturel">
+                    <xsd:element name="max" minOccurs="0" type="TNaturel">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -364,7 +367,7 @@
                 <xsd:all>
                     <xsd:element name="debut" type="TMLRDate">
                     <xsd:element name="fin" type="TMLRDate">
-                    <xsd:element name="commentaire" type="TMLRString">
+                    <xsd:element name="commentaire" minOccurs="0" type="TMLRString">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -403,9 +406,9 @@
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
-                    <xsd:element name="condition" type="TMLRDate">
-                    <xsd:element name="compose" type="TMLRDate">
-                    <xsd:element name="utilise" type="%RC0060%">
+                    <xsd:element name="conditionDAcces" minOccurs="0" maxOccurs="unbounded" type="TMLRDate">
+                    <xsd:element name="seComposeDe" minOccurs="0" maxOccurs="unbounded" type="TMLRDate">
+                    <xsd:element name="utilise" minOccurs="0" type="%RC0060%">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -421,9 +424,9 @@
 		<xsd:complexContent>
             <xsd:extension base="%RC0100%">
                 <xsd:all>
-                    <xsd:element name="utilise" type="%RC0104%">
-                    <xsd:element name="compose" type="%RC0103%">
-                    <xsd:element name="suivant" type="%RC0103%">
+                    <xsd:element name="utilise" minOccurs="0" maxOccurs="unbounded" type="%RC0104%">
+                    <xsd:element name="seComposeDe" minOccurs="0" maxOccurs="unbounded" type="%RC0103%">
+                    <xsd:element name="suivant" minOccurs="0" maxOccurs="unbounded" type="%RC0103%">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -439,9 +442,9 @@
 		<xsd:complexContent>
             <xsd:extension base="%RC0100%">
                 <xsd:sequence maxOccurs="unbounded">
-                    <xsd:element name="composant" type="%RC0104%" maxOccurs="unbounded">
-                    <xsd:element name="composant" type="%RC0105%" maxOccurs="unbounded">
-                    <xsd:element name="modaliteEvaluation" type="TMLRString" maxOccurs="unbounded">
+                    <xsd:element name="modaliteDEvaluation" minOccurs="0" maxOccurs="unbounded" type="TMLRString">
+                    <xsd:element name="seComposeDe" minOccurs="0" maxOccurs="unbounded" type="%RC0104%" >
+                    <xsd:element name="seComposeDe" minOccurs="0" maxOccurs="unbounded" type="%RC0105%" >
                 </xsd:choice>
             </xsd:extension>
 		</xsd:complexContent>
@@ -457,8 +460,8 @@
 		<xsd:complexContent>
             <xsd:extension base="%RC0100%">
                 <xsd:all>
-                    <xsd:element name="type" type="TVocabulaire">
-                    <xsd:element name="modalite" type="TVocabulaire">
+                    <xsd:element name="typeDActivite" minOccurs="0" type="TVocabulaire">
+                    <xsd:element name="modalitePedagogique" minOccurs="0" maxOccurs="unbounded" type="TVocabulaire">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -474,14 +477,15 @@
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
-                    <xsd:element name="debut" type="TMLRDate">
-                    <xsd:element name="fin" type="TMLRDate">
-                    <xsd:element name="responsable" type="TIsoRc0003">
-                    <xsd:element name="intervenant" type="TIsoRc0003">
+                    <xsd:element name="debut" minOccurs="0" type="TMLRDate">
+                    <xsd:element name="fin" minOccurs="0" type="TMLRDate">
+                    <xsd:element name="lieu" minOccurs="0" type="TMLRString">
+                    <xsd:element name="responsable" minOccurs="0" maxOccurs="unbounded" type="TIsoRc0003">
+                    <xsd:element name="intervenant" minOccurs="0" maxOccurs="unbounded" type="TIsoRc0003">
                     <xsd:element name="entreSortiePermanente" type="xs:boolean">
-                    <xsd:element name="miseEnOeuvre" type="TIsoRc0001">
-                    <xsd:element name="sessionDInformation" type="%RC0080%">
-                    <xsd:element name="periodeInterruption" type="%RC0090%">
+                    <xsd:element name="estMiseEnOeuvreDans" minOccurs="0" maxOccurs="unbounded" type="TIsoRc0001">
+                    <xsd:element name="sessionDInformation" minOccurs="0" maxOccurs="unbounded" type="%RC0080%">
+                    <xsd:element name="periodeDInterruption" minOccurs="0" maxOccurs="unbounded" type="%RC0090%">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -497,7 +501,7 @@
 		<xsd:complexContent>
             <xsd:extension base="%RC0200%">
                 <xsd:all>
-                    <xsd:element name="realise" type="%RC0101%">
+                    <xsd:element name="realise" minOccurs="0" maxOccurs="unbounded" type="%RC0101%">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -513,7 +517,7 @@
 		<xsd:complexContent>
             <xsd:extension base="%RC0200%">
                 <xsd:all>
-                    <xsd:element name="realise" type="%RC0103%">
+                    <xsd:element name="realise" minOccurs="0" maxOccurs="unbounded" type="%RC0103%">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -529,7 +533,7 @@
 		<xsd:complexContent>
             <xsd:extension base="%RC0200%">
                 <xsd:all>
-                    <xsd:element name="realise" type="%RC0104%">
+                    <xsd:element name="realise" minOccurs="0" maxOccurs="unbounded" type="%RC0104%">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -544,7 +548,7 @@
     <xsd:complexType name="TRealisationDActivitePedagogique" id="RC0204">
             <xsd:extension base="%RC0200%">
                 <xsd:all>
-                    <xsd:element name="realise" type="%RC0104%">
+                    <xsd:element name="realise" minOccurs="0" maxOccurs="unbounded" type="%RC0104%">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
