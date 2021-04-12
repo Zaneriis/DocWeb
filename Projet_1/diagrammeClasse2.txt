@@ -78,7 +78,7 @@ abstract class Composition {
 }
 class CompositionObligatoire {
 }
-class CompositionOperationnelle {
+class CompositionOptionnelle {
 }
 class CompositionAChoix {
     Float NombreMinimal
@@ -191,7 +191,7 @@ CaracteristiqueDelaFormation <|-- Formation
 ConditionDAcces <|-- Formation
 
 Composition <|-- CompositionObligatoire
-Composition <|-- CompositionOperationnelle
+Composition <|-- CompositionOptionnelle
 Composition <|-- CompositionAChoix
 
 Formation <|-- Parcours

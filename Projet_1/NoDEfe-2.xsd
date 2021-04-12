@@ -104,7 +104,7 @@
         Note: Super classe de toutes les classes. Elle regroupe toutes les propriétés des classes présentes dans ce modèle
 
     -->
-    <xsd:complexType name="TEntiteDuMondeDeLaFormation">
+    <xsd:complexType name="TEntiteDuMondeDeLaFormation" id="RC0000">
         <xsd:all>
             <xsd:element name="libelle" type="TMLRString">
             <xsd:element name="dateMAJ" type="TMLRDate">
@@ -119,7 +119,7 @@
         Sous classe de: RC0000
         Note: Exemple : reconnaissance des compétences, des connaissances, des savoir-faire d'une personne
     -->
-    <xsd:complexType name="TCertificatBadgeDiplome">
+    <xsd:complexType name="TCertificatBadgeDiplome" id="RC0015">
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
@@ -137,7 +137,7 @@
         Sous classe de: RC0000
         Note: Exemple : Certification ISO 9001, QUALIOPI
     -->
-    <xsd:complexType name="TCertification">
+    <xsd:complexType name="TCertification" id="RC0016">
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
@@ -154,7 +154,7 @@
         Sous classe de: RC0000
         Note: Exemple : Niveau 5 du CEC
     -->
-    <xsd:complexType name="TNiveauDeCertification">
+    <xsd:complexType name="TNiveauDeCertification" id="RC0017">
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
@@ -182,7 +182,7 @@
         Sous classe de: RC0000
         Note: Ces conditions peuvent être exprimées de façon formelle ou informelle. Il peut y avoir plusieurs instances des modalités de sélection
     -->
-    <xsd:complexType name="TConditionDAccès">
+    <xsd:complexType name="TConditionDAccès" id="RC0030">
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
@@ -199,7 +199,7 @@
         Sous classe de: RC0000
         Note: Ces prérequis sont exprimés de manière informelle
     -->
-    <xsd:complexType name="TPrerequis">
+    <xsd:complexType name="TPrerequis" id="RC0031">
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
@@ -215,7 +215,7 @@
         Sous classe de: RC0000
         Note: Ces modalités de sélection sont décrites de manière informelle
     -->
-    <xsd:complexType name="TModaliteDeSelection">
+    <xsd:complexType name="TModaliteDeSelection" id="RC0032">
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
@@ -231,7 +231,7 @@
         Sous classe de:
         Note: Exemple : Les frais d'inscription au BTS SIO ou les frais pédagogiques du même BTS en formation continue
     -->
-    <xsd:complexType name="TFraisDeFormation">
+    <xsd:complexType name="TFraisDeFormation" id="RC0040">
         <xsd:all>
             <xsd:element name="montant" type="TPositiveDouble">
             <xsd:element name="devise" type="TCurrency">
@@ -247,7 +247,7 @@
         Sous classe de: RC0000
         Note: Super classe des classes offre de formation et formation
     -->
-    <xsd:complexType name="TCaracteristiquesDeLaFormation">
+    <xsd:complexType name="TCaracteristiquesDeLaFormation" id="RC0050">
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
@@ -271,7 +271,7 @@
         Sous classe de:
         Note: Super classe des classes ""composition"" obligatoire, optionnelle et à choix
     -->
-    <xsd:complexType name="TComposition">
+    <xsd:complexType name="TComposition" id="RC0060">
         <xs:sequence>
             <xsd:element name="element" type="%RC0104%" minOccurs="1" maxOccurs="unbounded">
         </xs:sequence>
@@ -283,7 +283,7 @@
         Sous classe de: RC0060
         Note: Exemple : dans le BTS SIO pour le module ""bloc 2"" du parcours ""SLAM"", l'élément de formation ""Conception et développement d'applications est obligatoire
     -->
-    <xsd:complexType name="TCompositionObligatoire">
+    <xsd:complexType name="TCompositionObligatoire" id="RC0061">
 		<xsd:complexContent>
             <xsd:extension base="%RC0060%">
             </xsd:extension>
@@ -296,7 +296,7 @@
         Sous classe de: RC0060
         Note: Exemple : dans le BTS SIO pour le parcours ""SLAM"", l'élément de formation ""Mathématiques approfondies"" est optionnel
     -->
-    <xsd:complexType name="TCompositionOptionnelle">
+    <xsd:complexType name="TCompositionOptionnelle" id="RC0062">
 		<xsd:complexContent>
             <xsd:extension base="%RC0060%">
             </xsd:extension>
@@ -309,7 +309,7 @@
         Sous classe de: RC0060
         Note: Exemple : dans le module M d'un parcours P, un étudiant peut choisir entre 2 et 3 éléments de formation parmi 5
     -->
-    <xsd:complexType name="TCompositionAChoix">
+    <xsd:complexType name="TCompositionAChoix" id="RC0063">
 		<xsd:complexContent>
             <xsd:extension base="%RC0060%">
                 <xsd:extension name="minimum" type="TNaturel">
@@ -323,7 +323,7 @@
         Sous classe de: RC0000
         Note:
     -->
-    <xsd:complexType name="TCreditsECTS">
+    <xsd:complexType name="TCreditsECTS" id="RC0070">
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
@@ -340,7 +340,7 @@
         Sous classe de: RC0000
         Note: Exemple : le BTS SIO option SLAM pour l'année 2020-2021 sera présenté aux étudiants le 4 avril 2020 à 14h
     -->
-    <xsd:complexType name="TSessionInformation">
+    <xsd:complexType name="TSessionDInformation" id="RC0080">
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
@@ -358,7 +358,7 @@
         Sous classe de: RC0000
         Note: Exemple :  pour l'année 2020-2021 les étudiants BTS SIO n'ont pas cours du 19 décembre 2020 au 3 janvier 2021
     -->
-    <xsd:complexType name="TPeriodeInterruption">
+    <xsd:complexType name="TPeriodeInterruption" id="RC0090">
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
@@ -399,7 +399,7 @@
         Sous classe de: RC0100
         Note: Cette classe se compose d'un ou plusieurs modules. Exemple : Itinéraire pédagogique en deux ans, en formation initiale, permettant d'acquérir un BTS services informatiques aux organisations (BTS SIO), option 1 SLAM solutions logicielles et applications métier proposé par le lycée Flaubert de Rouen
     -->
-    <xsd:complexType name="TParcours">
+    <xsd:complexType name="TParcours" id="RC0102">
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
@@ -417,7 +417,7 @@
         Sous classe de: RC0100
         Note: Un module est l'organisation temporelle, thématique ou pédagogique d'une partie de la formation. Exemple : AU lycée Flaubert de Rouen, l'option 1 SLAM solutions logicielles et applications métier du BTS SIO est composée de 2 modules 1ère année et 2ème année, ce deuxième succédant au premier. Chaque année étant composée de 2 modules 1er semestre et 2eme semestre, le 2ème succédant au 1er
     -->
-    <xsd:complexType name="TModule">
+    <xsd:complexType name="TModule" id="RC0103">
 		<xsd:complexContent>
             <xsd:extension base="%RC0100%">
                 <xsd:all>
@@ -435,7 +435,7 @@
         Sous classe de: RC0100
         Note: Un élément de formation peut être composé d'activités pédagogiques. Il peut correspondre à un ""cours"" ou un ensemble de cours pédagogiquement cohérents. Pour l'enseignement supérieur le traité de Bologne appelle cette notion unité d'enseignement. Exemple : Au sein du BTS services informatiques aux organisations (BTS SIO), option 1 SLAM solutions logicielles et applications métier proposé par le lycée Flaubert de Rouen, il y a un élément de formation ""Mathématiques pour l'informatique"" composé des éléments de formations  ""mathématiques"" et ""algorithmique avancée""
     -->
-    <xsd:complexType name="TElementDeFormation">
+    <xsd:complexType name="TElementDeFormation" id="RC0104">
 		<xsd:complexContent>
             <xsd:extension base="%RC0100%">
                 <xsd:sequence maxOccurs="unbounded">
@@ -453,7 +453,7 @@
         Sous classe de: RC0100
         Note: Une activité pédagogique peut être décrite en spécifiant son type, sa modalité de mise en oeuvre et le matériel nécessaire à sa réalisation. Exemple : travaux pratiques en  réseau informatique nécessitant un routeur internet.
     -->
-    <xsd:complexType name="TActivitePedagogique">
+    <xsd:complexType name="TActivitePedagogique" id="RC0105">
 		<xsd:complexContent>
             <xsd:extension base="%RC0100%">
                 <xsd:all>
@@ -470,7 +470,7 @@
         Sous classe de: RC0000
         Note: Superclasse des classes Réalisation de parcours, Réalisation de module, Réalisation de la session de formation et Réalisation de l'activité pédagogique
     -->
-    <xsd:complexType name="TRealisation">
+    <xsd:complexType name="TRealisation" id="RC0200">
 		<xsd:complexContent>
             <xsd:extension base="TEntiteDuMondeDeLaFormation">
                 <xsd:all>
@@ -480,7 +480,7 @@
                     <xsd:element name="intervenant" type="TIsoRc0003">
                     <xsd:element name="entreSortiePermanente" type="xs:boolean">
                     <xsd:element name="miseEnOeuvre" type="TIsoRc0001">
-                    <xsd:element name="sessionInformation" type="%RC0080%">
+                    <xsd:element name="sessionDInformation" type="%RC0080%">
                     <xsd:element name="periodeInterruption" type="%RC0090%">
                 </xsd:all>
             </xsd:extension>
@@ -493,11 +493,11 @@
         Sous classe de: RC0200
         Note: Une réalisation de parcours est la programmation pendant une période donnée, à un endroit donné. Exemple : Programmation de l'option 1 SLAM solutions logicielles et applications métier du BTS SIO sur la période 2020-2022 au lycée Flaubert de Rouen
     -->
-    <xsd:complexType name="TRealisationDeParcours">
+    <xsd:complexType name="TRealisationDeParcours" id="RC0201">
 		<xsd:complexContent>
             <xsd:extension base="%RC0200%">
                 <xsd:all>
-                    <xsd:element name="realise" type="%RC101%">
+                    <xsd:element name="realise" type="%RC0101%">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -509,11 +509,11 @@
         Sous classe de: RC0200
         Note: Une réalisation de module est la programmation pendant une période donnée à un endroit donné d'un module de formation. Exemple : Le module du 1er semestre de la 1ère année du BTS SIO option 1 SLAM solutions logicielles et applications métier commence en septembre 2020 et finit en janvier 2021 au Lycée Flaubert de Rouen
     -->
-    <xsd:complexType name="TRealisationDeModule">
+    <xsd:complexType name="TRealisationDeModule" id="RC0202">
 		<xsd:complexContent>
             <xsd:extension base="%RC0200%">
                 <xsd:all>
-                    <xsd:element name="realise" type="%RC103%">
+                    <xsd:element name="realise" type="%RC0103%">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -525,11 +525,11 @@
         Sous classe de: RC0200
         Note: Une session de formation est la programmation pendant une période donnée à un endroit donné d'un élément de formation. Exemple : Programmation de l'élément de formation ""Algorithmique appliquée"" de l'option 1 SLAM solutions logicielles et applications métier du BTS SIO de septembre 2020 à janvier 2021 au lycée Flaubert de Rouen.
     -->
-    <xsd:complexType name="TSessionDeFormation">
+    <xsd:complexType name="TSessionDeFormation" id="RC0203">
 		<xsd:complexContent>
             <xsd:extension base="%RC0200%">
                 <xsd:all>
-                    <xsd:element name="realise" type="%RC104%">
+                    <xsd:element name="realise" type="%RC0104%">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
@@ -541,10 +541,10 @@
         Sous classe de: RC0200
         Note: Une réalisation d'une activité pédagogique est la programmation pendant une période donnée à un endroit donné d'une activité de pédagogique. Exemple : Programmation du premier cours magistral de l'activité pédagogique ""Algotihmique appliquée"" de l'option 1 SLAM solutions logicielles et applications métier du BTS SIO le mardi 8 septembre 2020 de 8h à 9h30 en salle 505 du lycée Flaubert de Rouen
     -->
-    <xsd:complexType name="TRealisationDActivitePedagogique">
+    <xsd:complexType name="TRealisationDActivitePedagogique" id="RC0204">
             <xsd:extension base="%RC0200%">
                 <xsd:all>
-                    <xsd:element name="realise" type="%RC104%">
+                    <xsd:element name="realise" type="%RC0104%">
                 </xsd:all>
             </xsd:extension>
 		</xsd:complexContent>
