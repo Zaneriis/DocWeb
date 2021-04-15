@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://www.easyrdf.org/converter -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>EasyRdf - Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Stylesheets -->
+    <link href="./EasyRdf - Converter_files/bootstrap.css" type="text/css" rel="stylesheet" media="screen">
+    <link href="./EasyRdf - Converter_files/prettify.css" type="text/css" rel="stylesheet">
+    <link href="./EasyRdf - Converter_files/easyrdf.css" type="text/css" rel="stylesheet">
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.easyrdf.org/icons/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.easyrdf.org/icons/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://www.easyrdf.org/icons/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="https://www.easyrdf.org/icons/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="https://www.easyrdf.org/favicon.ico">
+
+      </head>
+
+  <body onload="prettyPrint()">
+
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+      <a class="navbar-brand text-hide" href="https://www.easyrdf.org/">EasyRdf</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+                      <li class="nav-item ">
+              <a class="nav-link" href="https://www.easyrdf.org/docs">Documentation</a>
+            </li>
+                      <li class="nav-item ">
+              <a class="nav-link" href="https://www.easyrdf.org/examples">Examples</a>
+            </li>
+                      <li class="nav-item active">
+              <a class="nav-link" href="https://www.easyrdf.org/converter">Converter</a>
+            </li>
+                      <li class="nav-item ">
+              <a class="nav-link" href="https://www.easyrdf.org/support">Support</a>
+            </li>
+                      <li class="nav-item ">
+              <a class="nav-link" href="https://www.easyrdf.org/downloads">Downloads</a>
+            </li>
+                  </ul>
+      </div>
+    </nav>
+
+    <div class="forkme">
+      <a href="https://github.com/easyrdf/easyrdf" class="github-corner" aria-label="View source on GitHub">
+        <!-- Thanks to: http://tholman.com/github-corners/ -->
+<svg width="80" height="80" viewBox="0 0 250 250" style="fill:#FF6000; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+   <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+   <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+   <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+</svg>
+      </a>
+    </div>
+
+    <div class="container">
+<h1>Converter</h1>
+
+<div class="alert alert-danger col-9" role="alert">
+  <strong>Error!</strong>
+  Turtle Parse Error: expected '.', found '@' on line 5, column 2
+</div>
+
+<div class="card">
+  <form method="POST" accept-charset="utf-8" action="https://www.easyrdf.org/converter">
+    <div class="card-body bg-light">
+      <div class="form-group">
+        <label for="data">Input Data:</label>
+        <textarea name="data" id="data" cols="60" rows="7" class="form-control">
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt;.
+@prefix rdf: &lt;"http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+@prefix teaching: &lt;https ://purl.oclc.org/teaching# &gt;.
+@prefix asi_person : &lt;https ://asi.insa-rouen.fr/Personnes/ &gt;.
+@prefix asi_ec : &lt;https ://asi.insa-rouen.fr/ECs/ &gt;.
+asi_person:nicolasMalandain
+rdf:type teaching:Teacher ;
+foaf:name " Nicolas Malandain "^^ xsd : string ;
+teaching:school " INSA de Rouen "^^ xsd : string ;
+teaching:teach asi_ec: programmationAvancee .
+asi_ec:programmationAvancee
+a teaching:Course ;
+teaching:courseTitle " Programmation avanc´ee "@fr ;
+teaching:courseTitle "Object - Oriented Programming ( Java )"@en .</textarea>
+      </div>
+      <div class="form-group">
+        <label for="uri">or URI:</label>
+        <input type="text" name="uri" id="uri" value="http://njh.me/" class="form-control">
+        <small class="form-text text-muted">(This URI is also used as the Base URI, when text is put in the input data box)</small>
+      </div>
+      <div class="form-group">
+        <label for="in">Input Format:</label>
+        <select name="in" id="in" class="form-control col-sm-8"><option value="guess">Guess</option><option value="php">RDF/PHP</option><option value="json">RDF/JSON Resource-Centric</option><option value="jsonld">JSON-LD</option><option value="ntriples">N-Triples</option><option selected="selected" value="turtle">Turtle Terse RDF Triple Language</option><option value="rdfxml">RDF/XML</option><option value="rdfa">RDFa</option></select>
+      </div>
+      <div class="form-group">
+        <label for="out">Output Format:</label>
+        <select name="out" id="out" class="form-control col-sm-8"><option value="php">RDF/PHP</option><option value="json">RDF/JSON Resource-Centric</option><option value="jsonld">JSON-LD</option><option value="ntriples">N-Triples</option><option selected="selected" value="turtle">Turtle Terse RDF Triple Language</option><option value="rdfxml">RDF/XML</option><option value="dot">Graphviz</option><option value="n3">Notation3</option></select>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" name="raw" id="raw" value="1" class="form-check-input">
+        <label class="form-check-label" for="raw">Raw output</label>
+      </div>
+      <div class="form-group text-right">
+        <input type="reset" value="Clear" class="btn">
+        <input type="submit" value="Submit" class="btn btn-primary">
+      </div>
+    </div>
+  </form></div>
+  
+</div>
+
+
+<div class="container my-3">
+  <p>
+    This converter is running version <strong>1.1.1</strong> of EasyRdf.
+  </p>
+</div>
+
+
+
+    <footer class="footer">
+      <div class="container">
+        <p>Written and maintained by <a href="https://njh.me/">Nicholas Humfrey</a>.</p>
+        <p>The library is licensed under the <a href="https://www.opensource.org/licenses/BSD-3-Clause">BSD 3-Clause</a> license and documentation under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>The examples are in the public domain, for more information see <a href="https://unlicense.org/">unlicense.org</a>.</p>
+      </div>
+    </footer>
+
+    <script type="text/javascript" async="" src="./EasyRdf - Converter_files/analytics.js"></script><script src="./EasyRdf - Converter_files/jquery-latest.min.js"></script>
+    <script src="./EasyRdf - Converter_files/bootstrap.bundle.min.js"></script>
+    <script src="./EasyRdf - Converter_files/prettify.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./EasyRdf - Converter_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-37767726-1');
+</script>
+
+  
+
+
+</body></html>

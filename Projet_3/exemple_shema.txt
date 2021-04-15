@@ -1,0 +1,29 @@
+@prefix noDEfr2: <http://example.org/noDEfr2/>
+
+
+//pour les classes
+noDEfr2:Nom
+	rdf:type rdfs:Class
+	rdfs:comment Description
+	rdfs:subClassOf Autre classe
+	
+//pour les propriétés
+noDEfr2:Nom
+	rdf:type rdf:Property
+	rdfs:domain Classe 
+	rdfs:range rdfs:Literal
+	rdfs:comment Description
+	
+	
+//on perd les autres attributs et notamment les id ?
+//indicateur linguistique = langue ? 
+
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,18 @@
+
+
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rdf: <"http://www.w3.org/1999/02/22-rdf-syntax-ns#">.
+@prefix teaching: <https ://purl.oclc.org/teaching# >.
+@prefix asi_person : <https ://asi.insa-rouen.fr/Personnes/ >.
+@prefix xsd: <http //www.w3.org/2001/xmlschema#>.
+@prefix asi_ec : <https ://asi.insa-rouen.fr/ECs/ >.
+asi_person:nicolasMalandain
+	rdf:type teaching:Teacher;
+	foaf:name "Nicolas Malandain"^^xsd:string;
+	teaching:school "INSA de Rouen"^^xsd:string;
+	teaching:teach asi_ec:programmationAvancee .
+
+asi_ec:programmationAvancee
+	a teaching:Course ;
+	teaching:courseTitle "Programmation avancée"@fr;
+	teaching:courseTitle "Object-Oriented Programming (Java)"@en .

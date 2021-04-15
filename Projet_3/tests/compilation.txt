@@ -1,0 +1,1 @@
+xsltproc xml2rdf3.xsl filename.xml > document.rdf
