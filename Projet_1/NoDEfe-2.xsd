@@ -98,7 +98,7 @@
             <xsd:element name="nom" type="TNom"/>
             <xsd:element name="definition" type="TDefinition"/>
             <xsd:sequence>
-                <xsd:element name="sousClasseDe" minOccurs="0" maxOccur="unbounded" type="TIdentifiantClasse"/>
+                <xsd:element name="sousClasseDe" minOccurs="0" maxOccurs="unbounded" type="TIdentifiantClasse"/>
             </xsd:sequence>
             <xsd:element name="note" type="TNotes"/>
             <xsd:sequence>
