@@ -94,7 +94,16 @@
 
     <xsd:complexType name="TClasse">
         <xsd:sequence>
-            <xsd:element name="relation" minOccurs="0" minOccurs="unbounded" type="TRelation"/>
+            <xsd:element name="identifiant" type="TIdentifiantClasse"/>
+            <xsd:element name="nom" type="TNom"/>
+            <xsd:element name="definition" type="TDefinition"/>
+            <xsd:sequence>
+                <xsd:element name="sousClasseDe" minOccurs="0" maxOccur="unbounded" type="TIdentifiantClasse"/>
+            </xsd:sequence>
+            <xsd:element name="note" type="TNotes"/>
+            <xsd:sequence>
+                <xsd:element name="relation" minOccurs="0" minOccurs="unbounded" type="TRelation"/>
+            </xsd:sequence>
         </xsd:sequence>
     </xsd:complexType>
 
