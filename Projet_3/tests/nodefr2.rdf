@@ -1,0 +1,47 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix noDEfr2: <http://example.org/noDEfr2/>.
+
+    
+    noDEfr2:RC0000
+        rdf:type rdfs:Class
+        rdfs:label Entité du monde de la formation
+        rdfs:comment classe abstraite qui regroupe les propriétés communes à toutes les situations ou à l'ensemble de situations visant un ou plusieurs objectifs de développement personnel ou professionnel
+        rdfs:subClassOf 
+
+    noDEfr2:DES000001
+        rdf:type rdf:Property
+        rdfs:label libellé
+        rdfs:comment nommage humainement compréhensible de l'élément
+        rdfs:domain RC0000
+        rdfs:range MLR String
+
+    noDEfr2:DES000002
+        rdf:type rdf:Property
+        rdfs:label date de mise à jour
+        rdfs:comment dernière date de modification d'une information d'un élément
+        rdfs:domain RC0000
+        rdfs:range MLR Date
+
+    
+    noDEfr2:RC0015
+        rdf:type rdfs:Class
+        rdfs:label Certificat, badge, diplome
+        rdfs:comment un élément de cette classe est la reconnaissance des compétences, des connaissances, des savoir-faire d'une personne
+        rdfs:subClassOf RC0000
+
+    noDEfr2:DES015001
+        rdf:type rdf:Property
+        rdfs:label description
+        rdfs:comment Description du diplôme, certificat ou badge
+        rdfs:domain RC0015
+        rdfs:range MLR String
+
+    noDEfr2:DES015017001
+        rdf:type rdf:Property
+        rdfs:label a pour niveau
+        rdfs:comment Niveau du diplome d'un système de codification donné
+        rdfs:domain RC0015
+        rdfs:range 
+

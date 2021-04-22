@@ -2,21 +2,23 @@
 
 
 //pour les classes
-noDEfr2:Nom
+noDEfr2:identifiant
 	rdf:type rdfs:Class
+	rdfs:label Nom
 	rdfs:comment Description
 	rdfs:subClassOf Autre classe
 	
 //pour les propriétés
-noDEfr2:Nom
+noDEfr2:identifiant
 	rdf:type rdf:Property
-	rdfs:domain Classe 
-	rdfs:range rdfs:Literal
+	rdfs:label nom
 	rdfs:comment Description
+	rdfs:domain Classe 
+	rdfs:range règle
 	
 	
-//on perd les autres attributs et notamment les id ?
-//indicateur linguistique = langue ? 
+	
+
 
 	
 	

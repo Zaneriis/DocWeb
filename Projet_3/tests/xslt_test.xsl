@@ -14,17 +14,25 @@
 <xsl:apply-templates/>
 </xsl:template>
 
-<xsl:template match="EntiteDuMondeDeLaFormation/*">
-    <xsl:text>
-        noDEfr2:Nom
-            rdf:type rdfs:Class
-            rdfs:comment Description
-            rdfs:subClassOf Autre classe
-    </xsl:text>
+<xsl:template match="Modele/*">
+    noDEfr2:<xsl:value-of select="identifiant"/>
+        rdf:type rdfs:Class
+        rdfs:label <xsl:value-of select="nom"/>
+        rdfs:comment <xsl:value-of select="definition"/>
+        rdfs:subClassOf <xsl:value-of select="sousClasseDe"/>
+        <xsl:apply-templates select="relation"/>
+
 </xsl:template>
 
-<xsl:variable name="slash">
-/
-</xsl:variable>
+<xsl:template match="relation">
+
+    noDEfr2:<xsl:value-of select="identifiant"/>
+        rdf:type rdf:Property
+        rdfs:label <xsl:value-of select="nom"/>
+        rdfs:comment <xsl:value-of select="definition"/>
+        rdfs:domain <xsl:value-of select="../identifiant"/>
+        rdfs:range <xsl:value-of select="regleDeContenu"/>
+        
+</xsl:template>
 
 </xsl:stylesheet>
