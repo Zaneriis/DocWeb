@@ -15,7 +15,7 @@
             <definition>nommage humainement compréhensible de l'élément</definition>
             <indicateurLinguistique>oui</indicateurLinguistique>
             <coDomaine>Littéral</coDomaine>
-            <regleDeContenu>MLR String</regleDeContenu>
+            <regleDeContenu>MLR String</regleDeContenu>\subsection{Choix et implémentations}
             <raffine></raffine>
             <exemple>Pour une instance de la classe RC0020 Offre de formation, le libellé pourraît être " BTS services informatiques aux organisations"</exemple>
             <note></note>
