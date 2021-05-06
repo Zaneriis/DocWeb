@@ -8,14 +8,14 @@ Lien : https://www.overleaf.com/5648792571gydrbwmvvtqf
 
 ## Obtention du xml de sortie
 
-Pour lire la sortie xml sur le terminal :  
+Enregistrement de la sortie du premier filtre NoDEfr-2.xsl (qui permet d'avoir un document xml bien formé) :
 
-``` bash
-saxonb-xslt content.xml NoDEfr-2.xsl
+```bash
+saxonb-xslt -o output1.xml content.xml NoDEfr-2.xsl
 ```
+Le fichier output.xml correspond aux attentes mais il contient des balises dont le contenu est vide. Pour les supprimer, on applique un nouveau filtre sur le fichier de sortie output1.xml :
 
-Pour enregistrer la sortie xml dans un fichier output.xml :
+```bash
+saxonb-xslt -o output2.xml output1.xml filtre_vides.xsl
 
-``` bash
-saxonb-xslt -o output.xml content.xml NoDEfr-2.xsl
 ```
