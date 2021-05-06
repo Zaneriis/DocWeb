@@ -27,10 +27,9 @@
     office:version="1.0">
 
     <xsl:output method="html" encoding="UTF-8"/>
-
-    <xsl:strip-space elements="*"/>
-
+    
     <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
     <xsl:template match="/">
             <xsl:element name="Modele">
                 <xsl:apply-templates select=".//table:table[@table:name='Classes']/table:table-row/following-sibling::table:table-row[1]"/>
@@ -38,75 +37,64 @@
 
     </xsl:template>
 
-
-    <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--> 
     <xsl:template match="table:table-row">
-        <xsl:if test="position() &lt; last()-3">
-            <xsl:variable name="idClasse">
+        <xsl:variable name="idClasse">
+            <xsl:value-of select=".//table:table-cell[1]/text:p"/>
+        </xsl:variable>
+        <xsl:element name="classe">
+            <xsl:element name="identifiant">
                 <xsl:value-of select=".//table:table-cell[1]/text:p"/>
-            </xsl:variable>
-            <xsl:element name="classe">
-                <!--<xsl:element name="test">
-                    <xsl:value-of select=".//@table:style-name"/>
-                </xsl:element>-->
+            </xsl:element>
+            <xsl:element name="nom">
+                <xsl:value-of select=".//table:table-cell[2]/text:p"/>
+            </xsl:element>
+            <xsl:element name="definition">
+                <xsl:value-of select=".//table:table-cell[3]/text:p"/>
+            </xsl:element>
+            <xsl:element name="sousClasseDe">
+                <xsl:value-of select=".//table:table-cell[4]/text:p"/>
+            </xsl:element>
+            <xsl:element name="note">
+                <xsl:value-of select=".//table:table-cell[5]/text:p"/>
+            </xsl:element>
+            <xsl:apply-templates select="//table:table[@table:name=$idClasse]"/>
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template match="table:table">
+        <xsl:for-each select=".//table:table-row/following-sibling::table:table-row[1]">
+            <xsl:element name="relation">
                 <xsl:element name="identifiant">
                     <xsl:value-of select=".//table:table-cell[1]/text:p"/>
                 </xsl:element>
                 <xsl:element name="nom">
                     <xsl:value-of select=".//table:table-cell[2]/text:p"/>
                 </xsl:element>
-                <xsl:element name="definition">
+                <xsl:element name="defintion">
                     <xsl:value-of select=".//table:table-cell[3]/text:p"/>
                 </xsl:element>
-                <xsl:element name="sousClasseDe">
+                <xsl:element name="indicateurLinguistique">
                     <xsl:value-of select=".//table:table-cell[4]/text:p"/>
                 </xsl:element>
-                <xsl:element name="note">
+                <xsl:element name="coDomaine">
                     <xsl:value-of select=".//table:table-cell[5]/text:p"/>
                 </xsl:element>
-                <xsl:apply-templates select="//table:table[@table:name=$idClasse]"/>
-            </xsl:element>
-        </xsl:if>
-    </xsl:template>
-
-    <xsl:template match="table:table">
-        <xsl:for-each select=".//table:table-row/following-sibling::table:table-row[1]">
-            <xsl:if test="position() &lt; last()-3">
-                <xsl:element name="relation">
-                    <!--<xsl:element name="test">
-                        <xsl:value-of select=".//@table:style-name"/>
-                    </xsl:element>-->
-                    <xsl:element name="identifiant">
-                        <xsl:value-of select=".//table:table-cell[1]/text:p"/>
-                    </xsl:element>
-                    <xsl:element name="nom">
-                        <xsl:value-of select=".//table:table-cell[2]/text:p"/>
-                    </xsl:element>
-                    <xsl:element name="defintion">
-                        <xsl:value-of select=".//table:table-cell[3]/text:p"/>
-                    </xsl:element>
-                    <xsl:element name="indicateurLinguistique">
-                        <xsl:value-of select=".//table:table-cell[4]/text:p"/>
-                    </xsl:element>
-                    <xsl:element name="coDomaine">
-                        <xsl:value-of select=".//table:table-cell[5]/text:p"/>
-                    </xsl:element>
-                    <xsl:element name="regleDeContenu">
-                        <xsl:value-of select=".//table:table-cell[6]/text:p"/>
-                    </xsl:element>
-                    <xsl:element name="raffine">
-                        <xsl:value-of select=".//table:table-cell[7]/text:p"/>
-                    </xsl:element>
-                    <xsl:element name="exemple">
-                        <xsl:value-of select=".//table:table-cell[8]/text:p"/>
-                    </xsl:element>
-                    <xsl:element name="note">
-                        <xsl:value-of select=".//table:table-cell[9]/text:p"/>
-                    </xsl:element>
+                <xsl:element name="regleDeContenu">
+                    <xsl:value-of select=".//table:table-cell[6]/text:p"/>
                 </xsl:element>
-            </xsl:if>
+                <xsl:element name="raffine">
+                    <xsl:value-of select=".//table:table-cell[7]/text:p"/>
+                </xsl:element>
+                <xsl:element name="exemple">
+                    <xsl:value-of select=".//table:table-cell[8]/text:p"/>
+                </xsl:element>
+                <xsl:element name="note">
+                    <xsl:value-of select=".//table:table-cell[9]/text:p"/>
+                </xsl:element>
+            </xsl:element>
         </xsl:for-each>        
     </xsl:template> 
+
     <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
 </xsl:stylesheet> 

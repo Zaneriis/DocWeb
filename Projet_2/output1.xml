@@ -1,0 +1,3047 @@
+<Modele>
+   <classe>
+      <identifiant>ISO-IEC22602:RC0007</identifiant>
+      <nom>Institution</nom>
+      <definition>un élément de cette classe est 
+         une entité composée d'êtres humains, organisée dans la durée,en vue d'une finalité et dotée d'une personalité juridique
+      </definition>
+      <sousClasseDe>RC0700</sousClasseDe>
+      <note>Exemple : Le lycée Flaubert de Rouen</note>
+   </classe>
+   <classe>
+      <identifiant>RC0000</identifiant>
+      <nom>Entité du monde de la formation</nom>
+      <definition>classe abstraite qui regroupe les propriétés communes à toutes les situations ou à l'ensemble de situations visant un ou plusieurs
+         objectifs de développement personnel ou professionnel
+      </definition>
+      <sousClasseDe></sousClasseDe>
+      <note>Super classe de toutes les classes. Elle regroupe toutes les propriétés des classes présentes dans ce modèle  </note>
+      <relation>
+         <identifiant>DES000001</identifiant>
+         <nom>libellé</nom>
+         <defintion>nommage humainement compréhensible de l'élément</defintion>
+         <indicateurLinguistique>oui</indicateurLinguistique>
+         <coDomaine>Littéral</coDomaine>
+         <regleDeContenu>MLR String</regleDeContenu>
+         <raffine></raffine>
+         <exemple>Pour une instance de la classe RC0020 Offre de formation, le libellé pourraît être " BTS services informatiques aux organisations"</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES000002</identifiant>
+         <nom>date de mise à jour</nom>
+         <defintion>dernière date de modification d'une information d'un élément</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Littéral</coDomaine>
+         <regleDeContenu>MLR Date</regleDeContenu>
+         <raffine></raffine>
+         <exemple>Pour une instance de la Classe RC0105 Activité pédagogique, le changement de modalité pédagogique sera daté</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES000003</identifiant>
+         <nom>code</nom>
+         <defintion>code "humain" permettant de désigner de manière non ambigüe un élément</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Littéral</coDomaine>
+         <regleDeContenu>MLR String</regleDeContenu>
+         <raffine></raffine>
+         <exemple>Au CNED le BTS SIO est identifié par le code "8TSI1DIX20"</exemple>
+         <note>Ce code a du sens au niveau local</note>
+      </relation>
+      <relation>
+         <identifiant>DES000003001</identifiant>
+         <nom>contributeur</nom>
+         <defintion>contributeur de la dernière modification de l'information</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>ISO_IEC_19788-1:2010::RC0003</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>Ce contributeur peut être une personne physique ou morale</exemple>
+         <note>0</note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0015</identifiant>
+      <nom>Certificat, badge, diplome</nom>
+      <definition>un élément de cette classe est la reconnaissance des compétences, des connaissances, des savoir-faire d'une personne</definition>
+      <sousClasseDe>RC0000</sousClasseDe>
+      <note>Exemple : reconnaissance des compétences, des connaissances, des savoir-faire d'une personne</note>
+      <relation>
+         <identifiant>DES015001</identifiant>
+         <nom>description</nom>
+         <defintion>Description du diplôme, certificat ou badge</defintion>
+         <indicateurLinguistique>oui</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>MLR String</regleDeContenu>
+         <raffine></raffine>
+         <exemple>L'ONISEP décrit le BTS SIO de la façon suivante : "Couvrant tous les secteurs professionnels, les BTS forment des collaborateurs
+            d'ingénieur, des assistants commerciaux ou techniques, des assistants clientèle, des chefs de chantier, etc. selon les secteurs.
+            Le BTS se prépare en 2 ans après le bac en lycée, en école ou par l'apprentissage. Le recrutement se fait sur dossier. Une
+            mise à niveau de 1 an est obligatoire pour l'accès en BTS management en hôtellerie-restauration pour les élèves n'étant pas
+            titulaires du bac sciences et technologies de l'hôtellerie et de la restauration (STHR). Les BTS visent une insertion professionnelle
+            directe. Poursuite d'études possible, notamment en licence pro (pour 1 an)."
+         </exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES015017001</identifiant>
+         <nom>a pour niveau</nom>
+         <defintion>Niveau du diplome d'un système de codification donné</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0017</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note>0</note>
+      </relation>
+      <relation>
+         <identifiant>DES015016001</identifiant>
+         <nom>est autorisé à délivrer par</nom>
+         <defintion>Habilitation ou certificat permettant de délivrer un diplome, un certficat, un badge, une attestation, etc.</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0016</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine>0</raffine>
+         <exemple>n</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0016</identifiant>
+      <nom>Certification</nom>
+      <definition>un élément de cette classe est la reconnaissance de la qualité de l'offre d'un organisme donné selon un référentiel spécifié</definition>
+      <sousClasseDe>RC0000</sousClasseDe>
+      <note>Exemple : Certification ISO 9001, QUALIOPI</note>
+      <relation>
+         <identifiant>DES016001</identifiant>
+         <nom>date d'habilitation</nom>
+         <defintion>Date d'obtention de l'habilitation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Littéral</coDomaine>
+         <regleDeContenu>MLR Date</regleDeContenu>
+         <raffine></raffine>
+         <exemple>2000</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES016002</identifiant>
+         <nom>durée d'habilitation</nom>
+         <defintion>Durée de validité de l'habilitation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Littéral</coDomaine>
+         <regleDeContenu>MLR Duration</regleDeContenu>
+         <raffine></raffine>
+         <exemple>6 ans</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0017</identifiant>
+      <nom>Niveau de certification</nom>
+      <definition>un élément de cette classe représente un niveau de certification dans un système de codification</definition>
+      <sousClasseDe>RC0000</sousClasseDe>
+      <note>Exemple : Niveau 5 du CEC</note>
+      <relation>
+         <identifiant>DES017001</identifiant>
+         <nom>valeur</nom>
+         <defintion>Niveau de la certification</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>Nombre naturel</regleDeContenu>
+         <raffine></raffine>
+         <exemple>5</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES017002</identifiant>
+         <nom>système de codification</nom>
+         <defintion>Nom du système de codification du diplôme, certificat, badge</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>IRI</regleDeContenu>
+         <raffine></raffine>
+         <exemple>
+            http://data.europa.eu/esco/eqf/5
+            
+         </exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0020</identifiant>
+      <nom>Offre de formation</nom>
+      <definition>un élément de cette classe est une formation décrite au niveau national, cette formation pouvant donner lieu à une attestation
+         ou à préparer à un diplôme, une qualification, un certificat
+      </definition>
+      <sousClasseDe>RC0050, RC0030</sousClasseDe>
+      <note>Exemple : description d'un BTS services informatiques aux organisations (BTS SIO) au niveau national</note>
+      <relation>
+         <identifiant>DES020001</identifiant>
+         <nom>type</nom>
+         <defintion>indique à quel type, catégorie, nationale de formation la formation appartient</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Littéral</coDomaine>
+         <regleDeContenu>Vocabulaire</regleDeContenu>
+         <raffine></raffine>
+         <exemple>L'Onisep dispose d'une liste de types de formation avec la formation initiale, type de formation en cours, hierarchisée en
+            3 niveaux avec des redondances (un type peut apparaitre à plusieurs endroits de la hierarchie)
+         </exemple>
+         <note>L'Onisep doit nous fournir la liste</note>
+      </relation>
+      <relation>
+         <identifiant>DES020002</identifiant>
+         <nom>stage</nom>
+         <defintion>indique les stages prévus dans le référentiels de formation</defintion>
+         <indicateurLinguistique>oui</indicateurLinguistique>
+         <coDomaine>Littéral</coDomaine>
+         <regleDeContenu>MLR String</regleDeContenu>
+         <raffine></raffine>
+         <exemple>Par exemple "Pour le BTS SIO il y a deux stages obligatoires, l'un en fin de première année (4 à 5 semaines consécutives)
+            et l'autre en fin de cursus (5 à 6 semaines consécutives), en tout 10 semaines"
+         </exemple>
+         <note>La cardinalité multiple permet de décrire chaque stage</note>
+      </relation>
+      <relation>
+         <identifiant>DES020003</identifiant>
+         <nom>métier visé</nom>
+         <defintion>métier(s) au(x)quel(s) donne(nt) accès la formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Littéral</coDomaine>
+         <regleDeContenu>Vocabulaire</regleDeContenu>
+         <raffine></raffine>
+         <exemple>R.O.M.E.</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES020004</identifiant>
+         <nom>acronyme</nom>
+         <defintion>Acronyme officiel de la formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>MLR String</regleDeContenu>
+         <raffine></raffine>
+         <exemple>BTS SIO</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES020005</identifiant>
+         <nom>ressource</nom>
+         <defintion>Lien vers des ressources en rapport avec l'offre de formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>IRI</regleDeContenu>
+         <raffine></raffine>
+         <exemple>
+            https://www.education.gouv.fr/bo/2011/22/esrs1108973a.htm
+            
+         </exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES020017001</identifiant>
+         <nom>niveau de sortie</nom>
+         <defintion>indique le niveau de formation obtenu à la fin de la formation si le certificat est validé</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0017</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>L'offre de formation BTS SIO peut être reliée au niveau de certification 5 du CEC</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES020020001</identifiant>
+         <nom>se décline en</nom>
+         <defintion>une offre de formation se décline en une autre offre de formation pour par exemple préciser des options</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0020</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>L'offre de formation BTS SIO peut être reliée à deux offres de formation représentant les options SISR et SLAM</exemple>
+         <note>Chaque option peut éventuellement est une offre de formation en tant que telle</note>
+      </relation>
+      <relation>
+         <identifiant>DES020020002</identifiant>
+         <nom>a évolué en</nom>
+         <defintion>historique de la formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0020</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>L'offre de formation BTS SIO peut être reliée à l'ancienne offre de formation BTS Informatique de Gestion</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES020030001</identifiant>
+         <nom>condition d'accès</nom>
+         <defintion>conditions d'accès aux actions de formation de cette offre</defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine>RC0030</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>L'offre de formation BTS SIO option SISR peut être reliée à une modalité de sélection représentant ici un bac général, le
+            bac pro Système Numérique, les bacs techniques (STMG, STI2D), des entretiens, etc.
+         </exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES020101001</identifiant>
+         <nom>est matérialisée</nom>
+         <defintion>L'offre de formation est matérialisée dans un ou plusieurs établissements</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0101</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>L'offre de formation BTS SIO est reliée avec l'Action de formation BTS SIO du Lycée Gustave Flaubert de Rouen</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0030</identifiant>
+      <nom>Condition d'accès</nom>
+      <definition>un élément de cette classe indique les conditions d'admission pour pouvoir postuler à une offre de formation</definition>
+      <sousClasseDe>RC0000</sousClasseDe>
+      <note>Ces conditions peuvent être exprimées de façon formelle ou informelle. Il peut y avoir plusieurs instances des modalités de
+         sélection
+      </note>
+      <relation>
+         <identifiant>DES030031001</identifiant>
+         <nom>prérequis</nom>
+         <defintion>Les prérequis sont les caractéristiques du candidat, les différents niveaux de connaissances, de savoir-faire, d’expériences
+            professionnelles ou de fonctions exercées nécessaires pour suivre efficacement une formation déterminée
+         </defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0031</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine>L'offre de formation BTS SIO peut être relié vers un prérequis représentant l'obtention d'un bac</raffine>
+         <exemple></exemple>
+         <note>0</note>
+      </relation>
+      <relation>
+         <identifiant>DES030032001</identifiant>
+         <nom>modalité de sélection</nom>
+         <defintion>La méthode de sélection permettant de retenir un candidat</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0032</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine>L'offre de formation BTS SIO peut être relié vers une modalité de sélection sur dossier</raffine>
+         <exemple></exemple>
+         <note>0</note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0031</identifiant>
+      <nom>Prérequis</nom>
+      <definition>un élément de cette classe indique un ou plusieurs prérequis pour pouvoir postuler à une offre de formation</definition>
+      <sousClasseDe>RC0000</sousClasseDe>
+      <note>Ces prérequis sont exprimés de manière informelle</note>
+      <relation>
+         <identifiant>DES031001</identifiant>
+         <nom>description</nom>
+         <defintion>description d'un ou plusiuers prérequis</defintion>
+         <indicateurLinguistique>oui</indicateurLinguistique>
+         <coDomaine>Littéral</coDomaine>
+         <regleDeContenu>MLR String</regleDeContenu>
+         <raffine></raffine>
+         <exemple>1</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0032</identifiant>
+      <nom>Modalité de sélection</nom>
+      <definition>un élément de cette classe indique une ou plusieurs modalités de sélection pour pouvoir être admis à une offre de formation</definition>
+      <sousClasseDe>RC0000</sousClasseDe>
+      <note>Ces modalités de sélection sont décrites de manière informelle</note>
+      <relation>
+         <identifiant>DES032001</identifiant>
+         <nom>description</nom>
+         <defintion>description d'un ou plusiuers prérequis</defintion>
+         <indicateurLinguistique>oui</indicateurLinguistique>
+         <coDomaine>Littéral</coDomaine>
+         <regleDeContenu>MLR String</regleDeContenu>
+         <raffine></raffine>
+         <exemple>1</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0040</identifiant>
+      <nom>Frais de formation</nom>
+      <definition>un élément de cette classe est une dépense pour l'apprenant liée à la participation à la formation</definition>
+      <sousClasseDe></sousClasseDe>
+      <note>Exemple : Les frais d'inscription au BTS SIO ou les frais pédagogiques du même BTS en formation continue</note>
+      <relation>
+         <identifiant>DES040001</identifiant>
+         <nom>montant</nom>
+         <defintion>montant du frais de formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>Réel positif</regleDeContenu>
+         <raffine></raffine>
+         <exemple>350</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES040002</identifiant>
+         <nom>devise</nom>
+         <defintion>devise du montant</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>ISO 4217</regleDeContenu>
+         <raffine></raffine>
+         <exemple>EUR</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES040003</identifiant>
+         <nom>taux TVA</nom>
+         <defintion>Taux de TVA appliquée pour l'élément de formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>Réel positif</regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>Un organisme non soumis à la TVA aura un taux de TVA à 0</note>
+      </relation>
+      <relation>
+         <identifiant>DES040004</identifiant>
+         <nom>type</nom>
+         <defintion>type du montant</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>Vocabulaire</regleDeContenu>
+         <raffine></raffine>
+         <exemple>pédagogique, inscription à la certification, élément des formations à sa charge, remise à niveau</exemple>
+         <note>1</note>
+      </relation>
+      <relation>
+         <identifiant>DES040005</identifiant>
+         <nom>description</nom>
+         <defintion>complément d'information sur le montant et/ou le type</defintion>
+         <indicateurLinguistique>oui</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>MLR String</regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>1</note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0050</identifiant>
+      <nom>Caractéristiques de la formation</nom>
+      <definition>classe abstraite qui regroupe les propriété communes aux offres de formation et aux cas décrivant l'organisation pédagoqique
+         d'une formation
+      </definition>
+      <sousClasseDe>RC0000</sousClasseDe>
+      <note>Super classe des classes offre de formation et formation</note>
+      <relation>
+         <identifiant>DES050001</identifiant>
+         <nom>description</nom>
+         <defintion>resumé descriptif de l'offre de formation</defintion>
+         <indicateurLinguistique>oui</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>MLR String</regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>1</note>
+      </relation>
+      <relation>
+         <identifiant>DES050002</identifiant>
+         <nom>domaine</nom>
+         <defintion>regroupement de plusieurs disciplines d'enseignement subdivisé en mention</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>Vocabulaire</regleDeContenu>
+         <raffine></raffine>
+         <exemple>droit, économie gestion (source : domaines LMD)</exemple>
+         <note>On utilise le vocabulaire Formacode</note>
+      </relation>
+      <relation>
+         <identifiant>DES050003</identifiant>
+         <nom>durée hors entreprise</nom>
+         <defintion>indique la durée de formation 
+            en heures dans l'établissement de formation ou à distance
+         </defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Littéral</coDomaine>
+         <regleDeContenu>MLR Duration</regleDeContenu>
+         <raffine></raffine>
+         <exemple>La première année du BTS SIO correspond à 900h</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES050004</identifiant>
+         <nom>durée en entreprise</nom>
+         <defintion>indique la durée de formation en heures en entreprise</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Littéral</coDomaine>
+         <regleDeContenu>MLR Duration</regleDeContenu>
+         <raffine></raffine>
+         <exemple>Le stage de première année du BTS SIO correspond à 140h</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES050005</identifiant>
+         <nom>période</nom>
+         <defintion>indique la durée de la période de la formation la plus pratiquée (indication pour l'apprenant)</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Littéral</coDomaine>
+         <regleDeContenu>MLR Duration</regleDeContenu>
+         <raffine></raffine>
+         <exemple>La première année du 
+            BTS SIO dure 10 mois
+         </exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES050070001</identifiant>
+         <nom>crédits ECTS</nom>
+         <defintion>indique le nombre de credits ECTS obtenu à l'issue de la validation de la formation (certification 
+            validée)
+         </defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0070</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine>0</raffine>
+         <exemple>n</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES05002001</identifiant>
+         <nom>ressource</nom>
+         <defintion>ressources utilisées dans le cadre de cette formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>ISO_IEC_19788-1:2011::RC0002</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant>DES050003001</identifiant>
+         <nom>a pour objectif</nom>
+         <defintion>indique les objectifs de la formation en termes de ou des compétences avec leurs niveaux</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>ISO_IEC_22602:RC0003</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant>DES050003002</identifiant>
+         <nom>a pour prérequis</nom>
+         <defintion>indique les prérequis pour la formation en termes de ou des compétences avec leurs niveaux</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>ISO_IEC_22602:RC0003</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>compétences</exemple>
+         <note>0</note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0060</identifiant>
+      <nom>Composition</nom>
+      <definition>classe abstraite qui définit la composition d'une action de formation, d'un parcours ou d'un module en termes d'élément de
+         formation
+      </definition>
+      <sousClasseDe></sousClasseDe>
+      <note>Super classe des classes "composition" obligatoire, optionnelle et à choix</note>
+      <relation>
+         <identifiant>DES060104001</identifiant>
+         <nom>élément constituant</nom>
+         <defintion>indique le ou les éléments de formation qui sont inclus dans une composition</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0104</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine>1</raffine>
+         <exemple>n</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0061</identifiant>
+      <nom>Compositon obligatoire</nom>
+      <definition>classe qui définit le caractère obligatoire de la composition d'une action de formation, d'un parcours ou d'un module en termes
+         d'éléments de formation
+      </definition>
+      <sousClasseDe>RC0060</sousClasseDe>
+      <note>Exemple : dans le BTS SIO pour le module "bloc 2" du parcours "SLAM", l'élément de formation "Conception et développement
+         d'applications est obligatoire
+      </note>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0062</identifiant>
+      <nom>Composition optionnelle</nom>
+      <definition>classe qui définit le caractère optionnel de la composition d'une action de formation, d'un parcours ou d'un module en termes
+         d'éléments de formation
+      </definition>
+      <sousClasseDe>RC0060</sousClasseDe>
+      <note>Exemple : dans le BTS SIO pour le parcours "SLAM", l'élément de formation "Mathématiques approfondies" est optionnel</note>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0063</identifiant>
+      <nom>Composition à choix</nom>
+      <definition>classe qui définit le caractère "à choix" de la composition d'une action de formation, d'un parcours ou d'un module en termes
+         d'éléments de formation
+      </definition>
+      <sousClasseDe>RC0060</sousClasseDe>
+      <note>Exemple : dans le module M d'un parcours P, un étudiant peut choisir entre 2 et 3 éléments de formation parmi 5</note>
+      <relation>
+         <identifiant>DES063001</identifiant>
+         <nom>nombre minimal</nom>
+         <defintion>spécifie le nombre minimal d'éléments de formation à choisir parmi les éléments de formation constituant la composition</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>Nombre naturel</regleDeContenu>
+         <raffine></raffine>
+         <exemple>1</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES063002</identifiant>
+         <nom>nombre maximal</nom>
+         <defintion>spécifie le nombre maximal d'éléments de formation à choisir parmi les éléments de formation constituant la composition</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>Nombre naturel</regleDeContenu>
+         <raffine></raffine>
+         <exemple>1</exemple>
+         <note>1</note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0070</identifiant>
+      <nom>Crédits ECTS</nom>
+      <definition>classe qui définit le nombre de crédits ECTS qui peuvent être contextuels à une offre de formation</definition>
+      <sousClasseDe>RC0000</sousClasseDe>
+      <note></note>
+      <relation>
+         <identifiant>DES070001</identifiant>
+         <nom>nombre de crédits</nom>
+         <defintion>nombre de crédits ECTS associé à une offre de formation, un parcours, un module, un élément de formation ou une activité pédagogique</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu>Réel positif</regleDeContenu>
+         <raffine></raffine>
+         <exemple>La formation BTS SIO permet d'obtenir 120 ECTS</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES070101001</identifiant>
+         <nom>relatif à</nom>
+         <defintion>indique q'un nombre de crédits ECTS peut être relatif à une offre de formation, un parcours, un module, un élément de formation
+            ou une activité pédagogique
+         </defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0100</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>1</note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0080</identifiant>
+      <nom>Session d'information</nom>
+      <definition>classe qui présente une réalisation lors d'une session d'information</definition>
+      <sousClasseDe>RC0000</sousClasseDe>
+      <note>Exemple : le BTS SIO option SLAM pour l'année 2020-2021 sera présenté aux étudiants le 4 avril 2020 à 14h</note>
+      <relation>
+         <identifiant>DES080001</identifiant>
+         <nom>date</nom>
+         <defintion>date de la session d'information</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu>MLR Date</regleDeContenu>
+         <raffine></raffine>
+         <exemple>2020-04-04T-14:00+00</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES080002</identifiant>
+         <nom>lieu</nom>
+         <defintion>lieu de la session d'information</defintion>
+         <indicateurLinguistique>oui</indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu>MLR String</regleDeContenu>
+         <raffine></raffine>
+         <exemple>Le BTS SIO option SLAM pour l'année 2020-2021 sera présenté dans la salle polyvalente du Lycée Flaubert</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES080003</identifiant>
+         <nom>nombre maximal</nom>
+         <defintion>nombre maximal de participants à la session d'information</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu>Nombre naturel</regleDeContenu>
+         <raffine></raffine>
+         <exemple>200</exemple>
+         <note>Cet élément est renseigné uniquement lorsqu'un nombre maximum de personnes est attendu </note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0090</identifiant>
+      <nom>Période d'interruption</nom>
+      <definition>classe qui définit toute période d'interruption (vacances, fermeture administrative, etc.) pour une réalisation</definition>
+      <sousClasseDe>RC0000</sousClasseDe>
+      <note>Exemple : 
+         pour l'année 2020-2021 les étudiants BTS SIO n'ont pas cours du 19 décembre 2020 au 3 janvier 2021
+      </note>
+      <relation>
+         <identifiant>DES090001</identifiant>
+         <nom>début</nom>
+         <defintion></defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu>MLR Date</regleDeContenu>
+         <raffine></raffine>
+         <exemple>2020-12-19</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES090002</identifiant>
+         <nom>fin</nom>
+         <defintion></defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu>MLR Date</regleDeContenu>
+         <raffine></raffine>
+         <exemple>2021-01-03</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES090003</identifiant>
+         <nom>commentaire</nom>
+         <defintion></defintion>
+         <indicateurLinguistique>oui</indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu>MLR String</regleDeContenu>
+         <raffine></raffine>
+         <exemple>Le lycée Flaubert est fermé pendant les vacances de Noël</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0100</identifiant>
+      <nom>Formation</nom>
+      <definition>classe abstraite qui regroupe les propriétés communes decrivant l'organisation pédagogique de la formation dans une institution</definition>
+      <sousClasseDe>RC0050, RC0030</sousClasseDe>
+      <note>Super classe des classes action de formation, parcours, module, élément de formation et activité pédagogique</note>
+      <relation>
+         <identifiant>DES100001</identifiant>
+         <nom>langue d'enseignement</nom>
+         <defintion>langue dans laquelle est délivrée la formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>ISO 639</regleDeContenu>
+         <raffine></raffine>
+         <exemple>FR-fra</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES100002</identifiant>
+         <nom>charge de travail</nom>
+         <defintion>durée moyenne du travail pour l'apprenant en prenant en compte toutes les activités </defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>MLR Duration</regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>1</note>
+      </relation>
+      <relation>
+         <identifiant>DES100003001</identifiant>
+         <nom>responsable</nom>
+         <defintion>personne en charge de la formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>ISO_IEC_19788-1:2010::RC0003</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>1</note>
+      </relation>
+      <relation>
+         <identifiant>DES100003001</identifiant>
+         <nom>condition de validation</nom>
+         <defintion>règles permettant de valider la formation</defintion>
+         <indicateurLinguistique>oui</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>MLR String</regleDeContenu>
+         <raffine></raffine>
+         <exemple>VALIDATION PREMIÈRE ANNÉE du BTS SIO 1e année - Un relevé de notes est établi à l’issue de l’année de formation. - Le passage
+            de première en seconde année est soumis à l’avis d’un conseil de classe.
+         </exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES100004</identifiant>
+         <nom>programme</nom>
+         <defintion>contenu de la formation</defintion>
+         <indicateurLinguistique>oui</indicateurLinguistique>
+         <coDomaine>Littéral</coDomaine>
+         <regleDeContenu>MLR String</regleDeContenu>
+         <raffine></raffine>
+         <exemple>1</exemple>
+         <note>1</note>
+      </relation>
+      <relation>
+         <identifiant>DES100005</identifiant>
+         <nom>programme_ref</nom>
+         <defintion>indique l'url vers d'un document qui propose notamment le reférentiel de formation </defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>IRI</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>
+            https://lycee-flaubert-rouen.fr/app/media/uploads/images/bootstrap-builder/DiapoSIODRCertav2_DR_VEM.pdf
+            
+         </exemple>
+         <note>ajout le 03/07/19</note>
+      </relation>
+      <relation>
+         <identifiant>DES100006</identifiant>
+         <nom>matériel pédagogique</nom>
+         <defintion>équipement ou matériel technique de l'apprenant nécessaire à la formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>Vocabulaire</regleDeContenu>
+         <raffine></raffine>
+         <exemple>Les BTS SIO 
+            nécessite l'acquisition d'un logiciel de programmation
+         </exemple>
+         <note>Reprendre le vocabulaire de ScolLOM-fr  https://www.reseau-canope.fr/scolomfr/fileadmin/user_upload/nomenclatures/20.html</note>
+      </relation>
+      <relation>
+         <identifiant>DES100007</identifiant>
+         <nom>financeur</nom>
+         <defintion>entité qui est susceptible de prendre en charge financièrement toute où partie de la formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>Vocabulaire</regleDeContenu>
+         <raffine></raffine>
+         <exemple>Financement individuel, État, Pole emploi, AGEFIPH, entreprise, LADOM, etc.</exemple>
+         <note>
+            http://lheo.gouv.fr/langage#dict-financeurs
+            
+         </note>
+      </relation>
+      <relation>
+         <identifiant>DES100015001</identifiant>
+         <nom>permet d'obtenir</nom>
+         <defintion>indique le certificat, badge ou diplôme associé à la formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0015</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant>DES100040001</identifiant>
+         <nom>tarif</nom>
+         <defintion>tarifs de la formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0040</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>1</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0101</identifiant>
+      <nom>Action de formation</nom>
+      <definition>un élément de cette classe est la réalisation concrète de la formation (sens catalogue). Il décrit un itinéraire composé de
+         situations de formation permettant d'atteindre un objectif de développement personnel ou professionnel spécifié
+      </definition>
+      <sousClasseDe>RC0100, RC0030</sousClasseDe>
+      <note>Cette classe se concrétise dans un catalogue. Elle se décline en un ou plusieurs parcours. Exemple : description générale
+         du BTS services informatiques aux organisations (BTS SIO) dans le lycée Flaubert de Rouen
+      </note>
+      <relation>
+         <identifiant>DES101001</identifiant>
+         <nom>public cible</nom>
+         <defintion>public prioritairement concerné par l'action de formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>Vocabulaire</regleDeContenu>
+         <raffine></raffine>
+         <exemple>étudiants, demandeur d'emploi</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES101002</identifiant>
+         <nom>modalité</nom>
+         <defintion>statut, situation de l'apprenant</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>Vocabulaire</regleDeContenu>
+         <raffine></raffine>
+         <exemple>formation initiale, formation continue, formation par apprentissage</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES101016001</identifiant>
+         <nom>est certifié par</nom>
+         <defintion>indique que l'action de formation respecte tout ou partie du référentiel de la certification</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0016</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant>DES101020001</identifiant>
+         <nom>matérialise</nom>
+         <defintion>l'action de formation matérialise une offre de formation au sein d'un établissement</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0020</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>1</note>
+      </relation>
+      <relation>
+         <identifiant>DES101030001</identifiant>
+         <nom>conditions d'accès</nom>
+         <defintion>indique les conditions d'accès à la formation action de formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0030</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant>DES101102001</identifiant>
+         <nom>se décline en</nom>
+         <defintion>indique les parcours dans lesquels se décline l'action de formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0102</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant>DES101103001</identifiant>
+         <nom>se compose de</nom>
+         <defintion>indique les modules dans lesquels se décline l'action de formation</defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine>RC0103</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine>0</raffine>
+         <exemple>n</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES101104001</identifiant>
+         <nom>utilise</nom>
+         <defintion>indique que l'action de formation utilise jusqu'à trois types compositions</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0060</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine>Chaque relation doit désigner des instances de classe différentes (RC0061, RC0062 et RC0063)</raffine>
+         <exemple>0</exemple>
+         <note>3</note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0102</identifiant>
+      <nom>Parcours</nom>
+      <definition>un élément de cette classe est un itinéraire pédagogique comportant un ou plusieurs éléments de formation spécifiés et ordonnés,
+         organisé selon une ou plusieurs modalités spécifiées, en vue d'atteindre un objectif de développement personnel ou professionnel
+      </definition>
+      <sousClasseDe>RC0100</sousClasseDe>
+      <note>Cette classe se compose d'un ou plusieurs modules. Exemple : Itinéraire pédagogique en deux ans, en formation initiale, permettant
+         d'acquérir un BTS services informatiques aux organisations (BTS SIO), option 1 SLAM solutions logicielles et applications
+         métier proposé par le lycée Flaubert de Rouen
+      </note>
+      <relation>
+         <identifiant>DES102030001</identifiant>
+         <nom>conditions d'accès</nom>
+         <defintion>indique les conditions d'accès au parcours de formation</defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine>RC0030</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant>DES102103001</identifiant>
+         <nom>se compose de</nom>
+         <defintion>indique les modules / unités se composent de parcours de formation</defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine>RC0103</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant>DES102060001</identifiant>
+         <nom>utilise</nom>
+         <defintion>indique qu'un parcours peut utiliser une composition spécifique (compositons obligatoires, optionnelles ou à choix) d'éléments
+            de formation
+         </defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine>RC060</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine>0</raffine>
+         <exemple>1</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0103</identifiant>
+      <nom>Module</nom>
+      <definition>un élément de cette classe est un regroupement temporel, thématique ou pédagogique d'éléments de formation. </definition>
+      <sousClasseDe>RC0100</sousClasseDe>
+      <note>Un module est l'organisation temporelle, thématique ou pédagogique d'une partie de la formation. Exemple : AU lycée Flaubert
+         de Rouen, l'option 1 SLAM solutions logicielles et applications métier du BTS SIO est composée de 2 modules 1ère année et
+         2ème année, ce deuxième succédant au premier. Chaque année étant composée de 2 modules 1er semestre et 2eme semestre, le 2ème
+         succédant au 1er
+      </note>
+      <relation>
+         <identifiant>DES103060001</identifiant>
+         <nom>utilise</nom>
+         <defintion>indique qu'un module utilise une composition spécifique (compositons obligatoires, optionnelles ou à choix) d'éléments de
+            formation
+         </defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0104</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant>DES103103001</identifiant>
+         <nom>se compose de</nom>
+         <defintion>permet de hiérarchiser les modules</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0103</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant>DES103103002</identifiant>
+         <nom>suivant</nom>
+         <defintion>permet d'ordonnancer les modules</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0103</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0104</identifiant>
+      <nom>Élément de formation</nom>
+      <definition>un élément de cette classe permet de décomposer les modules en unités pédagogiques</definition>
+      <sousClasseDe>RC0100</sousClasseDe>
+      <note>Un élément de formation peut être composé d'activités pédagogiques. Il peut correspondre à un "cours" ou un ensemble de cours
+         pédagogiquement cohérents. Pour l'enseignement supérieur le traité de Bologne appelle cette notion unité d'enseignement. Exemple
+         : Au sein du BTS services informatiques aux organisations (BTS SIO), option 1 SLAM solutions logicielles et applications métier
+         proposé par le lycée Flaubert de Rouen, il y a un élément de formation "Mathématiques pour l'informatique" composé des éléments
+         de formations 
+         "mathématiques" et "algorithmique avancée"
+      </note>
+      <relation>
+         <identifiant>DES104001</identifiant>
+         <nom>modalité d'évaluation</nom>
+         <defintion>modalité d'évaluation de l'élément de formation</defintion>
+         <indicateurLinguistique>oui</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>MLR String</regleDeContenu>
+         <raffine></raffine>
+         <exemple>L'élément de formation "Mathématiques" du module "Mathématiques pour l'informatique" du module "Premier semestre" est evalué
+            à l'aide d'un examen sur table et d'un projet
+         </exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES104104001</identifiant>
+         <nom>se compose de</nom>
+         <defintion>permet de hiérarchiser les éléments de formation</defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine>RC0104</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant>DES104105001</identifiant>
+         <nom>se compose de</nom>
+         <defintion>permet de spécifier qu'un élément de formation est composé d'activités pédagogiques</defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine>RC0105</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0105</identifiant>
+      <nom>Activité pédagogique</nom>
+      <definition>un élément de cette classe est une forme spécifique d'une situation conçue pour apprendre</definition>
+      <sousClasseDe>RC0100</sousClasseDe>
+      <note>Une activité pédagogique peut être décrite en spécifiant son type, sa modalité de mise en oeuvre et le matériel nécessaire
+         à sa réalisation. Exemple : travaux pratiques en 
+         réseau informatique nécessitant un routeur internet.
+      </note>
+      <relation>
+         <identifiant>DES105001</identifiant>
+         <nom>type d'activité</nom>
+         <defintion>définit un type d'activité pédagogique et/ou d'apprentissage pour l'activité pédagogique</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>Vocabulaire</regleDeContenu>
+         <raffine></raffine>
+         <exemple>L'activité pédagogique "Généralité et opérations de base" de l'élément de formation "Mathématiques" est un "cours"</exemple>
+         <note>Reprendre celui du NoDEfr-1  Typologies du contenu pédagogique https://www.reseau-canope.fr/scolomfr/fileadmin/user_upload/nomenclatures/10.html
+            Type de contenu plus éditorial https://www.reseau-canope.fr/scolomfr/fileadmin/user_upload/nomenclatures/05.html 
+         </note>
+      </relation>
+      <relation>
+         <identifiant>DES105002</identifiant>
+         <nom>modalité pédagogique</nom>
+         <defintion>indique la modalité utilisée pour réaliser l'activité pédagogique</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>Vocabulaire</regleDeContenu>
+         <raffine></raffine>
+         <exemple>L'activité pédagogique "Généralité et opérations de base" de l'élément de formation "Mathématiques" est "à distance"</exemple>
+         <note>Reprendre le vocabulaire de ScolLOM-fr  https://www.reseau-canope.fr/scolomfr/fileadmin/user_upload/nomenclatures/18.html</note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0200</identifiant>
+      <nom>Réalisation</nom>
+      <definition>classe abstraite 
+         qui regroupe les propriétés communes décrivant les réalisations programmées d'une offre de formation
+      </definition>
+      <sousClasseDe>RC0000</sousClasseDe>
+      <note>Superclasse des classes Réalisation de parcours, Réalisation de module, Réalisation de la session de formation et Réalisation
+         de l'activité pédagogique
+      </note>
+      <relation>
+         <identifiant>DES200001</identifiant>
+         <nom>début</nom>
+         <defintion>date de début de la réalisation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>MLR Date</regleDeContenu>
+         <raffine></raffine>
+         <exemple>Date de début du BTS SIO</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES200002</identifiant>
+         <nom>fin</nom>
+         <defintion>date de fin de la réalisation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>MLR Date</regleDeContenu>
+         <raffine></raffine>
+         <exemple>Date de fin du BTS SIO</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES200003</identifiant>
+         <nom>lieu</nom>
+         <defintion>lieu (réel ou virtuel) où a lieu la réalisation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>MLR String</regleDeContenu>
+         <raffine></raffine>
+         <exemple>Lycée Gustave Flaubert de Rouen</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES200003001</identifiant>
+         <nom>responsable</nom>
+         <defintion>responsable de la réalisation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>ISO_IEC_19788-1:2010::RC0003</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>Nom de la personne responsable</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES200003002</identifiant>
+         <nom>intervenant</nom>
+         <defintion>enseignant, tuteur, formateur, etc. intervenant dans la réalisation de la formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>ISO_IEC_19788-1:2010::RC0003</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>Nom de l'intervenant</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES200004</identifiant>
+         <nom>entrée sortie permanente</nom>
+         <defintion>les dates de début et de fin indiquent des bornes au sein de laqquelle la réalisation doit avoir lieu</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>Litteral</coDomaine>
+         <regleDeContenu>Booléen</regleDeContenu>
+         <raffine></raffine>
+         <exemple>1</exemple>
+         <note>1</note>
+      </relation>
+      <relation>
+         <identifiant>DES20001001</identifiant>
+         <nom>est mise en oeuvre dans </nom>
+         <defintion>la réalisation pédagogique met en oeuvre des actions de formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>ISO_IEC_22602:RC0001</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant>DES200080001</identifiant>
+         <nom>session d'information</nom>
+         <defintion>session durant laquelle la réalisation est présentée</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0080</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine>0</raffine>
+         <exemple>n</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant>DES200090001</identifiant>
+         <nom>période d'interruption</nom>
+         <defintion>période durant laquelle la formation est interrompue</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0090</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine>0</raffine>
+         <exemple>n</exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0201</identifiant>
+      <nom>Réalisation de parcours</nom>
+      <definition>un élément de cette classe est la réalisation d'un parcours de formation programmé</definition>
+      <sousClasseDe>RC0200</sousClasseDe>
+      <note>Une réalisation de parcours est la programmation pendant une période donnée, à un endroit donné. Exemple : Programmation de
+         l'option 1 SLAM solutions logicielles et applications métier du BTS SIO sur la période 2020-2022 au lycée Flaubert de Rouen
+      </note>
+      <relation>
+         <identifiant>DES201102001</identifiant>
+         <nom>réalise</nom>
+         <defintion>la réalisation d'un parcours de formation spécifie les éléments de mise en oeuvre (réalisation) d'un parcours de formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0101</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0202</identifiant>
+      <nom>Réalisation de module</nom>
+      <definition>un élément de cette classe est la réalisation d'un module programmé</definition>
+      <sousClasseDe>RC0200</sousClasseDe>
+      <note>Une réalisation de module est la programmation pendant une période donnée à un endroit donné d'un module de formation. Exemple
+         : Le module du 1er semestre de la 1ère année du BTS SIO option 1 SLAM solutions logicielles et applications métier commence
+         en septembre 2020 et finit en janvier 2021 au Lycée Flaubert de Rouen
+      </note>
+      <relation>
+         <identifiant>DES202103001</identifiant>
+         <nom>réalise</nom>
+         <defintion>la réalisation d'un module de formation spécifie les éléments de mise en oeuvre (réalisation) d'un module de formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0103</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0203</identifiant>
+      <nom>Session de formation</nom>
+      <definition>un élément de cette classe est la réalisation d'une session de formation programmée</definition>
+      <sousClasseDe>RC0200</sousClasseDe>
+      <note>Une session de formation est la programmation pendant une période donnée à un endroit donné d'un élément de formation. Exemple
+         : Programmation de l'élément de formation "Algorithmique appliquée" de l'option 1 SLAM solutions logicielles et applications
+         métier du BTS SIO de septembre 2020 à janvier 2021 au lycée Flaubert de Rouen.
+      </note>
+      <relation>
+         <identifiant>DES203104001</identifiant>
+         <nom>réalise</nom>
+         <defintion>la réalisation d'une session de formation spécifie les éléments de mise en oeuvre (réalisation) d'une session de formation</defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0104</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant>RC0204</identifiant>
+      <nom>Réalisation d'activité pédagogique</nom>
+      <definition>un élément de cette classe est la réalisation d'une activité pédagogique programmée</definition>
+      <sousClasseDe>RC0200</sousClasseDe>
+      <note>Une réalisation d'une activité pédagogique est la programmation pendant une période donnée à un endroit donné d'une activité
+         de pédagogique. Exemple : Programmation du premier cours magistral de l'activité pédagogique "Algotihmique appliquée" de l'option
+         1 SLAM solutions logicielles et applications métier du BTS SIO le mardi 8 septembre 2020 de 8h à 9h30 en salle 505 du lycée
+         Flaubert de Rouen
+      </note>
+      <relation>
+         <identifiant>DES204105001</identifiant>
+         <nom>réalise</nom>
+         <defintion>la réalisation d'une activité pédagogique sur une offre de formation spécifie les éléments de mise en oeuvre (réalisation)
+            d'une activité pédagogique
+         </defintion>
+         <indicateurLinguistique>non</indicateurLinguistique>
+         <coDomaine>RC0204</coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple>0</exemple>
+         <note>n</note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+      <relation>
+         <identifiant></identifiant>
+         <nom></nom>
+         <defintion></defintion>
+         <indicateurLinguistique></indicateurLinguistique>
+         <coDomaine></coDomaine>
+         <regleDeContenu></regleDeContenu>
+         <raffine></raffine>
+         <exemple></exemple>
+         <note></note>
+      </relation>
+   </classe>
+   <classe>
+      <identifiant></identifiant>
+      <nom></nom>
+      <definition></definition>
+      <sousClasseDe></sousClasseDe>
+      <note></note>
+   </classe>
+   <classe>
+      <identifiant></identifiant>
+      <nom></nom>
+      <definition></definition>
+      <sousClasseDe></sousClasseDe>
+      <note></note>
+   </classe>
+   <classe>
+      <identifiant></identifiant>
+      <nom></nom>
+      <definition></definition>
+      <sousClasseDe></sousClasseDe>
+      <note></note>
+   </classe>
+   <classe>
+      <identifiant></identifiant>
+      <nom></nom>
+      <definition></definition>
+      <sousClasseDe></sousClasseDe>
+      <note></note>
+   </classe>
+</Modele>
