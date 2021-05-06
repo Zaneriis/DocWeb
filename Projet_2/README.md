@@ -8,8 +8,14 @@ Lien : https://www.overleaf.com/5648792571gydrbwmvvtqf
 
 ## Obtention du xml de sortie
 
-Pour lire le fichier xml sur le terminal :  
+Pour lire la sortie xml sur le terminal :  
 
 ``` bash
 saxonb-xslt content.xml NoDEfr-2.xsl
+```
+
+Pour enregistrer la sortie xml dans un fichier output.xml :
+
+``` bash
+saxonb-xslt -o output.xml content.xml NoDEfr-2.xsl
 ```
