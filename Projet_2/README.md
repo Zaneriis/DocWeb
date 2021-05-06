@@ -5,3 +5,11 @@
 
 ## RAPPORT
 Lien : https://www.overleaf.com/5648792571gydrbwmvvtqf
+
+## Obtention du xml de sortie
+
+Pour lire le fichier xml sur le terminal :  
+
+``` bash
+saxonb-xslt content.xml NoDEfr-2.xsl
+```
