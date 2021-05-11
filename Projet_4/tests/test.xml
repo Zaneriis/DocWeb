@@ -1,0 +1,64 @@
+<Modele>
+  <classe>
+    <identifiant>ISO-IEC22602:RC0007</identifiant>
+    <nom>Institution</nom>
+    <definition>un élément de cette classe est 
+    une entité composée d'êtres humains, organisée dans la durée,en vue d'une finalité et dotée d'une personalité juridique
+    </definition>
+    <sousClasseDe>RC0700</sousClasseDe>
+    <note>Exemple : Le lycée Flaubert de Rouen</note>
+  </classe>
+  <classe>
+    <identifiant>RC0000</identifiant>
+    <nom>Entité du monde de la formation</nom>
+    <definition>classe abstraite qui regroupe les propriétés communes à toutes les situations ou à l'ensemble de situations visant un ou plusieurs
+    objectifs de développement personnel ou professionnel
+    </definition>
+    <note>Super classe de toutes les classes. Elle regroupe toutes les propriétés des classes présentes dans ce modèle  </note>
+    <relation>
+      <identifiant>DES000001</identifiant>
+      <nom>libellé</nom>
+      <defintion>nommage humainement compréhensible de l'élément</defintion>
+      <indicateurLinguistique>oui</indicateurLinguistique>
+      <coDomaine>Littéral</coDomaine>
+      <regleDeContenu>MLR String</regleDeContenu>
+      <exemple>Pour une instance de la classe RC0020 Offre de formation, le libellé pourraît être " BTS services informatiques aux organisations"</exemple>
+      <cardinaliteMin>1</cardinaliteMin>
+      <cardinaliteMax>1</cardinaliteMax>
+    </relation>
+    <relation>
+      <identifiant>DES000002</identifiant>
+      <nom>date de mise à jour</nom>
+      <defintion>dernière date de modification d'une information d'un élément</defintion>
+      <indicateurLinguistique>non</indicateurLinguistique>
+      <coDomaine>Littéral</coDomaine>
+      <regleDeContenu>MLR Date</regleDeContenu>
+      <exemple>Pour une instance de la Classe RC0105 Activité pédagogique, le changement de modalité pédagogique sera daté</exemple>
+      <cardinaliteMin>0</cardinaliteMin>
+      <cardinaliteMax>1</cardinaliteMax>
+    </relation>
+    <relation>
+      <identifiant>DES000003</identifiant>
+      <nom>code</nom>
+      <defintion>code "humain" permettant de désigner de manière non ambigüe un élément</defintion>
+      <indicateurLinguistique>non</indicateurLinguistique>
+      <coDomaine>Littéral</coDomaine>
+      <regleDeContenu>MLR String</regleDeContenu>
+      <exemple>Au CNED le BTS SIO est identifié par le code "8TSI1DIX20"</exemple>
+      <note>Ce code a du sens au niveau local</note>
+      <cardinaliteMin>0</cardinaliteMin>
+      <cardinaliteMax>1</cardinaliteMax>
+    </relation>
+    <relation>
+      <identifiant>DES000003001</identifiant>
+      <nom>contributeur</nom>
+      <defintion>contributeur de la dernière modification de l'information</defintion>
+      <indicateurLinguistique>non</indicateurLinguistique>
+      <coDomaine>ISO_IEC_19788-1:2010::RC0003</coDomaine>
+      <exemple>Ce contributeur peut être une personne physique ou morale</exemple>
+      <note>0</note>
+      <cardinaliteMin>0</cardinaliteMin>
+      <cardinaliteMax>1</cardinaliteMax>
+    </relation>
+  </classe>
+</Modele>
