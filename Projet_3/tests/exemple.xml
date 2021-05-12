@@ -6,9 +6,11 @@
     <classe>
         <identifiant>RC0000</identifiant>
         <nom>Entité du monde de la formation</nom>
-        <definition>classe abstraite qui regroupe les propriétés communes à toutes les situations ou à l'ensemble de situations visant un ou plusieurs objectifs de développement personnel ou professionnel</definition>
+        <definition>classe abstraite qui regroupe les propriétés communes à toutes les situations ou à l'ensemble 
+        de situations visant un ou plusieurs objectifs de développement personnel ou professionnel</definition>
         <sousClasseDe></sousClasseDe>
-        <note>Super classe de toutes les classes. Elle regroupe toutes les propriétés des classes présentes dans ce modèle</note>
+        <note>Super classe de toutes les classes. Elle regroupe toutes les propriétés des classes présentes 
+        dans ce modèle</note>
         <relation>
             <identifiant>DES000001</identifiant>
             <nom>libellé</nom>
@@ -17,7 +19,8 @@
             <coDomaine>Littéral</coDomaine>
             <regleDeContenu>MLR String</regleDeContenu>\subsection{Choix et implémentations}
             <raffine></raffine>
-            <exemple>Pour une instance de la classe RC0020 Offre de formation, le libellé pourraît être " BTS services informatiques aux organisations"</exemple>
+            <exemple>Pour une instance de la classe RC0020 Offre de formation, le libellé pourraît 
+            être " BTS services informatiques aux organisations"</exemple>
             <note></note>
             <cardinaliteMinimale>1</cardinaliteMinimale>
             <cardinaliteMaximale>1</cardinaliteMaximale>
@@ -31,7 +34,8 @@
             <coDomaine>Littéral</coDomaine>
             <regleDeContenu>MLR Date</regleDeContenu>
             <raffine></raffine>
-            <exemple>Pour une instance de la Classe RC0105 Activité pédagogique, le changement de modalité pédagogique sera daté</exemple>
+            <exemple>Pour une instance de la Classe RC0105 Activité pédagogique, le changement de
+             modalité pédagogique sera daté</exemple>
             <note></note>
             <cardinaliteMinimale>0</cardinaliteMinimale>
             <cardinaliteMaximale>1</cardinaliteMaximale>
@@ -42,9 +46,11 @@
     <classe>
         <identifiant>RC0015</identifiant>
         <nom>Certificat, badge, diplome</nom>
-        <definition>un élément de cette classe est la reconnaissance des compétences, des connaissances, des savoir-faire d'une personne</definition>
+        <definition>un élément de cette classe est la reconnaissance des compétences, des connaissances, 
+        des savoir-faire d'une personne</definition>
         <sousClasseDe>RC0000</sousClasseDe>
-        <note>Exemple : reconnaissance des compétences, des connaissances, des savoir-faire d'une personne</note>
+        <note>Exemple : reconnaissance des compétences, des connaissances, des savoir-faire d'une
+         personne</note>
         <relation>
             <identifiant>DES015001</identifiant>
             <nom>description</nom>
@@ -53,7 +59,14 @@
             <coDomaine>Littéral</coDomaine>
             <regleDeContenu>MLR String</regleDeContenu>
             <raffine></raffine>
-            <exemple>L'ONISEP décrit le BTS SIO de la façon suivante : "Couvrant tous les secteurs professionnels, les BTS forment des collaborateurs d'ingénieur, des assistants commerciaux ou techniques, des assistants clientèle, des chefs de chantier, etc. selon les secteurs. Le BTS se prépare en 2 ans après le bac en lycée, en école ou par l'apprentissage. Le recrutement se fait sur dossier. Une mise à niveau de 1 an est obligatoire pour l'accès en BTS management en hôtellerie-restauration pour les élèves n'étant pas titulaires du bac sciences et technologies de l'hôtellerie et de la restauration (STHR). Les BTS visent une insertion professionnelle directe. Poursuite d'études possible, notamment en licence pro (pour 1 an)."</exemple>
+            <exemple>L'ONISEP décrit le BTS SIO de la façon suivante : "Couvrant tous les secteurs professionnels, 
+            les BTS forment des collaborateurs d'ingénieur, des assistants commerciaux ou techniques, des 
+            assistants clientèle, des chefs de chantier, etc. selon les secteurs. Le BTS se prépare en 2 ans 
+            après le bac en lycée, en école ou par l'apprentissage. Le recrutement se fait sur dossier. Une mise 
+            à niveau de 1 an est obligatoire pour l'accès en BTS management en hôtellerie-restauration pour les
+             élèves n'étant pas titulaires du bac sciences et technologies de l'hôtellerie et de la restauration 
+             (STHR). Les BTS visent une insertion professionnelle directe. Poursuite d'études possible, 
+             notamment en licence pro (pour 1 an)."</exemple>
             <note></note>
             <cardinaliteMinimale>0</cardinaliteMinimale>
             <cardinaliteMaximale>1</cardinaliteMaximale>

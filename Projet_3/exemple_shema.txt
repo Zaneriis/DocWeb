@@ -1,6 +1,5 @@
 @prefix noDEfr2: <http://example.org/noDEfr2/>
 
-
 //pour les classes
 noDEfr2:identifiant
 	rdf:type rdfs:Class
