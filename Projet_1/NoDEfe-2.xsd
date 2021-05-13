@@ -85,13 +85,9 @@
             <xsd:attribute name="identifiant" type="xsd:ID"/>
             <xsd:element name="nom" type="TNom"/>
             <xsd:element name="definition" type="TDefinition"/>
-            <xsd:sequence>
-                <xsd:element name="sousClasseDe" minOccurs="0" maxOccurs="unbounded" type="xsd:IDREFS"/>
-            </xsd:sequence>
+            <xsd:element name="sousClasseDe" minOccurs="0" maxOccurs="1" type="xsd:IDREFS"/>
             <xsd:element name="note" type="TNotes"/>
-            <xsd:sequence>
-                <xsd:element name="relation" minOccurs="0" minOccurs="unbounded" type="TRelation"/>
-            </xsd:sequence>
+            <xsd:element name="relation" minOccurs="0" maxOccurs="unbounded" type="TRelation"/>
         </xsd:sequence>
     </xsd:complexType>
 
