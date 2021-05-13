@@ -7,6 +7,17 @@
         </xsd:all>  
     </xsd:complexType>
 <xsd:element/>
+    
+    
+<xsd:element name="BU" type="TBibliotheque">
+    <xsd:complexType name="TBibliotheque">
+        <xsd:choice>
+            <xsd:element maxOccurs="unbounded" name="livre" type="TLivre"/>
+            <xsd:element maxOccurs="unbounded" name="journal" type="TJournal"/>
+        </xsd:choice>  
+    </xsd:complexType>
+<xsd:element/>
+
 
 
 
