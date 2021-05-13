@@ -42,9 +42,9 @@
             <xsl:value-of select=".//table:table-cell[1]/text:p"/>
         </xsl:variable>
         <xsl:element name="classe">
-            <xsl:element name="identifiant">
+            <xsl:attribute name="identifiant">
                 <xsl:value-of select=".//table:table-cell[1]/text:p"/>
-            </xsl:element>
+            </xsl:attribute>
             <xsl:element name="nom">
                 <xsl:value-of select=".//table:table-cell[2]/text:p"/>
             </xsl:element>
@@ -64,13 +64,13 @@
     <xsl:template match="table:table">
         <xsl:for-each select=".//table:table-row/following-sibling::table:table-row[1]">
             <xsl:element name="relation">
-                <xsl:element name="identifiant">
+                <xsl:attribute name="identifiant">
                     <xsl:value-of select=".//table:table-cell[1]/text:p"/>
-                </xsl:element>
+                </xsl:attribute>
                 <xsl:element name="nom">
                     <xsl:value-of select=".//table:table-cell[2]/text:p"/>
                 </xsl:element>
-                <xsl:element name="defintion">
+                <xsl:element name="definition">
                     <xsl:value-of select=".//table:table-cell[3]/text:p"/>
                 </xsl:element>
                 <xsl:element name="indicateurLinguistique">

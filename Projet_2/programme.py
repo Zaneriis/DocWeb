@@ -15,10 +15,10 @@ def creationRacine(path, nbSheet, sheetNames):
 
     df = read_ods(path, singleSheetName)
     nomIdentifiant=df.iloc[1,0]
-    racine = etree.SubElement(root, "EntiteDuMondeDeLaFormation", IDREF=nomIdentifiant)
+    branche = etree.SubElement(root, "EntiteDuMondeDeLaFormation", IDREF=nomIdentifiant)
 
-    obtenirValeurCellule(path, singleSheetName, racine, 1, 1, 1)
-    creationFils(path, racine)
+    obtenirValeurCellule(path, singleSheetName, branche, 1, 1, 1)
+    creationFils(path, branche)
     #contenuSheetSecondaire(path, root, nbSheet, sheetNames)
 
 
