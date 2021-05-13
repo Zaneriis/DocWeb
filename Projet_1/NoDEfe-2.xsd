@@ -64,7 +64,6 @@
     </xsd:simpleType>
 
     <xsd:complexType name="TRelation">
-        <xsd:attribute name="identifiant" type="xsd:ID"/>
         <xsd:sequence>
             <xsd:element name="nom" type="TNom"/>
             <xsd:element name="definition" type="TDefinition"/>
@@ -78,10 +77,10 @@
             <xsd:element name="cardinaliteMaximale" type="TCardinaliteMaximale"/>
             <xsd:element name="raison" type="TRaisonDeLOrdonnancement"/>
         </xsd:sequence>
+        <xsd:attribute name="identifiant" type="xsd:ID"/>
     </xsd:complexType>
 
     <xsd:complexType name="TClasse">
-        <xsd:attribute name="identifiant" type="xsd:ID"/>
         <xsd:sequence>
             <xsd:element name="nom" type="TNom"/>
             <xsd:element name="definition" type="TDefinition"/>
@@ -89,12 +88,15 @@
             <xsd:element name="note" type="TNotes"/>
             <xsd:element name="relation" minOccurs="0" maxOccurs="unbounded" type="TRelation"/>
         </xsd:sequence>
+        <xsd:attribute name="identifiant" type="xsd:ID"/>
     </xsd:complexType>
 
-    <xsd:element name="Modele">
+    <xsd:complexType name="TModele">
         <xsd:sequence>
             <xsd:element name="classe" minOccurs="1" maxOccurs="unbounded" type="TClasse"/>
         </xsd:sequence>
-    </xsd:element>
+    </xsd:complexType>
+    
+    <xsd:element name="Modele" type="TModele"/>
 
 </xsd:schema>
