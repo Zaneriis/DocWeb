@@ -71,7 +71,7 @@
             <xsd:element name="coDomaine" type="TCoDomaine"/>
             <xsd:element name="regleDeContenu" type="TRegleDeContenu"/>
             <xsd:element name="raffine" type="TRaffine"/>
-            <xsd:element name="exemple" maxOccurs="unbounded" type="TExemple"/>
+            <xsd:element name="exemple" maxOccurs="unbounded" type="TExemples"/>
             <xsd:element name="note" maxOccurs="unbounded" type="TNotes"/>
             <xsd:element name="cardinaliteMinimale" type="TCardinaliteMinimale"/>
             <xsd:element name="cardinaliteMaximale" type="TCardinaliteMaximale"/>
