@@ -64,8 +64,8 @@
     </xsd:simpleType>
 
     <xsd:complexType name="TRelation">
+        <xsd:attribute name="identifiant" type="xsd:ID"/>
         <xsd:sequence>
-            <xsd:attribute name="identifiant" type="xsd:ID"/>
             <xsd:element name="nom" type="TNom"/>
             <xsd:element name="definition" type="TDefinition"/>
             <xsd:element name="indicateurLinguistique" type="TIndicateurLinguistique"/>
@@ -81,8 +81,8 @@
     </xsd:complexType>
 
     <xsd:complexType name="TClasse">
+        <xsd:attribute name="identifiant" type="xsd:ID"/>
         <xsd:sequence>
-            <xsd:attribute name="identifiant" type="xsd:ID"/>
             <xsd:element name="nom" type="TNom"/>
             <xsd:element name="definition" type="TDefinition"/>
             <xsd:element name="sousClasseDe" minOccurs="0" maxOccurs="1" type="xsd:IDREFS"/>
