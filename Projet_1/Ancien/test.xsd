@@ -1,4 +1,15 @@
 
+<xsd:element name="BU" type="TBibliotheque">
+    <xsd:complexType name="TBibliotheque">
+        <xsd:all>
+            <xsd:element maxOccurs="unbounded" name="livre" type="TLivre"/>
+            <xsd:element maxOccurs="unbounded" name="journal" type="TJournal"/>
+        </xsd:all>  
+    </xsd:complexType>
+<xsd:element/>
+
+
+
 XSD:
 
 <xsd:complexType name="TBibliotheque">
@@ -32,3 +43,6 @@ XML invalide
     <journal> Le Monde </journal>
     <journal> Ouest France </journal>
 </BU>
+
+        
+        
