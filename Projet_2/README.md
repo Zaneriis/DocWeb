@@ -22,5 +22,5 @@ saxonb-xslt -o output2.xml output1.xml filtre_vides.xsl
 Pour vérifier la validité du fichier .xml on exécute la commande suivante : 
 
 ```bash
-  xmllint --schema ../Projet_1/NoDEfe-2.xsd output2.xml --noout
+xmllint --schema ../Projet_1/NoDEfe-2.xsd output2.xml --noout
 ```
