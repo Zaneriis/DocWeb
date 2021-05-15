@@ -64,18 +64,18 @@
     </xsd:simpleType>
 
     <xsd:complexType name="TRelation">
-        <xsd:sequence>
-            <xsd:element name="nom" type="TNom"/>
-            <xsd:element name="definition" type="TDefinition"/>
-            <xsd:element name="indicateurLinguistique" type="TIndicateurLinguistique"/>
-            <xsd:element name="coDomaine" type="TCoDomaine"/>
-            <xsd:element name="regleDeContenu" type="TRegleDeContenu"/>
-            <xsd:element name="raffine" type="TRaffine"/>
-            <xsd:element name="exemple" maxOccurs="unbounded" type="TExemples"/>
-            <xsd:element name="note" maxOccurs="unbounded" type="TNotes"/>
-            <xsd:element name="cardinaliteMinimale" type="TCardinaliteMinimale"/>
-            <xsd:element name="cardinaliteMaximale" type="TCardinaliteMaximale"/>
-            <xsd:element name="raison" type="TRaisonDeLOrdonnancement"/>
+        <xsd:sequence> 
+            <xsd:element name="nom"                                                        type="TNom"/>
+            <xsd:element name="definition"             minOccurs="0"                       type="TDefinition"/>
+            <xsd:element name="indicateurLinguistique"                                     type="TIndicateurLinguistique"/>
+            <xsd:element name="coDomaine"              minOccurs="0"                       type="TCoDomaine"/>
+            <xsd:element name="regleDeContenu"         minOccurs="0"                       type="TRegleDeContenu"/>
+            <xsd:element name="raffine"                minOccurs="0"                       type="TRaffine"/>
+            <xsd:element name="exemple"                minOccurs="0" maxOccurs="unbounded" type="TExemples"/>
+            <xsd:element name="note"                   minOccurs="0" maxOccurs="unbounded" type="TNotes"/>
+            <xsd:element name="cardinaliteMinimale"    default="1"                         type="TCardinaliteMinimale"/>
+            <xsd:element name="cardinaliteMaximale"    default="1"                         type="TCardinaliteMaximale"/>
+            <xsd:element name="raison"                 minOccurs="0"                       type="TRaisonDeLOrdonnancement"/>
         </xsd:sequence>
         <xsd:attribute name="identifiant" type="xsd:ID"/>
     </xsd:complexType>
