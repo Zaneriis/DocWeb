@@ -67,7 +67,7 @@
         <xsd:sequence> 
             <xsd:element name="nom"                                                        type="TNom"/>
             <xsd:element name="definition"             minOccurs="0"                       type="TDefinition"/>
-            <xsd:element name="indicateurLinguistique"                                     type="TIndicateurLinguistique"/>
+            <xsd:element name="indicateurLinguistique" default="non"                       type="TIndicateurLinguistique"/>
             <xsd:element name="coDomaine"              minOccurs="0"                       type="TCoDomaine"/>
             <xsd:element name="regleDeContenu"         minOccurs="0"                       type="TRegleDeContenu"/>
             <xsd:element name="raffine"                minOccurs="0"                       type="TRaffine"/>
