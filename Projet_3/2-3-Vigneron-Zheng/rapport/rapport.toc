@@ -1,0 +1,15 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}Introduction}{2}%
+\contentsline {section}{\numberline {2}Présentation du sujet}{2}%
+\contentsline {subsection}{\numberline {2.1}NoDEfr-2}{2}%
+\contentsline {subsection}{\numberline {2.2}Le sujet de notre projet}{4}%
+\contentsline {section}{\numberline {3}Analyse et implémentation}{5}%
+\contentsline {subsection}{\numberline {3.1}Phase d'analyse et de recherche}{5}%
+\contentsline {subsection}{\numberline {3.2}Implémentation}{6}%
+\contentsline {subsection}{\numberline {3.3}Difficultés rencontrées}{7}%
+\contentsline {subsection}{\numberline {3.4}Collaboration avec les autres groupes}{9}%
+\contentsline {section}{\numberline {4}Conclusion}{10}%
+\contentsline {section}{\numberline {5}Annexes}{11}%
+\contentsline {subsection}{\numberline {5.1}Annexe 1 : première version du fichier XML exemple}{11}%
+\contentsline {subsection}{\numberline {5.2}Annexe 2 : fichier XSLT}{13}%
+\contentsline {section}{\numberline {6}Webographie}{14}%

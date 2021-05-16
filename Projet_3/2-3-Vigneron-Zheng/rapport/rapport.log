@@ -1,0 +1,541 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.5.16)  16 MAY 2021 21:47
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**rapport.tex
+(./rapport.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/02/14 3.40 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/02/14 3.40 Babel switching mechanism
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-french/francais.ldf
+Language: francais 2020/01/30 v3.5g French support from the babel system
+
+
+Package francais.ldf Warning: Option `francais' for Babel is *deprecated*,
+(francais.ldf)                it might be removed sooner or later. Please
+(francais.ldf)                use `french' instead; reported on input line 31.
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf
+Language: french 2020/01/30 v3.5g French support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/02/14 3.40 Babel common definitions
+\babel@savecnt=\count175
+\U@D=\dimen135
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count176
+)
+Package babel Info: \l@acadian = using hyphenrules for french
+(babel)             (\language3) on input line 91.
+Package babel Info: \l@canadien = using hyphenrules for french
+(babel)             (\language3) on input line 92.
+\FB@nonchar=\count177
+Package babel Info: Making : an active character on input line 419.
+Package babel Info: Making ; an active character on input line 420.
+Package babel Info: Making ! an active character on input line 421.
+Package babel Info: Making ? an active character on input line 422.
+\FBguill@level=\count178
+\FBold@everypar=\toks16
+\FB@Mht=\dimen136
+\mc@charclass=\count179
+\mc@charfam=\count180
+\mc@charslot=\count181
+\std@mcc=\count182
+\dec@mcc=\count183
+\c@FBcaption@count=\count184
+\listindentFB=\dimen137
+\descindentFB=\dimen138
+\labelindentFB=\dimen139
+\labelwidthFB=\dimen140
+\leftmarginFB=\dimen141
+\parindentFFN=\dimen142
+\FBfnindent=\dimen143
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/usr/share/texmf/tex/latex/lm/lmodern.sty
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen144
+\Gin@req@width=\dimen145
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen146
+\ar@mcellbox=\box45
+\extrarowheight=\dimen147
+\NC@list=\toks18
+\extratabsurround=\skip49
+\backup@length=\skip50
+\ar@cellbox=\box46
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count185
+\l__pdf_internal_box=\box47
+)
+(./rapport.aux)
+\openout1 = `rapport.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 14
+.
+ (/usr/share/texmf/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Info: Redefining \degres on input line 14.
+LaTeX Info: Redefining \dots on input line 14.
+LaTeX Info: Redefining \up on input line 14.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count186
+\scratchdimen=\dimen148
+\scratchbox=\box48
+\nofMPsegments=\count187
+\nofMParguments=\count188
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count189
+\MPscratchDim=\dimen149
+\MPnumerator=\count190
+\makeMPintoPDFobject=\count191
+\everyMPtoPDFconversion=\toks20
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+6.
+
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+6.
+
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+16.
+
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+16.
+
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 16.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 16.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 16.
+<img/logo.jpg, id=1, 260.975pt x 130.4875pt>
+File: img/logo.jpg Graphic file (type jpg)
+<use img/logo.jpg>
+Package pdftex.def Info: img/logo.jpg  used on input line 19.
+(pdftex.def)             Requested size: 170.71887pt x 85.35942pt.
+ (./rapport.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 4.
+)
+\tf@toc=\write3
+\openout3 = `rapport.toc'.
+
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/logo.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+[2]
+<img/classes.png, id=15, 891.33pt x 543.02875pt>
+File: img/classes.png Graphic file (type png)
+<use img/classes.png>
+Package pdftex.def Info: img/classes.png  used on input line 42.
+(pdftex.def)             Requested size: 369.88145pt x 170.71523pt.
+
+Overfull \hbox (24.88145pt too wide) in paragraph at lines 42--43
+ [] 
+ []
+
+<img/proprietes.png, id=17, 1006.76125pt x 448.67625pt>
+File: img/proprietes.png Graphic file (type png)
+<use img/proprietes.png>
+Package pdftex.def Info: img/proprietes.png  used on input line 50.
+(pdftex.def)             Requested size: 369.88431pt x 170.71098pt.
+
+Overfull \hbox (24.88431pt too wide) in paragraph at lines 50--51
+ [] 
+ []
+
+[3 <./img/classes.png> <./img/proprietes.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+
+ []
+
+<img/triplet.png, id=24, 301.125pt x 106.3975pt>
+File: img/triplet.png Graphic file (type png)
+<use img/triplet.png>
+Package pdftex.def Info: img/triplet.png  used on input line 65.
+(pdftex.def)             Requested size: 227.63055pt x 85.36325pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+<img/schema_rdfs.png, id=25, 422.57875pt x 76.285pt>
+File: img/schema_rdfs.png Graphic file (type png)
+<use img/schema_rdfs.png>
+Package pdftex.def Info: img/schema_rdfs.png  used on input line 73.
+(pdftex.def)             Requested size: 170.71788pt x 56.90746pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
+
+ []
+
+[4 <./img/triplet.png> <./img/schema_rdfs.png>]
+Overfull \hbox (64.63893pt too wide) in paragraph at lines 85--103
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
+
+ []
+
+<img/schema_ex.png, id=31, 498.86375pt x 323.2075pt>
+File: img/schema_ex.png Graphic file (type png)
+<use img/schema_ex.png>
+Package pdftex.def Info: img/schema_ex.png  used on input line 109.
+(pdftex.def)             Requested size: 256.08418pt x 142.26105pt.
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+
+ []
+
+[6 <./img/schema_ex.png>]
+<img/temp_classes.png, id=39, 808.01875pt x 258.9675pt>
+File: img/temp_classes.png Graphic file (type png)
+<use img/temp_classes.png>
+Package pdftex.def Info: img/temp_classes.png  used on input line 133.
+(pdftex.def)             Requested size: 404.00839pt x 129.48341pt.
+<img/temp_proprietes.png, id=40, 837.1275pt x 190.7125pt>
+File: img/temp_proprietes.png Graphic file (type png)
+<use img/temp_proprietes.png>
+Package pdftex.def Info: img/temp_proprietes.png  used on input line 141.
+(pdftex.def)             Requested size: 418.56273pt x 95.356pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+
+ []
+
+[7 <./img/temp_classes.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+
+ []
+
+[8 <./img/temp_proprietes.png>]
+<img/schema_groupes.png, id=50, 876.27374pt x 477.785pt>
+File: img/schema_groupes.png Graphic file (type png)
+<use img/schema_groupes.png>
+Package pdftex.def Info: img/schema_groupes.png  used on input line 159.
+(pdftex.def)             Requested size: 341.43785pt x 170.71207pt.
+ [9 <./img/schema_groupes.png>] [10]
+<img/ex_xml_1.png, id=58, 1007.765pt x 703.62875pt>
+File: img/ex_xml_1.png Graphic file (type png)
+<use img/ex_xml_1.png>
+Package pdftex.def Info: img/ex_xml_1.png  used on input line 181.
+(pdftex.def)             Requested size: 503.88127pt x 351.8135pt.
+
+Overfull \hbox (167.15422pt too wide) in paragraph at lines 181--182
+ [][] 
+ []
+
+[11 <./img/ex_xml_1.png>]
+<img/ex_xml_2.png, id=63, 976.64874pt x 756.8275pt>
+File: img/ex_xml_2.png Graphic file (type png)
+<use img/ex_xml_2.png>
+Package pdftex.def Info: img/ex_xml_2.png  used on input line 186.
+(pdftex.def)             Requested size: 488.32318pt x 378.41283pt.
+
+Overfull \hbox (167.15962pt too wide) in paragraph at lines 186--187
+[][] 
+ []
+
+[12 <./img/ex_xml_2.png>]
+<img/xslt.png, id=68, 1214.5375pt x 926.46124pt>
+File: img/xslt.png Graphic file (type png)
+<use img/xslt.png>
+Package pdftex.def Info: img/xslt.png  used on input line 192.
+(pdftex.def)             Requested size: 607.26727pt x 463.22948pt.
+
+Overfull \hbox (110.25586pt too wide) in paragraph at lines 192--193
+[][] 
+ []
+
+[13 <./img/xslt.png>]
+Overfull \hbox (1.82442pt too wide) in paragraph at lines 198--239
+\T1/lmr/bx/n/10 norme ISO de des-crip-tion de res-sources pé-da-go-giques. \T1/
+lmr/m/n/10 STI-CEF (Sciences
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--239
+
+ []
+
+
+Overfull \hbox (58.90063pt too wide) in paragraph at lines 198--239
+\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 moodle:insa \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/i
+t/10 rouen:fr\OT1/lmr/m/n/10 ]$ \T1/lmr/m/n/10 Ni-co-las De-lestre, Ni-co-las M
+a-lan-dain \T1/lmr/bx/n/10 "XSLT" \T1/lmr/m/n/10 , https ://moodle.insa-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--239
+
+ []
+
+
+Overfull \hbox (4.38649pt too wide) in paragraph at lines 198--239
+\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 moodle:insa \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/i
+t/10 rouen:fr\OT1/lmr/m/n/10 ]$ \T1/lmr/m/n/10 Ni-co-las De-lestre, Ni-co-las M
+a-lan-dain \T1/lmr/bx/n/10 "RDF-SPARQL"
+ []
+
+
+Overfull \hbox (30.69376pt too wide) in paragraph at lines 198--239
+\T1/lmr/m/n/10 , https ://moodle.insa-rouen.fr/pluginfile.php/133458/mod_resour
+ce/content/1/RDF-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--239
+
+ []
+
+
+Overfull \hbox (31.24928pt too wide) in paragraph at lines 198--239
+\T1/lmr/m/n/10 https ://moodle.insa-rouen.fr/pluginfile.php/133459/mod_resource
+/content/2/RDFS-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--239
+
+ []
+
+
+Overfull \hbox (18.93083pt too wide) in paragraph at lines 198--239
+\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 blog:onyme:com; \OT1/lmr/m/n/10 2011]$ \T1/lm
+r/m/n/10 Ma-rina So-ler, \T1/lmr/bx/n/10 "Les on-to-lo-gies in-for-ma-tiques : 
+l'exemple
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--239
+
+ []
+
+
+Overfull \hbox (104.60873pt too wide) in paragraph at lines 198--239
+\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 edutechwiki:unige:ch\OT1/lmr/m/n/10 ]$\T1/lmr
+/m/n/10 , \T1/lmr/bx/n/10 "Tu-to-riel XSLT dé-bu-tant" \T1/lmr/m/n/10 , http :/
+/edu-tech-wiki.unige.ch/fr/Tutoriel_XSLT 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--239
+
+ []
+
+
+Overfull \hbox (5.03802pt too wide) in paragraph at lines 198--239
+\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 perso:univ \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it
+/10 mlv:fr\OT1/lmr/m/n/10 ]$ \T1/lmr/m/n/10 O.Curé,\T1/lmr/bx/n/10 "RDF" \T1/lm
+r/m/n/10 , http ://perso.univ-mlv.fr/ocure/RDF.pdf 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--239
+
+ []
+
+
+Overfull \hbox (98.19637pt too wide) in paragraph at lines 198--239
+\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 www:info:univ \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m
+/it/10 angers:fr\OT1/lmr/m/n/10 ]$ \T1/lmr/bx/n/10 "RDF-Schema" \T1/lmr/m/n/10 
+, http ://www.info.univ-angers.fr/pub/genest/fichiers/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--239
+
+ []
+
+[14] (./rapport.aux) ) 
+Here is how much of TeX's memory you used:
+ 3028 strings out of 483154
+ 44057 string characters out of 5965023
+ 282967 words of memory out of 5000000
+ 18008 multiletter control sequences out of 15000+600000
+ 578701 words of font info for 52 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 32i,8n,35p,1433b,425s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/
+share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/
+lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/f
+onts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
+Output written on rapport.pdf (14 pages, 867182 bytes).
+PDF statistics:
+ 112 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+
