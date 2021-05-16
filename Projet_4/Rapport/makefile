@@ -4,4 +4,4 @@ Rapport.pdf: Rapport.tex INSA.jpg
 all: Rapport.pdf
 
 clean:
-	rm Rapport.pdf Rapport.aux Rapport.log Rapport.out Rapport.toc
+	rm Rapport.pdf
