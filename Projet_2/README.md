@@ -19,7 +19,7 @@ Le fichier NoDEfr-2.1.xml correspond aux attentes mais il contient des balises d
 saxonb-xslt -o NoDEfr-2.2.xml NoDEfr-2.1.xml NoDEfr-2.2.xsl
 
 ```
-Pour vérifier la validité du fichier .xml on exécute la commande suivante : 
+Pour vérifier la validité du fichier de sortie final NoDEfr-2.2.xml on exécute la commande suivante : 
 
 ```bash
 xmllint --schema ../Projet_1/NoDEfe-2.xsd NoDEfr-2.2.xml --noout
