@@ -19,7 +19,7 @@
 
     <xsd:simpleType name="TCoDomaine">
         <xsd:restriction base="xsd:string">
-            <xsd:pattern value="Littéral|RC[0-9]{4}|ISO_[a-zA-Z0-9_\- ]*::RC[0-9]{4}"></xsd:pattern>
+            <xsd:pattern value="Littéral|Litteral|IRI|RC[0-9]{4}|RC[0-9]{3}|ISO_[a-zA-Z0-9_\-: ]*:*RC[0-9]{4}"></xsd:pattern>
         </xsd:restriction>
     </xsd:simpleType>
 

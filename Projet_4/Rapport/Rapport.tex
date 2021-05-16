@@ -1,0 +1,455 @@
+\documentclass[11pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{ucs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{sectsty}
+\usepackage{authblk}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{xspace}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\setlength{\parindent}{0pt} %Aucune identation
+\usepackage{lscape} % Format paysage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%CODE
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},   
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{teal},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{purple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
+\hypersetup{%
+  colorlinks=true,% hyperlinks will be black
+  linkbordercolor=red,% hyperlink borders will be red
+}
+
+\lstset{style=mystyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\providecommand{\keywords}[1]{\textbf{\textit{Keywords:}} #1}
+\bibliographystyle{apalike}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+\begin{titlepage}
+
+  \begin{center}
+
+    \textsc{{\LARGE Institut national des sciences appliquées de Rouen} \\ \vspace{6
+        mm} {\Large INSA de Rouen}} \\
+    \vspace{15mm}
+    \includegraphics[width=0.4\textwidth]{./INSA.jpg}\\[1.0 cm]
+
+    \textsc{\Large Document Web Sémantique}\\[0.5cm]
+
+    % Title
+
+    \HRule \\[0.4cm]
+           { \huge \bfseries Projet 2.4 - NoDEfr-2}\\[0.4cm]
+
+           \HRule \\[1.5cm]
+
+           % Author and supervisor
+           \vspace{1.5cm}
+           \begin{minipage}{0.4\textwidth}
+             \begin{flushleft} \large
+               \emph{Auteurs:}\\
+               Killian \textsc{POULIQUEN}
+               \\
+               Achraf \textsc{TALBI}
+               \\
+               Ghalil \textsc{BALGA}
+             \end{flushleft}
+           \end{minipage}
+           \begin{minipage}{0.4\textwidth}
+             \begin{flushright} \large
+               \emph{Enseignant:} \\
+               Nicolas \textsc{DELESTRE} 
+             \end{flushright}
+           \end{minipage}
+
+           \vfill
+               {\large \today}
+  \end{center}
+
+\end{titlepage} 
+\tableofcontents
+
+
+\chapter{Présentation du sujet}
+
+\section{Sujet 2 : NoDEfr-2, une norme pour la description des offres de formation}
+
+Un groupe d'experts de l'AFNOR travaillent depuis deux ans sur la spécification d'un modèle conceptuel pour la description des offres de formation (NoDEfr-2). Le méta modèle utilisé pour modéliser le NoDEfr-2 est celui proposé par l'ISO dans le cadre du MLR. Le paradigme de ce méta-modèle (ensembliste reposant sur la description de classes et d'éléments de données) est proche de ceux proposés par le W3C pour le web des données (RDFS) et le web sémantique (OWL2). Pour travailler les experts utilisent un tableur (document semi-formel): un onglet représente les classes, et les autres onglets (un par classe) leurs propriétés (éléments de données). L'objectif de ce projet est de formaliser automatiquement ce travail pour générer automatiquement des schémas RDFS et OWL.
+\hfill \break
+
+Liens :
+\begin{itemize}
+\item \href{https://sourcesup.renater.fr/www/nodefr/index.html}{Site NoDEfr}
+\item \href{https://hal.archives-ouvertes.fr/hal-01801633}{Article MLR}
+\item \href{https://github.com/Zaneriis/DocWeb}{GitHub projet}
+\end{itemize}
+
+\section{Sujet 2.4 : NoDEfr-2 XML vers OWL}
+
+4 équipes ont été constituées pour réaliser le projet NoDEfr-2 :
+\begin{itemize}
+\item Equipe 2.1 chargée de formaliser une grammaire XSD correspondant aux données du tableur
+\item Equipe 2.2 chargée de générer à partir du tableur un fichier XML respectant la grammaire XSD du groupe 2.1
+\item Equipe 2.3 chargée de générer un schéma RDFS au format turtle à partir du fichier XML de l'équipe 2.2
+\item Equipe 2.4 chargée de générer un schéma OWL2 au format turtle à partir du fichier XML de l'équipe 2.2
+\end{itemize}
+\hfill \break
+
+Nous sommes l'équipe 2.4.
+
+\section{Utilisation}
+\subsection{Répertoire code}
+Ce répertoire contient 3 fichiers :
+\begin{itemize}
+\item \emph{xml2ttl.xsl} : feuille XSLT qui transforme le xml en OWL au format turtle
+\item \emph{resources.xml} : version XML du noDEfr2 produite par le groupe projet 2.2
+\item \emph{noDEfr2\_OWL.ttl } : output au format turtle après application de la feuill XSLT sur le fichier XML
+\end{itemize}
+\subsection{Execution}
+L'application de la feuille XSLT se fait via un processeur XSLT tel que Saxon.
+\hfill \break
+\hfill \break
+Executez la commande suivante dans le répertoire courant pour lancer le processeur :
+\begin{lstlisting}[language=bash]
+  saxonb-xslt -o noDEfr2_OWL.ttl resources.xml xml2ttl.xsl
+\end{lstlisting}
+\subsection{Validation}
+La validation de la syntaxe du fichier turtle peut se faire sur le \href{https://www.w3.org/2015/03/ShExValidata/}{site du W3C}. Il suffit de copier coller le fichier \emph{noDEfr2\_OWL.ttl} et de lancer la validation.
+
+
+
+
+\chapter{Formalisation du problème}
+
+Le but du projet est d'automatiser la formalisation de données sous forme de schéma RDFS et OWL2. Il ne s'agit donc pas d'un problème de fond mais de forme. C'est à dire que nous ne devons pas construire le modèle NoDEfr2 (car celui ci est déjà représenté dans un tableur) mais le formaliser. Dans notre cas, il s'agit de passer un fichier XML en fichier turtle représentant un schéma OWL2.\\
+
+Nous pouvons identifier les problèmes généraux suivants :
+\begin{itemize}
+\item manipulation de plusieurs paradigmes
+  \begin{itemize}
+  \item paradigme des langages à balise (fichier XML, feuille XSLT)
+  \item paradigme MLR Metadata for Learning Resources
+  \item paradigme OWL2
+  \end{itemize}
+\item différentiation méta-modèle et modèle
+\end{itemize}
+\hfill \break
+Pour réaliser le travail demandé, nous avons décomposé le problème comme ceci :
+\begin{itemize}
+\item Comprendre le tableur.
+\item Lister les colonnes du tableur que nous pouvons représenter en OWL2.
+\item Passer du paradigme MLR vers le paradigme OWL.
+  \begin{itemize}
+  \item par exemple \emph{co-domaine} devient \emph{range} 
+  \end{itemize}
+\item Présenter aux équipes 2.1 et 2.2 les éléments que nous avons besoins de retrouver dans le fichier XML.
+\item Construire la feuille XSLT à partir d'exemples XML.
+\item Corriger la feuille XSLT pour pouvoir l'appliquer au vrai fichier XML de l'équipe 2.2.
+\item Corriger la feuille XSLT pour que le fichier turtle soit syntaxiquement validé par \href{https://www.w3.org/2015/03/ShExValidata/}{le site du W3C}
+\end{itemize}
+
+
+
+\chapter{Présentation des solutions}
+
+\section{Convertisseurs en ligne}
+
+Il esxiste plusieurs convertisseurs en ligne qui proposent une conversion de fichier XML vers des fichiers turtle (TTL).
+\hfill \break
+Avantages :
+\begin{itemize}
+\item solution clé en main
+\item fichier TTL de sortie valide
+\end{itemize}
+\hfill \break
+Inconvénients :
+\begin{itemize}
+\item le fichier XML d'entrée doit respecter la syntaxe XML/RDF
+\item solution très peu paramétrable
+\item largement disponible pour une conversion vers RDF mais moins disponible pour une conversion vers OWL2
+\end{itemize}
+\hfill \break
+Nous avons écarté cette solution car ce n'est pas une solution paramétrable et le fichier XML d'entrée n'est pas au format XML/RDF.
+\hfill \break
+Exemple de syntaxe XML/RDF :
+\begin{lstlisting}[language=XML]
+  <?xml version="1.0"?>
+
+  <rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:si="https://www.w3schools.com/rdf/">
+
+  <rdf:Description rdf:about="https://www.w3schools.com">
+  <si:title>W3Schools</si:title>
+  <si:author>Jan Egil Refsnes</si:author>
+  </rdf:Description>
+
+  </rdf:RDF> 
+\end{lstlisting}
+
+\section{Programme Python ou autre langage}
+
+Une solution envisageable pour résoudre notre problème est de produire un programme Python qui va charger le fichier XML puis écrire un fichier TTL.
+\hfill \break
+Avantages :
+\begin{itemize}
+\item Les membres du groupe ont un niveau de compétence élevé en Python.
+\item Il existe un module Python \emph{xml.etree.ElementTree} disponible pour manipuler des arbres XML.
+\end{itemize}
+\hfill \break
+Inconvénients :
+\begin{itemize}
+\item Le langage Python n'est pas spécialisé dans le traitement de données XML.
+\item Ce type de solution n'est pas abordé dans le cours de Document Web.
+\end{itemize}
+\hfill \break
+Cette solution est tout d'abord plus réaliste que la solution précédente (conversion en ligne). C'est une solution envisageable, mais ce n'est pas la solution optimale.
+
+\section{Feuille XSLT}
+XSLT est un langage à balise développé spécialement pour transformer un document XML dans un autre format. 
+\hfill \break
+Avantages :
+\begin{itemize}
+\item Langage spécialisé pour traiter des documents XML.
+\item Compilation simple grace à un processeur XSLT tel que \emph{Saxon}.
+\item Débuggage simple grace aux messages d'erreurs produite pas les processeurs XSLT.
+\end{itemize}
+\hfill \break
+Concrètement, cette solution ne présente pas d'inconvénients. Le langage est développé spécialement pour transformer des documents XML. De plus, XSLT et Saxon sont des outils largement utilisés : nous sommes certains de trouver des solutions pour les problèmes que nous allons rencontrer. Pour finir, si nous nous retrouvons dans une impasse, il est très peu probable que ce soit à cause du fait qu'il manque des fonctionnalités de traitement de document XML dans le langage XSLT.
+\hfill \break
+\hfill \break
+Ces éléments font de cette solution la plus fiable. C'est la solution que nous avons implémentée.
+
+\chapter{Implémentation}
+
+\section{Description du document XML en entrée}
+
+La philosophie adoptée pour représenter NoDEfr2 en format XML est : \emph{"une classe est une suite de relations"}. De plus, on peut noter que chaque colonne du tableur a une balise qui lui correspond dans le document XML.
+\hfill \break
+Extrait du fichier XML produit par l'équipe 2.2 :
+\begin{lstlisting}[language=XML]
+  <classe identifiant="RC0000">
+  <nom>Entite du monde de la formation</nom>
+  <definition>classe abstraite qui regroupe les proprietes communes a toutes les situations ou a l'ensemble de situations visant un ou plusieurs
+  objectifs de developpement personnel ou professionnel
+  </definition>
+  <sousClasseDe/>
+  <note>Super classe de toutes les classes. Elle regroupe toutes les proprietes des classes presentes dans ce modele  </note>
+  <relation identifiant="DES000001">
+  <nom>libelle</nom>
+  <definition>nommage humainement comprehensible de l'element</definition>
+  <indicateurLinguistique>oui</indicateurLinguistique>
+  <coDomaine>Litteral</coDomaine>
+  <regleDeContenu>MLR String</regleDeContenu>
+  <raffine/>
+  <exemple>Pour une instance de la classe RC0020 Offre de formation, le libelle pourrait etre " BTS services informatiques aux organisations"</exemple>
+  <note/>
+  <cardinaliteMinimale>1</cardinaliteMinimale>
+  <cardinaliteMaximale>1</cardinaliteMaximale>
+  <raison/>
+  </relation>
+  </classe>
+\end{lstlisting}
+Dans cette exemple, nous avons un extrait de la classe \emph{RC0000}. Nous avons d'abord des informations sur la classe puis la liste des relations qui ont pour domaine la classe \emph{RC0000} (dans l'extrait, nous n'avons gardé que la relation \emph{DES000001}).
+\hfill \break
+Pour généré un schéma OWL, les éléments et attributs qui nous interessent le plus sont les suivants :
+\begin{itemize}
+\item \emph{classe} ainsi que les informations basiques (\emph{nom, definition ...})
+  \begin{itemize}
+  \item \emph{identifiant}
+  \item \emph{sousClasseDe}
+  \end{itemize}
+\item \emph{relation}
+  \begin{itemize}
+  \item \emph{coDomaine}
+  \item \emph{cardinaliteMinimale}
+  \item \emph{cardinaliteMaximale}
+  \end{itemize}
+\end{itemize}
+
+\section{Description de la sortie souhaitée}
+
+Dans un premier temps, nous avons étudié le tableur pour lister les éléments à représenter. Dans le paradigme OWL, ces éléments sont représentés sous la forme de classes, de prédicats et de restrictions sur ces prédicats.
+\hfill \break
+Nous nous sommes d'abord intéressés au tableur car c'est ce dernier qui contient l'information d'origine. Ce sont les informations contenues dans le tableur que nous devons représenter au mieux. La représentation des données du tableur en document XML n'est qu'une étape. Après avoir étudier le tableur, nous avons communiqué aux équipes 2.1 et 2.2 les attentes que nous avions pour le document XML.
+\begin{table}[H]
+  \centering
+  \caption{Le tableau suivant rassemble la traduction des éléments et attributs XML en OWL :}
+  \label{tab:my-table}
+  \begin{tabular}{|l|l|}
+    \hline
+    XML                 & OWL                                                                           \\ \hline
+    classe              & rdfs:Class                                                                    \\ \hline
+    nom                 & rdfs:label                                                                    \\ \hline
+    definition          & rdfs:comment                                                                  \\ \hline
+    sousClasseDe        & \begin{tabular}[c]{@{}l@{}}rdfs:subClassOf\\ owl:intersectionOf\end{tabular}  \\ \hline
+      relation            & \begin{tabular}[c]{@{}l@{}}owl:DataProperty\\ owl:ObjectProperty\end{tabular} \\ \hline
+        coDomaien           & rdfs:range                                                                    \\ \hline
+        cardinalitéMaximale & \begin{tabular}[c]{@{}l@{}}owl:Restriction\\ owl:minCardinality\end{tabular}  \\ \hline
+          cardinalitéMinimale & \begin{tabular}[c]{@{}l@{}}owl:Restriction\\ owl:maxCardinality\end{tabular}  \\ \hline
+  \end{tabular}
+\end{table}
+\hfill \break
+Les extraits de code suivants sont des exemples de classes et de relations que nous souhaitons générer en TTL : 
+\begin{lstlisting}
+  noDEfr2:RC0015 rdf:type owl:Class ;
+  rdfs:label "Certificat, badge, diplome" ;
+  rdfs:comment "un element de cette classe est la reconnaissance des competences, des connaissances, des savoir-faire d'une personne"  ;
+  rdfs:subClassOf noDEfr2:RC0000 .
+\end{lstlisting}
+
+\begin{lstlisting}
+  noDEfr2:DES015001 rdf:type  owl:DataProperty ;
+  rdfs:label "description" ;
+  rdfs:comment "Description du diplome, certificat ou badge" ;
+  rdfs:domain noDEfr2:RC0015 ;
+  rdfs:range  "MLR String" .
+  _:DES015001Restriction rdf:type owl:Restriction ;
+  owl:onProperty noDEfr2:DES015001 ;
+  owl:minCardinality "0" ;
+  owl:maxCardinality "1" .
+\end{lstlisting}
+\newpage
+\section{Détails techniques}
+
+La section précédente donne une idée du résultat que nous attendons. Nous allons maintenant préciser quelques détails techniques de la feuille XSLT.
+\hfill \break
+La feuille XSLT utilise 3 principaux templates :
+\begin{itemize}
+\item classe
+\item sousClasseDe
+\item relation
+\end{itemize}
+\hfill \break
+
+\subsection{Templates}
+
+Le choix des templates \emph{relation} et \emph{classe} est trivial. Un troisième template \emph{sousClasseDe} à été créer car il y a beaucoup de modifications à faire pour passer le contenu du document XML vers un schéma OWL lorsqu'il s'agit de l'héritage des classes. En OWL, les classes sont des ensembles, il est donc possible d'avoir plusieurs classes mères pour une seule classe fille. Pour représenter cela en OWL, on créer une classe anonyme avec le prédicat \emph{owl:intersectionOf} puis on précise que la classe initiale pour laquelle on gère l'héritage possède l'attribut \emph{rdfs:subClassOf classAnonyme}.
+\hfill \break
+\hfill \break
+Les extraits de code suivants sont respectivement une partie XML et une partie TTL qui illustrent le paragraphe précédent.
+\begin{lstlisting}[language=XML]
+  <classe identifiant="RC0020">
+  <nom>Offre de formation</nom>
+  <definition>un element de cette classe est une formation decrite au niveau national, cette formation pouvant donner lieu a une attestation
+  ou a preparer a un diplome, une qualification, un certificat
+  </definition>
+  <sousClasseDe>RC0050, RC0030</sousClasseDe>
+  </classe>
+\end{lstlisting}
+
+\begin{lstlisting}
+  noDEfr2:RC0020 rdf:type owl:Class ;
+  rdfs:label "Offre de formation" ;
+  rdfs:comment "un element de cette classe est une formation decrite au niveau national, cette formation pouvant donner lieu a une attestation ou a preparer a un diplome, une qualification, un certificat"  .
+  _:anonymeRC0020 rdf:type owl:Class ;
+  rdfs:intersectionOf (noDEfr2:RC0050 noDEfr2:RC0030) .
+  noDEfr2:RC0020 rdfs:subClassOf _:anonymeRC0020 .
+\end{lstlisting}
+
+\subsection{Restrictions}
+
+Nous avons utilisé les Restrictions pour préciser la cardinalité de certaines propriétés. Pour cela, nous utilisons \emph{owl:Restriction}.
+\hfill \break
+\hfill \break
+Les extraits de code suivants sont respectivements une partie du document XML et une partie du document TTL.
+\begin{lstlisting}
+  <relation identifiant="DES040005">
+  <nom>description</nom>
+  <definition>complement d'information sur le montant et/ou le type</definition>
+  <indicateurLinguistique>oui</indicateurLinguistique>
+  <coDomaine>Litteral</coDomaine>
+  <regleDeContenu>MLR String</regleDeContenu>
+  <raffine/>
+  <exemple/>
+  <note/>
+  <cardinaliteMinimale>0</cardinaliteMinimale>
+  <cardinaliteMaximale>1</cardinaliteMaximale>
+  <raison/>
+  </relation>
+\end{lstlisting}
+
+\begin{lstlisting}
+  noDEfr2:DES040005 rdf:type  owl:DataProperty ;
+  rdfs:label "description" ;
+  rdfs:comment "complement d'information sur le montant et/ou le type" ;
+  rdfs:domain noDEfr2:RC0040 ;
+  rdfs:range  "MLR String" .
+  _:DES040005Restriction rdf:type owl:Restriction ;
+  owl:onProperty noDEfr2:DES040005 ;
+  owl:minCardinality "0" ;
+  owl:maxCardinality "1" .
+\end{lstlisting}
+
+\chapter{Conclusion}
+
+\section{Difficultés rencontrées}
+
+Cette section liste les difficultés rencontrées lors du développement du projet.
+\hfill \break
+\hfill \break
+La mise en page TTL, c'est à dire le bon placement des espaces, des sauts de lignes, des vigules, points-vigules et points. Plusieurs pistes de solutions sont possibles pour résoudre ce problème :
+\begin{itemize}
+\item Modifier le document XML.
+\item Choisir entre une bonne lisibilité du TTL et une bonne lisibilité de la feuille XSLT.
+\end{itemize}
+Pour résoudre cette difficulté, nous avons choisit de priorisé la lisibilité du fichier TTL au détriment de la feuille XSLT. Dans les faits, la feuille XSLT fonctionne et nous sommes satisfait de la lisibilité du fichier TTL. Cependant, la feuille XSLT est très difficile à déchiffrer.
+\hfill \break
+\hfill \break
+Lors des séances de TP du cours de Document Web, nous avons eu l'occasion d'utiliser un processeur XSLT pour transformer un document xml en fichier HTML. Nous n'avons pas utiliser XSLT pour transformer un document XML vers un fichier TTL. Cette difficulté est liée à la précédente.
+\hfill \break
+\hfill \break
+Les caractère spéciaux comme les guillemets, les chevrons ou encore les simples côtes nous ont posé problème au début du projet. Nous avon surmonté cette difficulté en choisissant astucieusement nos caractères spéciaux ainsi que les caractères d'échappement.
+\hfill \break
+\hfill \break
+La dernière difficulté notable est que XSLT est un langage à balise orienté fonctionnel. Il n'est pas simple de créer par exemple une variable que l'on souhaite incrémenter régulièrement. Ce genre de variable peut être utile pour les classes anonymes (identifiant unique). Pour résoudre ce problème, nous avons utilisé l'identifiant des classes ou des propriétés pour lesquelles nous utilisons une classe anonyme.
+
+\section{Améliorations}
+Une piste d'amélioration pour notre projet est la simplification et la clarification de la feuille XSLT.
+
+\section{Conclusion générale}
+Pour résumer le projet, nous avons produit une feuille XSLT pour transformer un document XML en fichier TTL. Ce fichier TTL représente un schéma OWL2 que nous avons construit à partir du document XML. Le document XML lui même se base sur un tableur qui représente le modèle NoDEfr2, un modèle décrivant les offres de formations. Le modèle NoDEfr2 est décrit par le méta-modèle MLR (Metadata for Learning Ressources).
+
+\end{document}

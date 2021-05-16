@@ -8,9 +8,9 @@
 
 ## Execution
 
-L'application de la feuille xslt se fait via un compilateur xsl comme **Saxon**.
+L'application de la feuille xslt se fait via un processeur xslt comme **Saxon**.
 
-Executer la commande suivante dans le répertoire courant pour lancer la compilation.
+Executer la commande suivante dans le répertoire courant pour lancer le processeur.
 
 ```bash
 saxonb-xslt -o noDEfr2_OWL.ttl resources.xml xml2ttl.xsl
