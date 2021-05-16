@@ -28,8 +28,24 @@
     <xsl:template match="relation">
         <xsl:if test="string(@identifiant)">
             <xsl:copy>
-                <xsl:copy-of select="@*"/>
-                <xsl:copy-of select="./*"/>
+                <xsl:for-each select="./*">
+                    <xsl:choose>
+                        <xsl:when test="((name()='definition') or
+                                        (name()='coDomaine') or 
+                                        (name()='coDomaine') or 
+                                        (name()='regleDeContenu') or
+                                        (name()='raffine') or 
+                                        (name()='exmeple') or
+                                        (name()='note') or
+                                        (name()='raison')) and 
+                                        (string()='')">
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:copy-of select="@*"/>
+                            <xsl:copy-of select="."/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:for-each>
             </xsl:copy>
         </xsl:if>
     </xsl:template>

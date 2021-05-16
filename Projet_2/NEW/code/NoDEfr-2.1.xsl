@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
     xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" 
@@ -26,7 +26,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     office:version="1.0">
 
-    <xsl:output method="html" encoding="UTF-8"/>
+    <xsl:output indent="yes" encoding="UTF-8"/>
     
     <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
