@@ -2,12 +2,12 @@
 
 <xsl:stylesheet version="1.0" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xslt="http://xml.apache.org/xslt"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:noDefr2="http://example.org/noDEfr2/">
-<xsl:output method="text" indent="yes"/>
+<xsl:output method="text" indent="yes" xslt:indent-amount="4"/>
 
-<xsl:template match="/" disable-output-escaping="yes">
-<td></td>
+<xsl:template match="/">
 @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#>.
 @prefix noDEfr2: &lt;http://example.org/noDEfr2/>.
