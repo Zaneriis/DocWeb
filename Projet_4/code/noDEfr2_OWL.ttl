@@ -1,0 +1,1132 @@
+
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+    @prefix noDEfr2: <http://example.org/noDEfr2/>.
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix owl2: <http://www.w3.org/2006/12/owl2#> .
+    
+
+
+    noDEfr2:ISO-IEC22602:RC0007 rdf:type owl:Class ;
+    rdfs:label "Institution" ;
+    rdfs:comment "un élément de cette classe est une entité composée d'êtres humains, organisée dans la durée,en vue d'une finalité et dotée d'une personalité juridique"  ;
+    rdfs:subClassOf noDEfr2:RC0700 .
+
+
+    noDEfr2:RC0000 rdf:type owl:Class ;
+    rdfs:label "Entité du monde de la formation" ;
+    rdfs:comment "classe abstraite qui regroupe les propriétés communes à toutes les situations ou à l'ensemble de situations visant un ou plusieurs objectifs de développement personnel ou professionnel"  .
+  
+
+
+    noDEfr2:DES000001 rdf:type  owl:DataProperty ;
+    rdfs:label "libellé" ;
+    rdfs:comment "nommage humainement compréhensible de l'élément" ;
+    rdfs:domain noDEfr2:RC0000 ;
+    rdfs:range  "MLR String" .
+    _:DES000001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES000001 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES000002 rdf:type  owl:DataProperty ;
+    rdfs:label "date de mise à jour" ;
+    rdfs:comment "dernière date de modification d'une information d'un élément" ;
+    rdfs:domain noDEfr2:RC0000 ;
+    rdfs:range  "MLR Date" .
+    _:DES000002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES000002 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:DES000003 rdf:type  owl:DataProperty ;
+    rdfs:label "code" ;
+    rdfs:comment "code humain permettant de désigner de manière non ambigüe un élément" ;
+    rdfs:domain noDEfr2:RC0000 ;
+    rdfs:range  "MLR String" .
+    _:DES000003Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES000003 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:DES000003001 rdf:type  owl:DataProperty ;
+    rdfs:label "contributeur" ;
+    rdfs:comment "contributeur de la dernière modification de l'information" ;
+    rdfs:domain noDEfr2:RC0000 ;
+    rdfs:range noDEfr2:ISO_IEC_19788-1:2010::RC0003 .
+    _:DES000003001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES000003001 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:RC0015 rdf:type owl:Class ;
+    rdfs:label "Certificat, badge, diplome" ;
+    rdfs:comment "un élément de cette classe est la reconnaissance des compétences, des connaissances, des savoir-faire d'une personne"  ;
+    rdfs:subClassOf noDEfr2:RC0000 .
+
+
+    noDEfr2:DES015001 rdf:type  owl:DataProperty ;
+    rdfs:label "description" ;
+    rdfs:comment "Description du diplôme, certificat ou badge" ;
+    rdfs:domain noDEfr2:RC0015 ;
+    rdfs:range  "MLR String" .
+    _:DES015001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES015001 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:DES015017001 rdf:type  owl:DataProperty ;
+    rdfs:label "a pour niveau" ;
+    rdfs:comment "Niveau du diplome d'un système de codification donné" ;
+    rdfs:domain noDEfr2:RC0015 ;
+    rdfs:range noDEfr2:RC0017 .
+    _:DES015017001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES015017001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES015016001 rdf:type  owl:DataProperty ;
+    rdfs:label "est autorisé à délivrer par" ;
+    rdfs:comment "Habilitation ou certificat permettant de délivrer un diplome, un certficat, un badge, une attestation, etc." ;
+    rdfs:domain noDEfr2:RC0015 ;
+    rdfs:range noDEfr2:RC0016 .
+    _:DES015016001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES015016001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:RC0016 rdf:type owl:Class ;
+    rdfs:label "Certification" ;
+    rdfs:comment "un élément de cette classe est la reconnaissance de la qualité de l'offre d'un organisme donné selon un référentiel spécifié"  ;
+    rdfs:subClassOf noDEfr2:RC0000 .
+
+
+    noDEfr2:DES016001 rdf:type  owl:DataProperty ;
+    rdfs:label "date d'habilitation" ;
+    rdfs:comment "Date d'obtention de l'habilitation" ;
+    rdfs:domain noDEfr2:RC0016 ;
+    rdfs:range  "MLR Date" .
+    _:DES016001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES016001 ;
+    owl:cardinality "" .
+
+
+    noDEfr2:DES016002 rdf:type  owl:DataProperty ;
+    rdfs:label "durée d'habilitation" ;
+    rdfs:comment "Durée de validité de l'habilitation" ;
+    rdfs:domain noDEfr2:RC0016 ;
+    rdfs:range  "MLR Duration" .
+    _:DES016002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES016002 ;
+    owl:cardinality "" .
+
+
+    noDEfr2:RC0017 rdf:type owl:Class ;
+    rdfs:label "Niveau de certification" ;
+    rdfs:comment "un élément de cette classe représente un niveau de certification dans un système de codification"  ;
+    rdfs:subClassOf noDEfr2:RC0000 .
+
+
+    noDEfr2:DES017001 rdf:type  owl:DataProperty ;
+    rdfs:label "valeur" ;
+    rdfs:comment "Niveau de la certification" ;
+    rdfs:domain noDEfr2:RC0017 ;
+    rdfs:range  "Nombre naturel" .
+    _:DES017001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES017001 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES017002 rdf:type  owl:DataProperty ;
+    rdfs:label "système de codification" ;
+    rdfs:comment "Nom du système de codification du diplôme, certificat, badge" ;
+    rdfs:domain noDEfr2:RC0017 ;
+    rdfs:range  "IRI" .
+    _:DES017002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES017002 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:RC0020 rdf:type owl:Class ;
+    rdfs:label "Offre de formation" ;
+    rdfs:comment "un élément de cette classe est une formation décrite au niveau national, cette formation pouvant donner lieu à une attestation ou à préparer à un diplôme, une qualification, un certificat"  .
+    _:anonyme rdf:type owl:Class ;
+    rdfs:intersectionOf (noDEfr2:RC0050 noDEfr2:RC0030) .
+    noDEfr2: rdfs:subClassOf _:anonyme .
+    
+
+
+    noDEfr2:DES020001 rdf:type  owl:DataProperty ;
+    rdfs:label "type" ;
+    rdfs:comment "indique à quel type, catégorie, nationale de formation la formation appartient" ;
+    rdfs:domain noDEfr2:RC0020 ;
+    rdfs:range  "Vocabulaire" .
+    _:DES020001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES020001 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES020002 rdf:type  owl:DataProperty ;
+    rdfs:label "stage" ;
+    rdfs:comment "indique les stages prévus dans le référentiels de formation" ;
+    rdfs:domain noDEfr2:RC0020 ;
+    rdfs:range  "MLR String" .
+    _:DES020002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES020002 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES020003 rdf:type  owl:DataProperty ;
+    rdfs:label "métier visé" ;
+    rdfs:comment "métier(s) au(x)quel(s) donne(nt) accès la formation" ;
+    rdfs:domain noDEfr2:RC0020 ;
+    rdfs:range  "Vocabulaire" .
+    _:DES020003Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES020003 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES020004 rdf:type  owl:DataProperty ;
+    rdfs:label "acronyme" ;
+    rdfs:comment "Acronyme officiel de la formation" ;
+    rdfs:domain noDEfr2:RC0020 ;
+    rdfs:range  "MLR String" .
+    _:DES020004Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES020004 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:DES020005 rdf:type  owl:DataProperty ;
+    rdfs:label "ressource" ;
+    rdfs:comment "Lien vers des ressources en rapport avec l'offre de formation" ;
+    rdfs:domain noDEfr2:RC0020 ;
+    rdfs:range  "IRI" .
+    _:DES020005Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES020005 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES020017001 rdf:type  owl:DataProperty ;
+    rdfs:label "niveau de sortie" ;
+    rdfs:comment "indique le niveau de formation obtenu à la fin de la formation si le certificat est validé" ;
+    rdfs:domain noDEfr2:RC0020 ;
+    rdfs:range noDEfr2:RC0017 .
+    _:DES020017001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES020017001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES020020001 rdf:type  owl:DataProperty ;
+    rdfs:label "se décline en" ;
+    rdfs:comment "une offre de formation se décline en une autre offre de formation pour par exemple préciser des options" ;
+    rdfs:domain noDEfr2:RC0020 ;
+    rdfs:range noDEfr2:RC0020 .
+    _:DES020020001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES020020001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES020020002 rdf:type  owl:DataProperty ;
+    rdfs:label "a évolué en" ;
+    rdfs:comment "historique de la formation" ;
+    rdfs:domain noDEfr2:RC0020 ;
+    rdfs:range noDEfr2:RC0020 .
+    _:DES020020002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES020020002 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES020030001 rdf:type  owl:DataProperty ;
+    rdfs:label "condition d'accès" ;
+    rdfs:comment "conditions d'accès aux actions de formation de cette offre" ;
+    rdfs:domain noDEfr2:RC0020 ;
+    rdfs:range noDEfr2:RC0030 .
+    _:DES020030001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES020030001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES020101001 rdf:type  owl:DataProperty ;
+    rdfs:label "est matérialisée" ;
+    rdfs:comment "L'offre de formation est matérialisée dans un ou plusieurs établissements" ;
+    rdfs:domain noDEfr2:RC0020 ;
+    rdfs:range noDEfr2:RC0101 .
+    _:DES020101001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES020101001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:RC0030 rdf:type owl:Class ;
+    rdfs:label "Condition d'accès" ;
+    rdfs:comment "un élément de cette classe indique les conditions d'admission pour pouvoir postuler à une offre de formation"  ;
+    rdfs:subClassOf noDEfr2:RC0000 .
+
+
+    noDEfr2:DES030031001 rdf:type  owl:DataProperty ;
+    rdfs:label "prérequis" ;
+    rdfs:comment "Les prérequis sont les caractéristiques du candidat, les différents niveaux de connaissances, de savoir-faire, d’expériences professionnelles ou de fonctions exercées nécessaires pour suivre efficacement une formation déterminée" ;
+    rdfs:domain noDEfr2:RC0030 ;
+    rdfs:range noDEfr2:RC0031 .
+    _:DES030031001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES030031001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES030032001 rdf:type  owl:DataProperty ;
+    rdfs:label "modalité de sélection" ;
+    rdfs:comment "La méthode de sélection permettant de retenir un candidat" ;
+    rdfs:domain noDEfr2:RC0030 ;
+    rdfs:range noDEfr2:RC0032 .
+    _:DES030032001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES030032001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:RC0031 rdf:type owl:Class ;
+    rdfs:label "Prérequis" ;
+    rdfs:comment "un élément de cette classe indique un ou plusieurs prérequis pour pouvoir postuler à une offre de formation"  ;
+    rdfs:subClassOf noDEfr2:RC0000 .
+
+
+    noDEfr2:DES031001 rdf:type  owl:DataProperty ;
+    rdfs:label "description" ;
+    rdfs:comment "description d'un ou plusiuers prérequis" ;
+    rdfs:domain noDEfr2:RC0031 ;
+    rdfs:range  "MLR String" .
+    _:DES031001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES031001 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:RC0032 rdf:type owl:Class ;
+    rdfs:label "Modalité de sélection" ;
+    rdfs:comment "un élément de cette classe indique une ou plusieurs modalités de sélection pour pouvoir être admis à une offre de formation"  ;
+    rdfs:subClassOf noDEfr2:RC0000 .
+
+
+    noDEfr2:DES032001 rdf:type  owl:DataProperty ;
+    rdfs:label "description" ;
+    rdfs:comment "description d'un ou plusiuers prérequis" ;
+    rdfs:domain noDEfr2:RC0032 ;
+    rdfs:range  "MLR String" .
+    _:DES032001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES032001 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:RC0040 rdf:type owl:Class ;
+    rdfs:label "Frais de formation" ;
+    rdfs:comment "un élément de cette classe est une dépense pour l'apprenant liée à la participation à la formation"  .
+  
+
+
+    noDEfr2:DES040001 rdf:type  owl:DataProperty ;
+    rdfs:label "montant" ;
+    rdfs:comment "montant du frais de formation" ;
+    rdfs:domain noDEfr2:RC0040 ;
+    rdfs:range  "Réel positif" .
+    _:DES040001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES040001 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES040002 rdf:type  owl:DataProperty ;
+    rdfs:label "devise" ;
+    rdfs:comment "devise du montant" ;
+    rdfs:domain noDEfr2:RC0040 ;
+    rdfs:range  "ISO 4217" .
+    _:DES040002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES040002 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES040003 rdf:type  owl:DataProperty ;
+    rdfs:label "taux TVA" ;
+    rdfs:comment "Taux de TVA appliquée pour l'élément de formation" ;
+    rdfs:domain noDEfr2:RC0040 ;
+    rdfs:range  "Réel positif" .
+    _:DES040003Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES040003 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES040004 rdf:type  owl:DataProperty ;
+    rdfs:label "type" ;
+    rdfs:comment "type du montant" ;
+    rdfs:domain noDEfr2:RC0040 ;
+    rdfs:range  "Vocabulaire" .
+    _:DES040004Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES040004 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES040005 rdf:type  owl:DataProperty ;
+    rdfs:label "description" ;
+    rdfs:comment "complément d'information sur le montant et/ou le type" ;
+    rdfs:domain noDEfr2:RC0040 ;
+    rdfs:range  "MLR String" .
+    _:DES040005Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES040005 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:RC0050 rdf:type owl:Class ;
+    rdfs:label "Caractéristiques de la formation" ;
+    rdfs:comment "classe abstraite qui regroupe les propriété communes aux offres de formation et aux cas décrivant l'organisation pédagoqique d'une formation"  ;
+    rdfs:subClassOf noDEfr2:RC0000 .
+
+
+    noDEfr2:DES050001 rdf:type  owl:DataProperty ;
+    rdfs:label "description" ;
+    rdfs:comment "resumé descriptif de l'offre de formation" ;
+    rdfs:domain noDEfr2:RC0050 ;
+    rdfs:range  "MLR String" .
+    _:DES050001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES050001 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:DES050002 rdf:type  owl:DataProperty ;
+    rdfs:label "domaine" ;
+    rdfs:comment "regroupement de plusieurs disciplines d'enseignement subdivisé en mention" ;
+    rdfs:domain noDEfr2:RC0050 ;
+    rdfs:range  "Vocabulaire" .
+    _:DES050002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES050002 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES050003 rdf:type  owl:DataProperty ;
+    rdfs:label "durée hors entreprise" ;
+    rdfs:comment "indique la durée de formation en heures dans l'établissement de formation ou à distance" ;
+    rdfs:domain noDEfr2:RC0050 ;
+    rdfs:range  "MLR Duration" .
+    _:DES050003Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES050003 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES050004 rdf:type  owl:DataProperty ;
+    rdfs:label "durée en entreprise" ;
+    rdfs:comment "indique la durée de formation en heures en entreprise" ;
+    rdfs:domain noDEfr2:RC0050 ;
+    rdfs:range  "MLR Duration" .
+    _:DES050004Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES050004 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:DES050005 rdf:type  owl:DataProperty ;
+    rdfs:label "période" ;
+    rdfs:comment "indique la durée de la période de la formation la plus pratiquée (indication pour l'apprenant)" ;
+    rdfs:domain noDEfr2:RC0050 ;
+    rdfs:range  "MLR Duration" .
+    _:DES050005Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES050005 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:DES050070001 rdf:type  owl:DataProperty ;
+    rdfs:label "crédits ECTS" ;
+    rdfs:comment "indique le nombre de credits ECTS obtenu à l'issue de la validation de la formation (certification validée)" ;
+    rdfs:domain noDEfr2:RC0050 ;
+    rdfs:range noDEfr2:RC0070 .
+    _:DES050070001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES050070001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES05002001 rdf:type  owl:DataProperty ;
+    rdfs:label "ressource" ;
+    rdfs:comment "ressources utilisées dans le cadre de cette formation" ;
+    rdfs:domain noDEfr2:RC0050 ;
+    rdfs:range noDEfr2:ISO_IEC_19788-1:2011::RC0002 .
+    _:DES05002001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES05002001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES050003001 rdf:type  owl:DataProperty ;
+    rdfs:label "a pour objectif" ;
+    rdfs:comment "indique les objectifs de la formation en termes de ou des compétences avec leurs niveaux" ;
+    rdfs:domain noDEfr2:RC0050 ;
+    rdfs:range noDEfr2:ISO_IEC_22602:RC0003 .
+    _:DES050003001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES050003001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES050003002 rdf:type  owl:DataProperty ;
+    rdfs:label "a pour prérequis" ;
+    rdfs:comment "indique les prérequis pour la formation en termes de ou des compétences avec leurs niveaux" ;
+    rdfs:domain noDEfr2:RC0050 ;
+    rdfs:range noDEfr2:ISO_IEC_22602:RC0003 .
+    _:DES050003002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES050003002 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:RC0060 rdf:type owl:Class ;
+    rdfs:label "Composition" ;
+    rdfs:comment "classe abstraite qui définit la composition d'une action de formation, d'un parcours ou d'un module en termes d'élément de formation"  .
+  
+
+
+    noDEfr2:DES060104001 rdf:type  owl:DataProperty ;
+    rdfs:label "élément constituant" ;
+    rdfs:comment "indique le ou les éléments de formation qui sont inclus dans une composition" ;
+    rdfs:domain noDEfr2:RC0060 ;
+    rdfs:range noDEfr2:RC0104 .
+    _:DES060104001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES060104001 ;
+    owl:minCardinality "1" .
+
+
+    noDEfr2:RC0061 rdf:type owl:Class ;
+    rdfs:label "Compositon obligatoire" ;
+    rdfs:comment "classe qui définit le caractère obligatoire de la composition d'une action de formation, d'un parcours ou d'un module en termes d'éléments de formation"  ;
+    rdfs:subClassOf noDEfr2:RC0060 .
+
+
+    noDEfr2:RC0062 rdf:type owl:Class ;
+    rdfs:label "Composition optionnelle" ;
+    rdfs:comment "classe qui définit le caractère optionnel de la composition d'une action de formation, d'un parcours ou d'un module en termes d'éléments de formation"  ;
+    rdfs:subClassOf noDEfr2:RC0060 .
+
+
+    noDEfr2:RC0063 rdf:type owl:Class ;
+    rdfs:label "Composition à choix" ;
+    rdfs:comment "classe qui définit le caractère à choix de la composition d'une action de formation, d'un parcours ou d'un module en termes d'éléments de formation"  ;
+    rdfs:subClassOf noDEfr2:RC0060 .
+
+
+    noDEfr2:DES063001 rdf:type  owl:DataProperty ;
+    rdfs:label "nombre minimal" ;
+    rdfs:comment "spécifie le nombre minimal d'éléments de formation à choisir parmi les éléments de formation constituant la composition" ;
+    rdfs:domain noDEfr2:RC0063 ;
+    rdfs:range  "Nombre naturel" .
+    _:DES063001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES063001 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES063002 rdf:type  owl:DataProperty ;
+    rdfs:label "nombre maximal" ;
+    rdfs:comment "spécifie le nombre maximal d'éléments de formation à choisir parmi les éléments de formation constituant la composition" ;
+    rdfs:domain noDEfr2:RC0063 ;
+    rdfs:range  "Nombre naturel" .
+    _:DES063002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES063002 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:RC0070 rdf:type owl:Class ;
+    rdfs:label "Crédits ECTS" ;
+    rdfs:comment "classe qui définit le nombre de crédits ECTS qui peuvent être contextuels à une offre de formation"  ;
+    rdfs:subClassOf noDEfr2:RC0000 .
+
+
+    noDEfr2:DES070001 rdf:type  owl:DataProperty ;
+    rdfs:label "nombre de crédits" ;
+    rdfs:comment "nombre de crédits ECTS associé à une offre de formation, un parcours, un module, un élément de formation ou une activité pédagogique" ;
+    rdfs:domain noDEfr2:RC0070 ;
+    rdfs:range  "Réel positif" .
+    _:DES070001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES070001 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES070101001 rdf:type  owl:DataProperty ;
+    rdfs:label "relatif à" ;
+    rdfs:comment "indique q'un nombre de crédits ECTS peut être relatif à une offre de formation, un parcours, un module, un élément de formation ou une activité pédagogique" ;
+    rdfs:domain noDEfr2:RC0070 ;
+    rdfs:range noDEfr2:RC0100 .
+    _:DES070101001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES070101001 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:RC0080 rdf:type owl:Class ;
+    rdfs:label "Session d'information" ;
+    rdfs:comment "classe qui présente une réalisation lors d'une session d'information"  ;
+    rdfs:subClassOf noDEfr2:RC0000 .
+
+
+    noDEfr2:DES080001 rdf:type  owl:DataProperty ;
+    rdfs:label "date" ;
+    rdfs:comment "date de la session d'information" ;
+    rdfs:domain noDEfr2:RC0080 ;
+    rdfs:range  "MLR Date" .
+    _:DES080001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES080001 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES080002 rdf:type  owl:DataProperty ;
+    rdfs:label "lieu" ;
+    rdfs:comment "lieu de la session d'information" ;
+    rdfs:domain noDEfr2:RC0080 ;
+    rdfs:range  "MLR String" .
+    _:DES080002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES080002 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES080003 rdf:type  owl:DataProperty ;
+    rdfs:label "nombre maximal" ;
+    rdfs:comment "nombre maximal de participants à la session d'information" ;
+    rdfs:domain noDEfr2:RC0080 ;
+    rdfs:range  "Nombre naturel" .
+    _:DES080003Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES080003 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:RC0090 rdf:type owl:Class ;
+    rdfs:label "Période d'interruption" ;
+    rdfs:comment "classe qui définit toute période d'interruption (vacances, fermeture administrative, etc.) pour une réalisation"  ;
+    rdfs:subClassOf noDEfr2:RC0000 .
+
+
+    noDEfr2:DES090001 rdf:type  owl:DataProperty ;
+    rdfs:label "début" ;
+    rdfs:comment "" ;
+    rdfs:domain noDEfr2:RC0090 ;
+    rdfs:range  "MLR Date" .
+    _:DES090001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES090001 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES090002 rdf:type  owl:DataProperty ;
+    rdfs:label "fin" ;
+    rdfs:comment "" ;
+    rdfs:domain noDEfr2:RC0090 ;
+    rdfs:range  "MLR Date" .
+    _:DES090002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES090002 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES090003 rdf:type  owl:DataProperty ;
+    rdfs:label "commentaire" ;
+    rdfs:comment "" ;
+    rdfs:domain noDEfr2:RC0090 ;
+    rdfs:range  "MLR String" .
+    _:DES090003Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES090003 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:RC0100 rdf:type owl:Class ;
+    rdfs:label "Formation" ;
+    rdfs:comment "classe abstraite qui regroupe les propriétés communes decrivant l'organisation pédagogique de la formation dans une institution"  .
+    _:anonyme rdf:type owl:Class ;
+    rdfs:intersectionOf (noDEfr2:RC0050 noDEfr2:RC0030) .
+    noDEfr2: rdfs:subClassOf _:anonyme .
+    
+
+
+    noDEfr2:DES100001 rdf:type  owl:DataProperty ;
+    rdfs:label "langue d'enseignement" ;
+    rdfs:comment "langue dans laquelle est délivrée la formation" ;
+    rdfs:domain noDEfr2:RC0100 ;
+    rdfs:range  "ISO 639" .
+    _:DES100001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES100001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES100002 rdf:type  owl:DataProperty ;
+    rdfs:label "charge de travail" ;
+    rdfs:comment "durée moyenne du travail pour l'apprenant en prenant en compte toutes les activités" ;
+    rdfs:domain noDEfr2:RC0100 ;
+    rdfs:range  "MLR Duration" .
+    _:DES100002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES100002 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:DES100003001 rdf:type  owl:DataProperty ;
+    rdfs:label "responsable" ;
+    rdfs:comment "personne en charge de la formation" ;
+    rdfs:domain noDEfr2:RC0100 ;
+    rdfs:range noDEfr2:ISO_IEC_19788-1:2010::RC0003 .
+    _:DES100003001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES100003001 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:DES100003001 rdf:type  owl:DataProperty ;
+    rdfs:label "condition de validation" ;
+    rdfs:comment "règles permettant de valider la formation" ;
+    rdfs:domain noDEfr2:RC0100 ;
+    rdfs:range  "MLR String" .
+    _:DES100003001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES100003001 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:DES100004 rdf:type  owl:DataProperty ;
+    rdfs:label "programme" ;
+    rdfs:comment "contenu de la formation" ;
+    rdfs:domain noDEfr2:RC0100 ;
+    rdfs:range  "MLR String" .
+    _:DES100004Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES100004 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES100005 rdf:type  owl:DataProperty ;
+    rdfs:label "programme_ref" ;
+    rdfs:comment "indique l'url vers d'un document qui propose notamment le reférentiel de formation" ;
+    rdfs:domain noDEfr2:RC0100 ;
+    rdfs:range noDEfr2:IRI .
+    _:DES100005Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES100005 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES100006 rdf:type  owl:DataProperty ;
+    rdfs:label "matériel pédagogique" ;
+    rdfs:comment "équipement ou matériel technique de l'apprenant nécessaire à la formation" ;
+    rdfs:domain noDEfr2:RC0100 ;
+    rdfs:range  "Vocabulaire" .
+    _:DES100006Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES100006 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES100007 rdf:type  owl:DataProperty ;
+    rdfs:label "financeur" ;
+    rdfs:comment "entité qui est susceptible de prendre en charge financièrement toute où partie de la formation" ;
+    rdfs:domain noDEfr2:RC0100 ;
+    rdfs:range  "Vocabulaire" .
+    _:DES100007Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES100007 ;
+    owl:minCardinality "1" .
+
+
+    noDEfr2:DES100015001 rdf:type  owl:DataProperty ;
+    rdfs:label "permet d'obtenir" ;
+    rdfs:comment "indique le certificat, badge ou diplôme associé à la formation" ;
+    rdfs:domain noDEfr2:RC0100 ;
+    rdfs:range noDEfr2:RC0015 .
+    _:DES100015001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES100015001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES100040001 rdf:type  owl:DataProperty ;
+    rdfs:label "tarif" ;
+    rdfs:comment "tarifs de la formation" ;
+    rdfs:domain noDEfr2:RC0100 ;
+    rdfs:range noDEfr2:RC0040 .
+    _:DES100040001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES100040001 ;
+    owl:minCardinality "1" .
+
+
+    noDEfr2:RC0101 rdf:type owl:Class ;
+    rdfs:label "Action de formation" ;
+    rdfs:comment "un élément de cette classe est la réalisation concrète de la formation (sens catalogue). Il décrit un itinéraire composé de situations de formation permettant d'atteindre un objectif de développement personnel ou professionnel spécifié"  .
+    _:anonyme rdf:type owl:Class ;
+    rdfs:intersectionOf (noDEfr2:RC0100 noDEfr2:RC0030) .
+    noDEfr2: rdfs:subClassOf _:anonyme .
+    
+
+
+    noDEfr2:DES101001 rdf:type  owl:DataProperty ;
+    rdfs:label "public cible" ;
+    rdfs:comment "public prioritairement concerné par l'action de formation" ;
+    rdfs:domain noDEfr2:RC0101 ;
+    rdfs:range  "Vocabulaire" .
+    _:DES101001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES101001 ;
+    owl:minCardinality "1" .
+
+
+    noDEfr2:DES101002 rdf:type  owl:DataProperty ;
+    rdfs:label "modalité" ;
+    rdfs:comment "statut, situation de l'apprenant" ;
+    rdfs:domain noDEfr2:RC0101 ;
+    rdfs:range  "Vocabulaire" .
+    _:DES101002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES101002 ;
+    owl:minCardinality "1" .
+
+
+    noDEfr2:DES101016001 rdf:type  owl:DataProperty ;
+    rdfs:label "est certifié par" ;
+    rdfs:comment "indique que l'action de formation respecte tout ou partie du référentiel de la certification" ;
+    rdfs:domain noDEfr2:RC0101 ;
+    rdfs:range noDEfr2:RC0016 .
+    _:DES101016001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES101016001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES101020001 rdf:type  owl:DataProperty ;
+    rdfs:label "matérialise" ;
+    rdfs:comment "l'action de formation matérialise une offre de formation au sein d'un établissement" ;
+    rdfs:domain noDEfr2:RC0101 ;
+    rdfs:range noDEfr2:RC0020 .
+    _:DES101020001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES101020001 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:DES101030001 rdf:type  owl:DataProperty ;
+    rdfs:label "conditions d'accès" ;
+    rdfs:comment "indique les conditions d'accès à la formation action de formation" ;
+    rdfs:domain noDEfr2:RC0101 ;
+    rdfs:range noDEfr2:RC0030 .
+    _:DES101030001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES101030001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES101102001 rdf:type  owl:DataProperty ;
+    rdfs:label "se décline en" ;
+    rdfs:comment "indique les parcours dans lesquels se décline l'action de formation" ;
+    rdfs:domain noDEfr2:RC0101 ;
+    rdfs:range noDEfr2:RC0102 .
+    _:DES101102001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES101102001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES101103001 rdf:type  owl:DataProperty ;
+    rdfs:label "se compose de" ;
+    rdfs:comment "indique les modules dans lesquels se décline l'action de formation" ;
+    rdfs:domain noDEfr2:RC0101 ;
+    rdfs:range noDEfr2:RC0103 .
+    _:DES101103001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES101103001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES101104001 rdf:type  owl:DataProperty ;
+    rdfs:label "utilise" ;
+    rdfs:comment "indique que l'action de formation utilise jusqu'à trois types compositions" ;
+    rdfs:domain noDEfr2:RC0101 ;
+    rdfs:range noDEfr2:RC0060 .
+    _:DES101104001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES101104001 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "3" .
+
+
+    noDEfr2:RC0102 rdf:type owl:Class ;
+    rdfs:label "Parcours" ;
+    rdfs:comment "un élément de cette classe est un itinéraire pédagogique comportant un ou plusieurs éléments de formation spécifiés et ordonnés, organisé selon une ou plusieurs modalités spécifiées, en vue d'atteindre un objectif de développement personnel ou professionnel"  ;
+    rdfs:subClassOf noDEfr2:RC0100 .
+
+
+    noDEfr2:DES102030001 rdf:type  owl:DataProperty ;
+    rdfs:label "conditions d'accès" ;
+    rdfs:comment "indique les conditions d'accès au parcours de formation" ;
+    rdfs:domain noDEfr2:RC0102 ;
+    rdfs:range noDEfr2:RC0030 .
+    _:DES102030001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES102030001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES102103001 rdf:type  owl:DataProperty ;
+    rdfs:label "se compose de" ;
+    rdfs:comment "indique les modules / unités se composent de parcours de formation" ;
+    rdfs:domain noDEfr2:RC0102 ;
+    rdfs:range noDEfr2:RC0103 .
+    _:DES102103001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES102103001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES102060001 rdf:type  owl:DataProperty ;
+    rdfs:label "utilise" ;
+    rdfs:comment "indique qu'un parcours peut utiliser une composition spécifique (compositons obligatoires, optionnelles ou à choix) d'éléments de formation" ;
+    rdfs:domain noDEfr2:RC0102 ;
+    rdfs:range noDEfr2:RC060 .
+    _:DES102060001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES102060001 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:RC0103 rdf:type owl:Class ;
+    rdfs:label "Module" ;
+    rdfs:comment "un élément de cette classe est un regroupement temporel, thématique ou pédagogique d'éléments de formation."  ;
+    rdfs:subClassOf noDEfr2:RC0100 .
+
+
+    noDEfr2:DES103060001 rdf:type  owl:DataProperty ;
+    rdfs:label "utilise" ;
+    rdfs:comment "indique qu'un module utilise une composition spécifique (compositons obligatoires, optionnelles ou à choix) d'éléments de formation" ;
+    rdfs:domain noDEfr2:RC0103 ;
+    rdfs:range noDEfr2:RC0104 .
+    _:DES103060001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES103060001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES103103001 rdf:type  owl:DataProperty ;
+    rdfs:label "se compose de" ;
+    rdfs:comment "permet de hiérarchiser les modules" ;
+    rdfs:domain noDEfr2:RC0103 ;
+    rdfs:range noDEfr2:RC0103 .
+    _:DES103103001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES103103001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES103103002 rdf:type  owl:DataProperty ;
+    rdfs:label "suivant" ;
+    rdfs:comment "permet d'ordonnancer les modules" ;
+    rdfs:domain noDEfr2:RC0103 ;
+    rdfs:range noDEfr2:RC0103 .
+    _:DES103103002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES103103002 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:RC0104 rdf:type owl:Class ;
+    rdfs:label "Élément de formation" ;
+    rdfs:comment "un élément de cette classe permet de décomposer les modules en unités pédagogiques"  ;
+    rdfs:subClassOf noDEfr2:RC0100 .
+
+
+    noDEfr2:DES104001 rdf:type  owl:DataProperty ;
+    rdfs:label "modalité d'évaluation" ;
+    rdfs:comment "modalité d'évaluation de l'élément de formation" ;
+    rdfs:domain noDEfr2:RC0104 ;
+    rdfs:range  "MLR String" .
+    _:DES104001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES104001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES104104001 rdf:type  owl:DataProperty ;
+    rdfs:label "se compose de" ;
+    rdfs:comment "permet de hiérarchiser les éléments de formation" ;
+    rdfs:domain noDEfr2:RC0104 ;
+    rdfs:range noDEfr2:RC0104 .
+    _:DES104104001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES104104001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES104105001 rdf:type  owl:DataProperty ;
+    rdfs:label "se compose de" ;
+    rdfs:comment "permet de spécifier qu'un élément de formation est composé d'activités pédagogiques" ;
+    rdfs:domain noDEfr2:RC0104 ;
+    rdfs:range noDEfr2:RC0105 .
+    _:DES104105001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES104105001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:RC0105 rdf:type owl:Class ;
+    rdfs:label "Activité pédagogique" ;
+    rdfs:comment "un élément de cette classe est une forme spécifique d'une situation conçue pour apprendre"  ;
+    rdfs:subClassOf noDEfr2:RC0100 .
+
+
+    noDEfr2:DES105001 rdf:type  owl:DataProperty ;
+    rdfs:label "type d'activité" ;
+    rdfs:comment "définit un type d'activité pédagogique et/ou d'apprentissage pour l'activité pédagogique" ;
+    rdfs:domain noDEfr2:RC0105 ;
+    rdfs:range  "Vocabulaire" .
+    _:DES105001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES105001 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:DES105002 rdf:type  owl:DataProperty ;
+    rdfs:label "modalité pédagogique" ;
+    rdfs:comment "indique la modalité utilisée pour réaliser l'activité pédagogique" ;
+    rdfs:domain noDEfr2:RC0105 ;
+    rdfs:range  "Vocabulaire" .
+    _:DES105002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES105002 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:RC0200 rdf:type owl:Class ;
+    rdfs:label "Réalisation" ;
+    rdfs:comment "classe abstraite qui regroupe les propriétés communes décrivant les réalisations programmées d'une offre de formation"  ;
+    rdfs:subClassOf noDEfr2:RC0000 .
+
+
+    noDEfr2:DES200001 rdf:type  owl:DataProperty ;
+    rdfs:label "début" ;
+    rdfs:comment "date de début de la réalisation" ;
+    rdfs:domain noDEfr2:RC0200 ;
+    rdfs:range  "MLR Date" .
+    _:DES200001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES200001 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:DES200002 rdf:type  owl:DataProperty ;
+    rdfs:label "fin" ;
+    rdfs:comment "date de fin de la réalisation" ;
+    rdfs:domain noDEfr2:RC0200 ;
+    rdfs:range  "MLR Date" .
+    _:DES200002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES200002 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:DES200003 rdf:type  owl:DataProperty ;
+    rdfs:label "lieu" ;
+    rdfs:comment "lieu (réel ou virtuel) où a lieu la réalisation" ;
+    rdfs:domain noDEfr2:RC0200 ;
+    rdfs:range  "MLR String" .
+    _:DES200003Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES200003 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES200003001 rdf:type  owl:DataProperty ;
+    rdfs:label "responsable" ;
+    rdfs:comment "responsable de la réalisation" ;
+    rdfs:domain noDEfr2:RC0200 ;
+    rdfs:range noDEfr2:ISO_IEC_19788-1:2010::RC0003 .
+    _:DES200003001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES200003001 ;
+    owl:minCardinality "0" ;
+    owl:maxCardinality "1" .
+
+
+    noDEfr2:DES200003002 rdf:type  owl:DataProperty ;
+    rdfs:label "intervenant" ;
+    rdfs:comment "enseignant, tuteur, formateur, etc. intervenant dans la réalisation de la formation" ;
+    rdfs:domain noDEfr2:RC0200 ;
+    rdfs:range noDEfr2:ISO_IEC_19788-1:2010::RC0003 .
+    _:DES200003002Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES200003002 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES200004 rdf:type  owl:DataProperty ;
+    rdfs:label "entrée sortie permanente" ;
+    rdfs:comment "les dates de début et de fin indiquent des bornes au sein de laqquelle la réalisation doit avoir lieu" ;
+    rdfs:domain noDEfr2:RC0200 ;
+    rdfs:range  "Booléen" .
+    _:DES200004Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES200004 ;
+    owl:cardinality "1" .
+
+
+    noDEfr2:DES20001001 rdf:type  owl:DataProperty ;
+    rdfs:label "est mise en oeuvre dans " ;
+    rdfs:comment "la réalisation pédagogique met en oeuvre des actions de formation" ;
+    rdfs:domain noDEfr2:RC0200 ;
+    rdfs:range noDEfr2:ISO_IEC_22602:RC0001 .
+    _:DES20001001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES20001001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES200080001 rdf:type  owl:DataProperty ;
+    rdfs:label "session d'information" ;
+    rdfs:comment "session durant laquelle la réalisation est présentée" ;
+    rdfs:domain noDEfr2:RC0200 ;
+    rdfs:range noDEfr2:RC0080 .
+    _:DES200080001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES200080001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:DES200090001 rdf:type  owl:DataProperty ;
+    rdfs:label "période d'interruption" ;
+    rdfs:comment "période durant laquelle la formation est interrompue" ;
+    rdfs:domain noDEfr2:RC0200 ;
+    rdfs:range noDEfr2:RC0090 .
+    _:DES200090001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES200090001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:RC0201 rdf:type owl:Class ;
+    rdfs:label "Réalisation de parcours" ;
+    rdfs:comment "un élément de cette classe est la réalisation d'un parcours de formation programmé"  ;
+    rdfs:subClassOf noDEfr2:RC0200 .
+
+
+    noDEfr2:DES201102001 rdf:type  owl:DataProperty ;
+    rdfs:label "réalise" ;
+    rdfs:comment "la réalisation d'un parcours de formation spécifie les éléments de mise en oeuvre (réalisation) d'un parcours de formation" ;
+    rdfs:domain noDEfr2:RC0201 ;
+    rdfs:range noDEfr2:RC0101 .
+    _:DES201102001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES201102001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:RC0202 rdf:type owl:Class ;
+    rdfs:label "Réalisation de module" ;
+    rdfs:comment "un élément de cette classe est la réalisation d'un module programmé"  ;
+    rdfs:subClassOf noDEfr2:RC0200 .
+
+
+    noDEfr2:DES202103001 rdf:type  owl:DataProperty ;
+    rdfs:label "réalise" ;
+    rdfs:comment "la réalisation d'un module de formation spécifie les éléments de mise en oeuvre (réalisation) d'un module de formation" ;
+    rdfs:domain noDEfr2:RC0202 ;
+    rdfs:range noDEfr2:RC0103 .
+    _:DES202103001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES202103001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:RC0203 rdf:type owl:Class ;
+    rdfs:label "Session de formation" ;
+    rdfs:comment "un élément de cette classe est la réalisation d'une session de formation programmée"  ;
+    rdfs:subClassOf noDEfr2:RC0200 .
+
+
+    noDEfr2:DES203104001 rdf:type  owl:DataProperty ;
+    rdfs:label "réalise" ;
+    rdfs:comment "la réalisation d'une session de formation spécifie les éléments de mise en oeuvre (réalisation) d'une session de formation" ;
+    rdfs:domain noDEfr2:RC0203 ;
+    rdfs:range noDEfr2:RC0104 .
+    _:DES203104001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES203104001 ;
+    owl:minCardinality "0" .
+
+
+    noDEfr2:RC0204 rdf:type owl:Class ;
+    rdfs:label "Réalisation d'activité pédagogique" ;
+    rdfs:comment "un élément de cette classe est la réalisation d'une activité pédagogique programmée"  ;
+    rdfs:subClassOf noDEfr2:RC0200 .
+
+
+    noDEfr2:DES204105001 rdf:type  owl:DataProperty ;
+    rdfs:label "réalise" ;
+    rdfs:comment "la réalisation d'une activité pédagogique sur une offre de formation spécifie les éléments de mise en oeuvre (réalisation) d'une activité pédagogique" ;
+    rdfs:domain noDEfr2:RC0204 ;
+    rdfs:range noDEfr2:RC0204 .
+    _:DES204105001Restriction rdf:type owl:Restriction ;
+    owl:onProperty noDEfr2:DES204105001 ;
+    owl:minCardinality "0" .
