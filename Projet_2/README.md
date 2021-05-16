@@ -13,7 +13,7 @@ Enregistrement de la sortie du premier filtre NoDEfr-2.1.xsl (qui permet d'avoir
 ```bash
 saxonb-xslt -o NoDEfr-2.1.xml content.xml NoDEfr-2.1.xsl
 ```
-Le fichier output.xml correspond aux attentes mais il contient des balises dont le contenu est vide. Pour les supprimer, on applique un nouveau filtre sur le fichier de sortie output1.xml :
+Le fichier NoDEfr-2.1.xml correspond aux attentes mais il contient des balises dont le contenu est vide. Pour les supprimer, on applique un nouveau filtre sur le fichier de sortie NoDEfr-2.1.xml :
 
 ```bash
 saxonb-xslt -o NoDEfr-2.2.xml NoDEfr-2.1.xml NoDEfr-2.2.xsl
