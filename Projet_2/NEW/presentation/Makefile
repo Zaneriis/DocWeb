@@ -1,4 +1,4 @@
-TEXFILE=main
+TEXFILE=Presentation
 
 STYLES = $(shell echo *.sty)
 

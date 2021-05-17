@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.4.7)  17 MAY 2021 21:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.4.7)  17 MAY 2021 21:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main
-(./main.tex
+**Presentation
+(./Presentation.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
@@ -750,8 +750,8 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count328
 \l__pdf_internal_box=\box80
 )
-(./main.aux)
-\openout1 = `main.aux'.
+No file Presentation.aux.
+\openout1 = `Presentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
 LaTeX Font Info:    ... okay on input line 70.
@@ -769,7 +769,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
 LaTeX Font Info:    ... okay on input line 70.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
 LaTeX Font Info:    ... okay on input line 70.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -844,10 +843,8 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 70.
 LaTeX Info: Redefining \pageref on input line 70.
 LaTeX Info: Redefining \nameref on input line 70.
-
-(./main.out) (./main.out)
 \@outlinefile=\write5
-\openout5 = `main.out'.
+\openout5 = `Presentation.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 70.
@@ -917,14 +914,17 @@ ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 \c@lstlisting=\count336
- (./main.nav) [1
+
+No file Presentation.nav.
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 96.
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 96.
@@ -933,7 +933,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 96.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<arborescence.png, id=80, 226.8475pt x 517.935pt>
+<arborescence.png, id=78, 226.8475pt x 517.935pt>
 File: arborescence.png Graphic file (type png)
 <use arborescence.png>
 Package pdftex.def Info: arborescence.png  used on input line 96.
@@ -941,7 +941,7 @@ Package pdftex.def Info: arborescence.png  used on input line 96.
  [3
 
  <./arborescence.png>]
-<extraitClasses.png, id=109, 572.1375pt x 302.12875pt>
+<extraitClasses.png, id=107, 572.1375pt x 302.12875pt>
 File: extraitClasses.png Graphic file (type png)
 <use extraitClasses.png>
 Package pdftex.def Info: extraitClasses.png  used on input line 106.
@@ -949,9 +949,9 @@ Package pdftex.def Info: extraitClasses.png  used on input line 106.
  [4
 
  <./extraitClasses.png>]
-\openout4 = `main.vrb'.
+\openout4 = `Presentation.vrb'.
 
- (./main.vrb
+ (./Presentation.vrb
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
@@ -1279,7 +1279,7 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 ) [5
 
 ]
-<listeClasses.png, id=166, 620.3175pt x 29.10875pt>
+<listeClasses.png, id=164, 620.3175pt x 29.10875pt>
 File: listeClasses.png Graphic file (type png)
 <use listeClasses.png>
 Package pdftex.def Info: listeClasses.png  used on input line 138.
@@ -1287,9 +1287,9 @@ Package pdftex.def Info: listeClasses.png  used on input line 138.
  [6
 
  <./listeClasses.png>]
-\openout4 = `main.vrb'.
+\openout4 = `Presentation.vrb'.
 
- (./main.vrb
+ (./Presentation.vrb
 ! Undefined control sequence.
 \lst@basicstyle ->\ttm 
                        \tiny 
@@ -1304,9 +1304,9 @@ and I'll forget about whatever was undefined.
 ) [7
 
 ]
-\openout4 = `main.vrb'.
+\openout4 = `Presentation.vrb'.
 
- (./main.vrb
+ (./Presentation.vrb
 ! Undefined control sequence.
 \lst@basicstyle ->\ttm 
                        \tiny 
@@ -1321,9 +1321,9 @@ and I'll forget about whatever was undefined.
 ) [8
 
 ]
-\openout4 = `main.vrb'.
+\openout4 = `Presentation.vrb'.
 
- (./main.vrb
+ (./Presentation.vrb
 ! Undefined control sequence.
 \lst@basicstyle ->\ttm 
                        \tiny 
@@ -1342,9 +1342,10 @@ File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )) [9
 
 ]
-\openout4 = `main.vrb'.
+\openout4 = `Presentation.vrb'.
 
- (./main.vrb
+
+(./Presentation.vrb
 ! Undefined control sequence.
 \lst@basicstyle ->\ttm 
                        \tiny 
@@ -1673,9 +1674,9 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 ) [10
 
 ]
-\openout4 = `main.vrb'.
+\openout4 = `Presentation.vrb'.
 
- (./main.vrb
+ (./Presentation.vrb
 ! Undefined control sequence.
 \lst@basicstyle ->\ttm 
                        \tiny 
@@ -1924,41 +1925,47 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 ]
 \tf@nav=\write6
-\openout6 = `main.nav'.
+\openout6 = `Presentation.nav'.
 
 \tf@toc=\write7
-\openout7 = `main.toc'.
+\openout7 = `Presentation.toc'.
 
 \tf@snm=\write8
-\openout8 = `main.snm'.
+\openout8 = `Presentation.snm'.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 283.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
- (./main.aux)
+ (./Presentation.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 283.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 283.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
+
+Package rerunfilecheck Warning: File `Presentation.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Presentation.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 22530 strings out of 483113
- 433399 string characters out of 5964009
- 1048275 words of memory out of 5000000
- 37012 multiletter control sequences out of 15000+600000
+ 22493 strings out of 483113
+ 433288 string characters out of 5964009
+ 1047991 words of memory out of 5000000
+ 36983 multiletter control sequences out of 15000+600000
  540901 words of font info for 55 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 54i,16n,64p,784b,1435s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,16n,64p,792b,1435s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/aurelia/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcss0600.6
 00pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
-Output written on main.pdf (12 pages, 135314 bytes).
+Output written on Presentation.pdf (12 pages, 135101 bytes).
 PDF statistics:
  385 PDF objects out of 1000 (max. 8388607)
  342 compressed objects within 4 object streams

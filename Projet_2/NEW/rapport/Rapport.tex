@@ -483,6 +483,11 @@ office:version="1.0">
 
 \section{Deuxième XSLT "xsl:template"}
 \begin{lstlisting}[language=XSLT]
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsl:stylesheet version="2.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:output indent="yes" encoding="UTF-8"/>
+    
     <xsl:strip-space elements="*"/>
 
     <xsl:template match="/">
@@ -508,13 +513,14 @@ office:version="1.0">
     <xsl:template match="relation">
         <xsl:if test="string(@identifiant)">
             <xsl:copy>
+                <xsl:copy-of select="@*"/>
                 <xsl:for-each select="./*">
                     <xsl:choose>
                         <xsl:when test="((name()='definition') or
                                         (name()='coDomaine') or 
                                         (name()='regleDeContenu') or
                                         (name()='raffine') or 
-                                        (name()='exmeple') or
+                                        (name()='exemple') or
                                         (name()='note') or
                                         (name()='raison')) and 
                                         (string()='')">
@@ -528,6 +534,9 @@ office:version="1.0">
             </xsl:copy>
         </xsl:if>
     </xsl:template>
+
+</xsl:stylesheet>
+
 \end{lstlisting}
 
 \section{Validation du XML}
