@@ -1,0 +1,25 @@
+\babel@toc {french}{}
+\contentsline {chapter}{\numberline {1}Présentation du sujet}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Contexte}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Sujet}{2}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Identification du problème à résoudre}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Identification des solutions}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Python}{4}{section.3.1}%
+\contentsline {section}{\numberline {3.2}XSLT}{4}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Choix et implémentation d'une solution en la décrivant}{6}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Description de notre implémentation}{6}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Attributs du stylesheet [Annexe 7.1]}{6}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Accès au noeud de l'arbre "Classes" [Annexe 7.2]}{6}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Extraction des données de la feuille "Classes" [Annexe 7.3] }{6}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Extraction des données des feuilles secondaires [Annexe 7.4] }{7}{subsection.4.1.4}%
+\contentsline {chapter}{\numberline {5}Validation avec le XSD ?}{9}{chapter.5}%
+\contentsline {subsection}{\numberline {5.0.1}Suppression des balises vides [Annexe 7.5]}{9}{subsection.5.0.1}%
+\contentsline {subsection}{\numberline {5.0.2}Problème de référence des classes [Annexe 7.6]}{9}{subsection.5.0.2}%
+\contentsline {chapter}{\numberline {6}Conclusion}{10}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Annexe}{11}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Attributs du stylesheet}{11}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Premier "xsl:template"}{11}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Second "xsl:template"}{11}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Troisième "xsl:template"}{12}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Deuxième XSLT "xsl:template"}{13}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Validation du XML}{14}{section.7.6}%
