@@ -28,6 +28,7 @@
     <xsl:template match="relation">
         <xsl:if test="string(@identifiant)">
             <xsl:copy>
+                <xsl:copy-of select="@*"/>
                 <xsl:for-each select="./*">
                     <xsl:choose>
                         <xsl:when test="((name()='definition') or
