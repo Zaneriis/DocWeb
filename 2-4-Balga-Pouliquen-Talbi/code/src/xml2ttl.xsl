@@ -59,7 +59,8 @@
     rdfs:comment &quot;<xsl:value-of select="normalize-space(translate($definitionRelation, '&quot;', ''))"/>&quot; ;
     rdfs:domain noDEfr2:<xsl:value-of select="../@identifiant"/> ;
     rdfs:range <xsl:if test="regleDeContenu"> &quot;<xsl:value-of select="regleDeContenu"/>&quot; .</xsl:if><xsl:if test="not(regleDeContenu)">noDEfr2:<xsl:value-of select="coDomaine"/> .</xsl:if>
-    <xsl:if test="cardinaliteMinimale != '' and cardinaliteMaximale != ''">_:<xsl:value-of select="@identifiant"/>Restriction rdf:type owl:Restriction ;
+    <xsl:if test="not(cardinaliteMinimale = '' and cardinaliteMaximale = '')">
+    _:<xsl:value-of select="@identifiant"/>Restriction rdf:type owl:Restriction ;
     owl:onProperty noDEfr2:<xsl:value-of select="@identifiant"/> ;
     <xsl:if test="cardinaliteMinimale = cardinaliteMaximale">owl:cardinality &quot;<xsl:value-of select="cardinaliteMinimale"/>&quot; .</xsl:if>
     <xsl:if test="cardinaliteMinimale != cardinaliteMaximale">
