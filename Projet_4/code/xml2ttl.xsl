@@ -31,9 +31,9 @@
     </xsl:variable>
     noDEfr2:<xsl:value-of select="@identifiant"/> rdf:type owl:Class ;
     rdfs:label &quot;<xsl:value-of select="translate(nom, '&quot;', '')"/>&quot; ;
-    rdfs:comment &quot;<xsl:value-of select="normalize-space(translate($definitionClasse, '&quot;', ''))"/>&quot; <xsl:if test="not(sousClasseDe) or contains(sousClasseDe, ',')"> .
+    rdfs:comment &quot;<xsl:value-of select="normalize-space(translate($definitionClasse, '&quot;', ''))"/>&quot; <xsl:if test="sousClasseDe = '' or contains(sousClasseDe, ',')"> .
   </xsl:if>
-  <xsl:if test="sousClasseDe and not(contains(sousClasseDe, ','))"> ;
+  <xsl:if test="sousClasseDe != '' and not(contains(sousClasseDe, ','))"> ;
   </xsl:if>
   <xsl:apply-templates select="sousClasseDe"/>
   <xsl:apply-templates select="relation"/>
@@ -54,18 +54,18 @@
     <xsl:variable name="definitionRelation">
       <xsl:value-of select="definition"/>
     </xsl:variable>
-    noDEfr2:<xsl:value-of select="@identifiant"/> rdf:type  owl:<xsl:if test="regleDeContenu">DataProperty ;</xsl:if><xsl:if test="not(regleDeContenu)">ObjectProperty ;</xsl:if>
+    noDEfr2:<xsl:value-of select="@identifiant"/> rdf:type owl:<xsl:if test="regleDeContenu">DataProperty ;</xsl:if><xsl:if test="not(regleDeContenu)">ObjectProperty ;</xsl:if>
     rdfs:label &quot;<xsl:value-of select="translate(nom, '&quot;', '')"/>&quot; ;
     rdfs:comment &quot;<xsl:value-of select="normalize-space(translate($definitionRelation, '&quot;', ''))"/>&quot; ;
     rdfs:domain noDEfr2:<xsl:value-of select="../@identifiant"/> ;
     rdfs:range <xsl:if test="regleDeContenu"> &quot;<xsl:value-of select="regleDeContenu"/>&quot; .</xsl:if><xsl:if test="not(regleDeContenu)">noDEfr2:<xsl:value-of select="coDomaine"/> .</xsl:if>
-    _:<xsl:value-of select="@identifiant"/>Restriction rdf:type owl:Restriction ;
+    <xsl:if test="cardinaliteMinimale != '' and cardinaliteMaximale != ''">_:<xsl:value-of select="@identifiant"/>Restriction rdf:type owl:Restriction ;
     owl:onProperty noDEfr2:<xsl:value-of select="@identifiant"/> ;
     <xsl:if test="cardinaliteMinimale = cardinaliteMaximale">owl:cardinality &quot;<xsl:value-of select="cardinaliteMinimale"/>&quot; .</xsl:if>
     <xsl:if test="cardinaliteMinimale != cardinaliteMaximale">
       <xsl:if test="cardinaliteMaximale = 'n'">owl:minCardinality &quot;<xsl:value-of select="cardinaliteMinimale"/>&quot; .</xsl:if>
       <xsl:if test="cardinaliteMaximale != 'n'">owl:minCardinality &quot;<xsl:value-of select="cardinaliteMinimale"/>&quot; ;
-    owl:maxCardinality &quot;<xsl:value-of select="cardinaliteMaximale"/>&quot; .</xsl:if></xsl:if>
+    owl:maxCardinality &quot;<xsl:value-of select="cardinaliteMaximale"/>&quot; .</xsl:if></xsl:if></xsl:if>
   </xsl:template>
 
 </xsl:stylesheet>
