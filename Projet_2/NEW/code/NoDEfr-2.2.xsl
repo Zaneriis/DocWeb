@@ -35,7 +35,7 @@
                                         (name()='coDomaine') or 
                                         (name()='regleDeContenu') or
                                         (name()='raffine') or 
-                                        (name()='exmeple') or
+                                        (name()='exemple') or
                                         (name()='note') or
                                         (name()='raison')) and 
                                         (string()='')">

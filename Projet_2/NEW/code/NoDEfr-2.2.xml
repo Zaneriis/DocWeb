@@ -48,7 +48,6 @@ une entité composée d'êtres humains, organisée dans la durée,en vue d'une f
          <definition>contributeur de la dernière modification de l'information</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>ISO_IEC_19788-1:2010::RC0003</coDomaine>
-         <exemple/>
          <note>Ce contributeur peut être une personne physique ou morale</note>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>1</cardinaliteMaximale>
@@ -74,7 +73,6 @@ une entité composée d'êtres humains, organisée dans la durée,en vue d'une f
          <definition>Niveau du diplome d'un système de codification donné</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0017</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -83,7 +81,6 @@ une entité composée d'êtres humains, organisée dans la durée,en vue d'une f
          <definition>Habilitation ou certificat permettant de délivrer un diplome, un certficat, un badge, une attestation, etc.</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0016</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -283,7 +280,6 @@ une entité composée d'êtres humains, organisée dans la durée,en vue d'une f
          <indicateurLinguistique>oui</indicateurLinguistique>
          <coDomaine>Littéral</coDomaine>
          <regleDeContenu>MLR String</regleDeContenu>
-         <exemple/>
          <cardinaliteMinimale>1</cardinaliteMinimale>
          <cardinaliteMaximale>1</cardinaliteMaximale>
       </relation>
@@ -299,7 +295,6 @@ une entité composée d'êtres humains, organisée dans la durée,en vue d'une f
          <indicateurLinguistique>oui</indicateurLinguistique>
          <coDomaine>Littéral</coDomaine>
          <regleDeContenu>MLR String</regleDeContenu>
-         <exemple/>
          <cardinaliteMinimale>1</cardinaliteMinimale>
          <cardinaliteMaximale>1</cardinaliteMaximale>
       </relation>
@@ -346,7 +341,6 @@ une entité composée d'êtres humains, organisée dans la durée,en vue d'une f
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>Litteral</coDomaine>
          <regleDeContenu>Vocabulaire</regleDeContenu>
-         <exemple/>
          <note>pédagogique, inscription à la certification, élément des formations à sa charge, remise à niveau</note>
          <cardinaliteMinimale>1</cardinaliteMinimale>
          <cardinaliteMaximale>1</cardinaliteMaximale>
@@ -357,7 +351,6 @@ une entité composée d'êtres humains, organisée dans la durée,en vue d'une f
          <indicateurLinguistique>oui</indicateurLinguistique>
          <coDomaine>Litteral</coDomaine>
          <regleDeContenu>MLR String</regleDeContenu>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>1</cardinaliteMaximale>
       </relation>
@@ -373,7 +366,6 @@ une entité composée d'êtres humains, organisée dans la durée,en vue d'une f
          <indicateurLinguistique>oui</indicateurLinguistique>
          <coDomaine>Litteral</coDomaine>
          <regleDeContenu>MLR String</regleDeContenu>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>1</cardinaliteMaximale>
       </relation>
@@ -426,7 +418,6 @@ BTS SIO dure 10 mois</exemple>
 validée)</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0070</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -435,7 +426,6 @@ validée)</definition>
          <definition>ressources utilisées dans le cadre de cette formation</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>ISO_IEC_19788-1:2011::RC0002</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -444,7 +434,6 @@ validée)</definition>
          <definition>indique les objectifs de la formation en termes de ou des compétences avec leurs niveaux</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>ISO_IEC_22602:RC0003</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -453,7 +442,6 @@ validée)</definition>
          <definition>indique les prérequis pour la formation en termes de ou des compétences avec leurs niveaux</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>ISO_IEC_22602:RC0003</coDomaine>
-         <exemple/>
          <note>compétences</note>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
@@ -469,7 +457,6 @@ validée)</definition>
          <definition>indique le ou les éléments de formation qui sont inclus dans une composition</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0104</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>1</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -497,7 +484,6 @@ validée)</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>Litteral</coDomaine>
          <regleDeContenu>Nombre naturel</regleDeContenu>
-         <exemple/>
          <cardinaliteMinimale>1</cardinaliteMinimale>
          <cardinaliteMaximale>1</cardinaliteMaximale>
       </relation>
@@ -507,7 +493,6 @@ validée)</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>Litteral</coDomaine>
          <regleDeContenu>Nombre naturel</regleDeContenu>
-         <exemple/>
          <cardinaliteMinimale>1</cardinaliteMinimale>
          <cardinaliteMaximale>1</cardinaliteMaximale>
       </relation>
@@ -531,7 +516,6 @@ validée)</definition>
          <definition>indique q'un nombre de crédits ECTS peut être relatif à une offre de formation, un parcours, un module, un élément de formation ou une activité pédagogique</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0100</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>1</cardinaliteMaximale>
       </relation>
@@ -622,7 +606,6 @@ pour l'année 2020-2021 les étudiants BTS SIO n'ont pas cours du 19 décembre 2
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>Litteral</coDomaine>
          <regleDeContenu>MLR Duration</regleDeContenu>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>1</cardinaliteMaximale>
       </relation>
@@ -631,7 +614,6 @@ pour l'année 2020-2021 les étudiants BTS SIO n'ont pas cours du 19 décembre 2
          <definition>personne en charge de la formation</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>ISO_IEC_19788-1:2010::RC0003</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>1</cardinaliteMaximale>
       </relation>
@@ -651,7 +633,6 @@ pour l'année 2020-2021 les étudiants BTS SIO n'ont pas cours du 19 décembre 2
          <indicateurLinguistique>oui</indicateurLinguistique>
          <coDomaine>Littéral</coDomaine>
          <regleDeContenu>MLR String</regleDeContenu>
-         <exemple/>
          <cardinaliteMinimale>1</cardinaliteMinimale>
          <cardinaliteMaximale>1</cardinaliteMaximale>
       </relation>
@@ -697,7 +678,6 @@ nécessite l'acquisition d'un logiciel de programmation</exemple>
          <definition>indique le certificat, badge ou diplôme associé à la formation</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0015</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -706,7 +686,6 @@ nécessite l'acquisition d'un logiciel de programmation</exemple>
          <definition>tarifs de la formation</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0040</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>1</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -741,7 +720,6 @@ nécessite l'acquisition d'un logiciel de programmation</exemple>
          <definition>indique que l'action de formation respecte tout ou partie du référentiel de la certification</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0016</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -750,7 +728,6 @@ nécessite l'acquisition d'un logiciel de programmation</exemple>
          <definition>l'action de formation matérialise une offre de formation au sein d'un établissement</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0020</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>1</cardinaliteMaximale>
       </relation>
@@ -759,7 +736,6 @@ nécessite l'acquisition d'un logiciel de programmation</exemple>
          <definition>indique les conditions d'accès à la formation action de formation</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0030</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -768,7 +744,6 @@ nécessite l'acquisition d'un logiciel de programmation</exemple>
          <definition>indique les parcours dans lesquels se décline l'action de formation</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0102</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -777,7 +752,6 @@ nécessite l'acquisition d'un logiciel de programmation</exemple>
          <definition>indique les modules dans lesquels se décline l'action de formation</definition>
          <indicateurLinguistique/>
          <coDomaine>RC0103</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -786,7 +760,6 @@ nécessite l'acquisition d'un logiciel de programmation</exemple>
          <definition>indique que l'action de formation utilise jusqu'à trois types compositions</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0060</coDomaine>
-         <exemple/>
          <note>Chaque relation doit désigner des instances de classe différentes (RC0061, RC0062 et RC0063)</note>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>3</cardinaliteMaximale>
@@ -802,7 +775,6 @@ nécessite l'acquisition d'un logiciel de programmation</exemple>
          <definition>indique les conditions d'accès au parcours de formation</definition>
          <indicateurLinguistique/>
          <coDomaine>RC0030</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -811,7 +783,6 @@ nécessite l'acquisition d'un logiciel de programmation</exemple>
          <definition>indique les modules / unités se composent de parcours de formation</definition>
          <indicateurLinguistique/>
          <coDomaine>RC0103</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -820,7 +791,6 @@ nécessite l'acquisition d'un logiciel de programmation</exemple>
          <definition>indique qu'un parcours peut utiliser une composition spécifique (compositons obligatoires, optionnelles ou à choix) d'éléments de formation</definition>
          <indicateurLinguistique/>
          <coDomaine>RC060</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>1</cardinaliteMaximale>
       </relation>
@@ -835,7 +805,6 @@ nécessite l'acquisition d'un logiciel de programmation</exemple>
          <definition>indique qu'un module utilise une composition spécifique (compositons obligatoires, optionnelles ou à choix) d'éléments de formation</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0104</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -844,7 +813,6 @@ nécessite l'acquisition d'un logiciel de programmation</exemple>
          <definition>permet de hiérarchiser les modules</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0103</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -853,7 +821,6 @@ nécessite l'acquisition d'un logiciel de programmation</exemple>
          <definition>permet d'ordonnancer les modules</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0103</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -879,7 +846,6 @@ nécessite l'acquisition d'un logiciel de programmation</exemple>
          <definition>permet de hiérarchiser les éléments de formation</definition>
          <indicateurLinguistique/>
          <coDomaine>RC0104</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -888,7 +854,6 @@ nécessite l'acquisition d'un logiciel de programmation</exemple>
          <definition>permet de spécifier qu'un élément de formation est composé d'activités pédagogiques</definition>
          <indicateurLinguistique/>
          <coDomaine>RC0105</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -982,7 +947,6 @@ qui regroupe les propriétés communes décrivant les réalisations programmées
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>Litteral</coDomaine>
          <regleDeContenu>Booléen</regleDeContenu>
-         <exemple/>
          <cardinaliteMinimale>1</cardinaliteMinimale>
          <cardinaliteMaximale>1</cardinaliteMaximale>
       </relation>
@@ -991,7 +955,6 @@ qui regroupe les propriétés communes décrivant les réalisations programmées
          <definition>la réalisation pédagogique met en oeuvre des actions de formation</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>ISO_IEC_22602:RC0001</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -1000,7 +963,6 @@ qui regroupe les propriétés communes décrivant les réalisations programmées
          <definition>session durant laquelle la réalisation est présentée</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0080</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -1009,7 +971,6 @@ qui regroupe les propriétés communes décrivant les réalisations programmées
          <definition>période durant laquelle la formation est interrompue</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0090</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -1024,7 +985,6 @@ qui regroupe les propriétés communes décrivant les réalisations programmées
          <definition>la réalisation d'un parcours de formation spécifie les éléments de mise en oeuvre (réalisation) d'un parcours de formation</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0101</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -1039,7 +999,6 @@ qui regroupe les propriétés communes décrivant les réalisations programmées
          <definition>la réalisation d'un module de formation spécifie les éléments de mise en oeuvre (réalisation) d'un module de formation</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0103</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -1054,7 +1013,6 @@ qui regroupe les propriétés communes décrivant les réalisations programmées
          <definition>la réalisation d'une session de formation spécifie les éléments de mise en oeuvre (réalisation) d'une session de formation</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0104</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
@@ -1069,7 +1027,6 @@ qui regroupe les propriétés communes décrivant les réalisations programmées
          <definition>la réalisation d'une activité pédagogique sur une offre de formation spécifie les éléments de mise en oeuvre (réalisation) d'une activité pédagogique</definition>
          <indicateurLinguistique>non</indicateurLinguistique>
          <coDomaine>RC0204</coDomaine>
-         <exemple/>
          <cardinaliteMinimale>0</cardinaliteMinimale>
          <cardinaliteMaximale>n</cardinaliteMaximale>
       </relation>
