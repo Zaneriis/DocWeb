@@ -32,7 +32,6 @@
                     <xsl:choose>
                         <xsl:when test="((name()='definition') or
                                         (name()='coDomaine') or 
-                                        (name()='coDomaine') or 
                                         (name()='regleDeContenu') or
                                         (name()='raffine') or 
                                         (name()='exmeple') or
